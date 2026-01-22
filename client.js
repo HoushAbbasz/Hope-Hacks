@@ -6,10 +6,14 @@ function initMap() {
     // initialize new google map object centered on Charlotte, NC
     map = new google.maps.Map(document.getElementById('map'), {
         center: charlotte,
-        zoom: 11,
+        zoom: 10,
         mapTypeControl: true,
         streetViewControl: true,
-        fullscreenControl: true
+        fullscreenControl: true,
+        restriction: {
+            latLngBounds: calculateBounds(charlotte, 25), 
+            strictBounds: true
+        }
     });
     
     // initialize geocoder to convert addresses to lat/long coordinates
@@ -47,7 +51,7 @@ function initMap() {
                     title: location.title,
                     label: location.label
                 });
-                
+                ma
                 const infoWindow = new google.maps.InfoWindow({
                     content: `<strong>${location.title}</strong><br>${location.address}`
                 });
@@ -62,6 +66,25 @@ function initMap() {
             }
         });
     });
+}
+
+function calculateBounds(center, borderInMiles) {
+    // convert radius from miles to kilometers
+    const borderInKm = borderInMiles * 1.60934;
+    const lat = center.lat;
+    const lng = center.lng;
+    
+    // calculate latitude and longitude offsets in degrees
+    // earth's circumerence is 40075 km, so 1 degree latitude is about 111 km
+    const latOffset = borderInKm / 111.0;
+    const longOffset = borderInKm / 111.0;
+    
+    return {
+        north: lat + latOffset,
+        south: lat - latOffset,
+        east: lng + longOffset,
+        west: lng - longOffset
+    };
 }
 
 // waits for DOM to load before fetching API key 
