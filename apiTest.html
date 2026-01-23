@@ -3,15 +3,42 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Charlotte Map</title>
+    <title>Charlotte Map - Location Finder</title>
     <link rel="stylesheet" href="apiTest.css">
 </head>
 <body>
     <div class="header">
-        Charlotte, NC Map
+        Charlotte, NC
     </div>
     
-    <div id="map"></div>
+    <div class="controls-container">
+        <div class="search-section">
+            <h4>Find Nearest by Address</h4>
+            <div class="search-group">
+                <input type="text" id="addressInput" placeholder="Enter Charlotte area address...">
+                <button id="searchButton">Find Nearest</button>
+                <button id="currentLocationBtn" class="secondary-btn">📍 Use Current Location</button>
+            </div>
+        </div>
+        
+        <div class="filter-section">
+            <h4>Or Browse by Category</h4>
+            <div class="filter-buttons">
+                <button class="filter-btn" data-label="1">Food Pantry</button>
+                <button class="filter-btn" data-label="2">Legal Assistance</button>
+                <button class="filter-btn" data-label="3">Other Resources</button>
+                <button id="showAllBtn" class="filter-btn">Show All</button>
+            </div>
+        </div>
+    </div>
+    
+    <div class="main-container">
+        <div id="cardsContainer" class="cards-container">
+            <p class="placeholder-text">Enter an address or select a category to view locations</p>
+        </div>
+        
+        <div id="map"></div>
+    </div>
 
     <script src="client.js"></script>
 </body>
