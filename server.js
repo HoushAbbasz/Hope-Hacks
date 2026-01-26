@@ -25,6 +25,10 @@ app.get('/map', (req, res) => {
   res.sendFile(path.join(__dirname, 'public/pages/map.html'));
 });
 
+app.get('/kyr', (req, res) => {
+  res.sendFile(path.join(__dirname, 'public/pages/kyr.html'));
+});
+
 app.listen(PORT, () => {
   console.log(`Server is running on http://localhost:3000`);
 });

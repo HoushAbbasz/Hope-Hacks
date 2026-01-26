@@ -3,250 +3,140 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Charlotte Legal Resources - Location Finder</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
 
-        body {
-            font-family: Arial, sans-serif;
-            height: 100vh;
-            display: flex;
-            flex-direction: column;
-            background: #f5f5f5;
-        }
+    <!-- MONTSERRAT FONT-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 
-        .header {
-            padding: 15px;
-            background: #4285f4;
-            color: white;
-            text-align: center;
-            font-size: 18px;
-            font-weight: bold;
-        }
+    <!-- TAILWIND -->
+    <script src="https://cdn.tailwindcss.com"></script>
 
-        .controls-container {
-            background: white;
-            padding: 20px;
-            border-bottom: 2px solid #ddd;
-        }
+    <!-- TAB ICON -->
+    <link rel="icon" type="Custom Logo Icon" href="../assets/images/home/logo.png"/>
 
-        .search-section {
-            margin-bottom: 15px;
-        }
+    <title>Legal Resources Map - Civic Clarity</title>
 
-        .search-section h4 {
-            margin-bottom: 10px;
-            color: #333;
-            font-size: 14px;
-        }
-
-        .search-group {
-            display: flex;
-            gap: 10px;
-            flex-wrap: wrap;
-        }
-
-        #addressInput {
-            flex: 1;
-            min-width: 250px;
-            padding: 10px;
-            border: 1px solid #ddd;
-            border-radius: 4px;
-            font-size: 14px;
-        }
-
-        #searchButton {
-            padding: 10px 20px;
-            background: #4285f4;
-            color: white;
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
-            font-size: 14px;
-            font-weight: 500;
-        }
-
-        #searchButton:hover {
-            background: #357ae8;
-        }
-
-        .secondary-btn {
-            padding: 10px 20px;
-            background: #34a853;
-            color: white;
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
-            font-size: 14px;
-        }
-
-        .secondary-btn:hover {
-            background: #2d8e47;
-        }
-
-        .view-all-btn {
-            padding: 10px 20px;
-            background: #f1f1f1;
-            color: #333;
-            border: 2px solid #ddd;
-            border-radius: 4px;
-            cursor: pointer;
-            font-size: 14px;
-            transition: all 0.2s;
-        }
-
-        .view-all-btn:hover {
-            background: #e0e0e0;
-            border-color: #bbb;
-        }
-
-        .main-container {
-            display: flex;
-            flex: 1;
-            overflow: hidden;
-        }
-
-        .cards-container {
-            width: 350px;
-            background: white;
-            border-right: 2px solid #ddd;
-            overflow-y: auto;
-            padding: 20px;
-        }
-
-        .cards-container h3 {
-            margin-bottom: 15px;
-            font-size: 18px;
-            color: #333;
-        }
-
-        .placeholder-text {
-            color: #999;
-            text-align: center;
-            padding: 40px 20px;
-            line-height: 1.6;
-        }
-
-        .cards-grid {
-            display: flex;
-            flex-direction: column;
-            gap: 15px;
-        }
-
-        .location-card {
-            background: #f9f9f9;
-            border: 1px solid #e0e0e0;
-            border-radius: 8px;
-            padding: 15px;
-            transition: transform 0.2s, box-shadow 0.2s;
-        }
-
-        .location-card:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-        }
-
-        .card-header {
-            font-size: 12px;
-            color: #4285f4;
-            font-weight: 600;
-            text-transform: uppercase;
-            margin-bottom: 8px;
-        }
-
-        .card-title {
-            font-size: 16px;
-            font-weight: bold;
-            color: #333;
-            margin-bottom: 8px;
-        }
-
-        .card-distance {
-            font-size: 14px;
-            color: #34a853;
-            font-weight: 600;
-            margin-bottom: 8px;
-        }
-
-        .card-address {
-            font-size: 13px;
-            color: #666;
-            line-height: 1.4;
-            margin-bottom: 12px;
-        }
-
-        .directions-btn {
-            width: 100%;
-            padding: 8px 16px;
-            background: #4285f4;
-            color: white;
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
-            font-size: 13px;
-            font-weight: 500;
-            transition: background 0.2s;
-        }
-
-        .directions-btn:hover {
-            background: #357ae8;
-        }
-
-        #map {
-            flex: 1;
-        }
-
-        @media (max-width: 768px) {
-            .main-container {
-                flex-direction: column;
-            }
-            
-            .cards-container {
-                width: 100%;
-                max-height: 300px;
-                border-right: none;
-                border-bottom: 2px solid #ddd;
-            }
-            
-            .search-group {
-                flex-direction: column;
-            }
-            
-            #addressInput {
-                width: 100%;
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="../css/styles.css">
 </head>
-<body>
-    <div class="header">
-        Charlotte Legal Resources
-    </div>
-    
-    <div class="controls-container">
-        <div class="search-section">
-            <h4>Find Nearest Legal Assistance</h4>
-            <div class="search-group">
-                <input type="text" id="addressInput" placeholder="Enter Charlotte area address...">
-                <button id="searchButton">Find Nearest from Address</button>
-                <button id="currentLocationBtn" class="secondary-btn">📍 Find Nearest from Current Location</button>
-                <button id="showAllBtn" class="view-all-btn">View All Locations</button>
-            </div>
-        </div>
-    </div>
-    
-    <div class="main-container">
-        <div id="cardsContainer" class="cards-container">
-            <p class="placeholder-text">Enter an address or click "View All Locations" to see legal assistance resources</p>
-        </div>
-        
-        <div id="map"></div>
-    </div>
 
+<body class='flex flex-col items-center p-0 m-0 min-h-screen w-full bg-[linear-gradient(to_bottom,#f0e2d1,#E8EDDF,#FDF0D5,#8FCFBC)] font-[Montserrat] text-[#242423] text-center text-[1.2rem]'>
+
+    <header class='bk-filter backdrop-blur-lg w-full'>
+        <!-- LOGO AND SIGN IN BTN -->
+        <div class='flex flex-row justify-between mt-[-1rem] mr-[2rem] text-[1.5rem] font-medium max-md:mr-[4.2rem] mb-[-1.5rem]'>
+            <a class='navLogo' href='/'>
+                <img style='width: 9rem' src='../assets/images/home/logo.png' alt='Logo'>
+            </a>
+            <button class='hover:text-[#396060]'><a href='#'>Sign in</a></button>
+        </div>
+
+        <!-- HAMBURGER CLASS NAME (hamburger-Menu)-->
+        <img src='../assets/images/home/hamburger.png' alt='Hamburger Menu' class='fixed top-[2rem] right-[0.6rem] cursor-pointer hamburger-Menu min-[768px]:hidden z-[80]' style='width: 3rem'>
+
+        <nav>
+            <!-- LARGE/DESKTOP NAV -->
+            <ul class='flex flex-row gap-[1.7rem] justify-end mr-[2rem] mt-[-2.5rem] text-[1.3rem] max-[768px]:hidden'>
+                <li><a href='/' class='hover:text-[#80b3b3]'>Home</a></li>
+                <li><a href='/kyr' class='hover:text-[#80b3b3]'>Resources</a></li>
+                <li><a href='/map' class='hover:text-[#80b3b3]'>Locations</a></li>
+                <li><a href='#' class='hover:text-[#80b3b3]'>Newsletter</a></li>
+                <li><a href='#' class='hover:text-[#80b3b3]'>Your Library</a></li>
+            </ul>  
+
+            <!-- SMALL/MOBILE NAV  CLASS NAME (navbar-Menu) -->
+            <ul class='hidden flex flex-col text-center h-full w-full top-0 left-0 gap-[2.5rem] py-[2rem] text-black text-[1.5rem] font-medium navbar-Menu'>
+                <li><a href='/' class='hover:underline hover:decoration-[#396060]'>Home</a></li>
+                <li><a href='/kyr' class='hover:underline hover:decoration-[#396060]'>Resources</a></li>
+                <li><a href='/map' class='hover:underline hover:decoration-[#396060]'>Locations</a></li>
+                <li><a href='#' class='hover:underline hover:decoration-[#396060]'>Newsletter</a></li>
+                <li><a href='#' class='hover:underline hover:decoration-[#396060]'>Your Library</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- PAGE TITLE -->
+    <section class='px-[2rem] py-[3rem] text-center w-full'> 
+        <h1 class='text-4xl font-bold mb-[1rem] text-[#242423]'>Legal Assistance Locations</h1>
+        <p class="font-[Montserrat] font-medium text-[1rem] max-w-3xl mx-auto">
+            Find immigration legal support near you in the Charlotte area. Search by address or use your current location to discover nearby resources.
+        </p>
+    </section>
+
+       <!-- MAP INTERFACE -->
+    <section class='w-full max-w-7xl px-[2rem] pb-[3rem]'>
+        <div class='grid grid-cols-1 lg:grid-cols-3 gap-6'>
+            
+            <!-- SIDEBAR -->
+            <div class='lg:col-span-1'>
+                <div class='sidebar'>
+                    <!-- STICKY SEARCH SECTION -->
+                    <div class='sticky-search'>
+                        <h2 class='text-2xl font-bold mb-4 text-left'>Search</h2>
+                        
+                        <!-- SEARCH INPUT -->
+                        <input 
+                            type='text' 
+                            id='addressInput' 
+                            class='search-input' 
+                            placeholder='Enter your address...'
+                        />
+                        
+                        <!-- SEARCH BUTTONS -->
+                        <div class='flex flex-col gap-2 mb-4'>
+                            <button id='searchButton' class='search-btn'>
+                                🔍 Find Nearest
+                            </button>
+                            <button id='currentLocationBtn' class='search-btn'>
+                                📍 Use Current Location
+                            </button>
+                        </div>
+
+                        <!-- FILTER BUTTON -->
+                        <button id='showAllBtn' class='filter-btn w-full'>
+                            Show All Locations
+                        </button>
+                    </div>
+
+                    <!-- SCROLLABLE CARDS CONTAINER -->
+                    <div id='cardsContainer' class='scrollable-cards'>
+                        <h3 class='text-left font-semibold mb-2'>Loading locations...</h3>
+                    </div>
+                </div>
+            </div>
+
+            <!-- MAP -->
+            <div class='lg:col-span-2'>
+                <div id='map'></div>
+            </div>
+
+        </div>
+    </section>
+    
+
+    <!--FOOTER -->
+    <footer class='h-full w-full flex flex-col justify-evenly items-center py-[1.2rem] font-medium'>
+        <!-- NAVIGATION -->
+        <ul class='flex flex-row gap-[2rem] text-[1.5rem] max-[768px]:text-[1.2rem] gap-[1.5rem] max-[422px]:text-[0.6rem] gap-[0.7rem]'>
+            <li><a href='/' class='hover:text-[#80b3b3]'>Home</a></li>
+            <li><a href='/kyr' class='hover:text-[#80b3b3]'>Resources</a></li>
+            <li><a href='/map' class='hover:text-[#80b3b3]'>Locations</a></li>
+            <li><a href='#' class='hover:text-[#80b3b3]'>Newsletter</a></li>
+        </ul> 
+        <!-- SOCIAL MEDIA -->
+        <ul class='flex flex-row gap-[2rem] mt-[1.2rem]'>
+            <a href="https://www.facebook.com/" target="_blank" aria-label="facebook" style='width: 1.9rem'>
+                <img src="../assets/images/home/facebook.png" alt="Facebook">
+            </a>
+            <a href="https://www.instagram.com/" target="_blank" aria-label="Instagram" style='width: 2.1rem'>
+                <img src="../assets/images/home/instagram.png" alt="Instagram">
+            </a>
+            <a href="https://x.com/" target="_blank" aria-label="Twitter" style='width: 2rem'>
+                <img src="../assets/images/home/twitter.png" alt="Twitter">
+            </a>
+        </ul>
+    </footer>
+    <script src="/js/hamburger.js"></script>
     <script src="/js/map.js"></script>
 </body>
 </html>
