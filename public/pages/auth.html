@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Know Your Rights</title>
-    <link rel="stylesheet" href="/Hope-Hacks/public/css/auth.css">
+
     <!-- MONTSERRAT FONT-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -31,14 +31,14 @@
 
         <!-- LOGO AND SIGN IN BTN -->
         <div class='flex flex-row justify-between mt-[-1rem] mr-[2rem] text-[1.5rem] font-medium max-md:mr-[4.2rem] mb-[-1.5rem]'>
-            <a class='navLogo' href='/'>
-                <img style='width: 9rem' src='../assets/images/home/logo.png' alt='Logo'>
+            <a class='navLogo' href='index.html'>
+                <img style='width: 9rem' src='../Assets/images/nav/logo.png' alt='Logo'>
             </a>
             <button class='hover:text-[#396060]'><a href='#'>Sign in</a></button>
         </div>
 
         <!-- HAMBURGER CLASS NAME (hamburger-Menu)-->
-            <img src='../assets/images/home/hamburger.png' alt='Hamburger Menu' class='fixed top-[2rem] right-[0.6rem] cursor-pointer hamburger-Menu min-[768px]:hidden z-[80]' style='width: 3rem'>
+            <img src='../Assets/images/nav/hamburger.png' alt='Hamburger Menu' class='fixed top-[2rem] right-[0.6rem] cursor-pointer hamburger-Menu min-[768px]:hidden z-[80]' style='width: 3rem'>
 
 
         <nav>
@@ -60,7 +60,7 @@
                 <li><a href='#' class='hover:underline hover:decoration-[#396060]'>Your Library</a></li>
             </ul>
         </nav>
-  </header>
+    </header>
 <body class="min-h-screen flex flex-col">
     <main class="flex-1 flex items-center justify-center px-4">
   <div class="w-full max-w-md bg-white rounded-xl shadow-lg p-6">
@@ -136,7 +136,7 @@
 </main>
 
 
-      <!--FOOTER -->
+    <!--FOOTER -->
     <footer class='h-full w-full flex flex-col justify-evenly items-center py-[1.2rem] font-medium'>
         <!-- NAVIGATION -->
         <ul class='flex flex-row gap-[2rem] text-[1.5rem] max-[768px]:text-[1.2rem] gap-[1.5rem] max-[422px]:text-[0.6rem] gap-[0.7rem]'>
@@ -146,18 +146,20 @@
             <li><a href='#' class='hover:text-[#80b3b3]'>Newsletter</a></li>
         </ul> 
         <!-- SOCIAL MEDIA -->
-        <ul class='flex flex-row gap-[2rem] mt-[1.2rem]'>
+       <ul class='flex flex-row gap-[2rem] mt-[1.2rem]'>
             <a href="https://www.facebook.com/" target="_blank" aria-label="facebook" style='width: 1.9rem'>
-                <img src="../assets/images/home/facebook.png" alt="Facebook">
+                <img src="../Assets/images/nav/facebook.png" alt="Facebook">
             </a>
             <a href="https://www.instagram.com/" target="_blank" aria-label="Instagram" style='width: 2.1rem'>
-                <img src="../assets/images/home/instagram.png" alt="Instagram">
+                <img src="../Assets/images/nav/instagram.png" alt="Instagram">
             </a>
             <a href="https://x.com/" target="_blank" aria-label="Twitter" style='width: 2rem'>
-                <img src="../assets/images/home/twitter.png" alt="Twitter">
+                <img src="../Assets/images/nav/twitter.png" alt="Twitter">
             </a>
         </ul>
     </footer>
-    <script src="/Hope-Hacks/public/js/auth.js"></script>
+
+      <script src="../js/hamburger.js"></script>
+
 </body>
 </html>
