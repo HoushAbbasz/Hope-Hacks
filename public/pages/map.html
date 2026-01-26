@@ -20,24 +20,40 @@
 
 <body class="min-h-screen bg-gradient-to-br from-[#E8EDDF] via-[#CFDBD5] to-[#FDF0D5] text-[#242423]">
 
-  <!-- Header / Top Bar -->
-  <header class="sticky top-0 z-20 border-b border-black/10 bg-white/70 backdrop-blur">
-    <div class="max-w-7xl mx-auto px-4 py-4 flex items-center justify-between">
-      <div class="flex items-center gap-3">
-     <!--logo-->
-       <img src="/public/Images/logo.png" alt="Civic Clarity" class="h-9 w-9 rounded-full object-contain">
-        <div>
-          <h1 class="text-lg sm:text-xl font-extrabold tracking-tight">Find Legal Help Near You</h1>
-          <p class="text-sm text-[#242423]/70">Search Charlotte-based legal resources and community support.</p>
-        </div>
-      </div>
+<header class='bk-filter backdrop-blur-lg w-full'>
 
-      <a href="/public/html/kyr.html"
-         class="hidden sm:inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#669BBC] text-white font-semibold hover:bg-[#242423] transition">
-        Know Your Rights →
-      </a>
-    </div>
-  </header>
+        <!-- LOGO AND SIGN IN BTN -->
+        <div class='flex flex-row justify-between mt-[-1rem] mr-[2rem] text-[1.5rem] font-medium max-md:mr-[4.2rem] mb-[-1.5rem]'>
+            <a class='navLogo' href='index.html'>
+                <img style='width: 9rem' src='../Assets/images/nav/logo.png' alt='Logo'>
+            </a>
+            <button class='hover:text-[#396060]'><a href='#'>Sign in</a></button>
+        </div>
+
+        <!-- HAMBURGER CLASS NAME (hamburger-Menu)-->
+            <img src='../Assets/images/nav/hamburger.png' alt='Hamburger Menu' class='fixed top-[2rem] right-[0.6rem] cursor-pointer hamburger-Menu min-[768px]:hidden z-[80]' style='width: 3rem'>
+
+
+        <nav>
+            <!-- LARGE/DESKTOP NAV -->
+            <ul class='flex flex-row gap-[1.7rem] justify-end mr-[2rem] mt-[-2.5rem] text-[1.3rem] max-[768px]:hidden'>
+                <li><a href='/' class='hover:text-[#80b3b3]'>Home</a></li>
+                <li><a href='/kyr' class='hover:text-[#80b3b3]'>Resources</a></li>
+                <li><a href='/map' class='hover:text-[#80b3b3]'>Locations</a></li>
+                <li><a href='#' class='hover:text-[#80b3b3]'>Newsletter</a></li>
+                <li><a href='#' class='hover:text-[#80b3b3]'>Your Library</a></li>
+            </ul>  
+
+            <!-- SMALL/MOBILE NAV  CLASS NAME (navbar-Menu) -->
+            <ul class='hidden flex flex-col text-center h-full w-full top-0 left-0 gap-[2.5rem] py-[2rem] text-black text-[1.5rem] font-medium navbar-Menu'>
+                <li><a href='/' class='hover:underline hover:decoration-[#396060]'>Home</a></li>
+                <li><a href='/kyr' class='hover:underline hover:decoration-[#396060]'>Resources</a></li>
+                <li><a href='/map' class='hover:underline hover:decoration-[#396060]'>Locations</a></li>
+                <li><a href='#' class='hover:underline hover:decoration-[#396060]'>Newsletter</a></li>
+                <li><a href='#' class='hover:underline hover:decoration-[#396060]'>Your Library</a></li>
+            </ul>
+        </nav>
+    </header>
 
   <!-- Controls -->
   <section class="max-w-7xl mx-auto px-4 pt-6">
@@ -129,8 +145,31 @@
     </div>
   </main>
 
-  <script src="/public/js/map.js"></script>
-
+  <script src="../js/map.js"></script>
+  <script src="../js/hamburger.js"></script>
 </body>
+
+    <!--FOOTER -->
+    <footer class='h-full w-full flex flex-col justify-evenly items-center py-[1.2rem] font-medium'>
+        <!-- NAVIGATION -->
+        <ul class='flex flex-row gap-[2rem] text-[1.5rem] max-[768px]:text-[1.2rem] gap-[1.5rem] max-[422px]:text-[0.6rem] gap-[0.7rem]'>
+            <li><a href='/' class='hover:text-[#80b3b3]'>Home</a></li>
+            <li><a href='/kyr' class='hover:text-[#80b3b3]'>Resources</a></li>
+            <li><a href='/map' class='hover:text-[#80b3b3]'>Locations</a></li>
+            <li><a href='#' class='hover:text-[#80b3b3]'>Newsletter</a></li>
+        </ul> 
+        <!-- SOCIAL MEDIA -->
+       <ul class='flex flex-row gap-[2rem] mt-[1.2rem]'>
+            <a href="https://www.facebook.com/" target="_blank" aria-label="facebook" style='width: 1.9rem'>
+                <img src="../Assets/images/nav/facebook.png" alt="Facebook">
+            </a>
+            <a href="https://www.instagram.com/" target="_blank" aria-label="Instagram" style='width: 2.1rem'>
+                <img src="../Assets/images/nav/instagram.png" alt="Instagram">
+            </a>
+            <a href="https://x.com/" target="_blank" aria-label="Twitter" style='width: 2rem'>
+                <img src="../Assets/images/nav/twitter.png" alt="Twitter">
+            </a>
+        </ul>
+    </footer>
 </html>
 
