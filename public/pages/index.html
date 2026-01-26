@@ -22,18 +22,17 @@
 <!-- COLOR PALETTE -->
  <!-- #ffffff WHITE, #669bbc80 BLUE LIGHT, #E8EDDF SEASALT, ##80b3b3 SEASALT HOVER, #396060 SEASALT UNDERLINE,#242423 BLACK-->
 
-<!-- bg-gradient-to-br from-[#E8EDDF80] [#E8EDDF] via-[#CFDBD5] to-[#FDF0D5] font-[Montserrat] text-[#242423] text-center text-[1.3rem] -->
 
-<body class='flex flex-col items-center p-0 m-0 h-100 w-full bg-[linear-gradient(to_bottom,#f0e2d1,#E8EDDF,#FDF0D5,#8FCFBC)] font-[Montserrat] text-[#242423] text-center text-[1.2rem]'>
+<body class='flex flex-col items-center p-0 m-0 h-100 w-full bg-gradient-to-br from-[#E8EDDF] via-[#CFDBD5] to-[#FDF0D5] font-[Montserrat] text-[#242423] text-center text-[1.2rem]'>
 
-    <header class='bk-filter backdrop-blur-lg w-full'>
+    <header class='sticky top-0 z-50 backdrop-blur-lg w-full bg-[#fef6e7]'>
 
         <!-- LOGO AND SIGN IN BTN -->
         <div class='flex flex-row justify-between mt-[-1rem] mr-[2rem] text-[1.5rem] font-medium max-md:mr-[4.2rem] mb-[-1.5rem]'>
             <a class='navLogo' href='index.html'>
                 <img style='width: 9rem' src='../Images/logo.png' alt='Logo'>
             </a>
-            <button class='hover:text-[#396060]'><a href='#'>Sign in</a></button>
+            <button class='hover:text-[#8FCFBC]'><a href='#'>Sign in</a></button>
         </div>
 
         <!-- HAMBURGER CLASS NAME (hamburger-Menu)-->
@@ -42,12 +41,12 @@
 
         <nav>
             <!-- LARGE/DESKTOP NAV -->
-            <ul class='flex flex-row gap-[1.7rem] justify-end mr-[2rem] mt-[-2.5rem] text-[1.3rem] max-[768px]:hidden'>
-                <li><a href='index.html' class='hover:text-[#80b3b3]'>Home</a></li>
-                <li><a href='#' class='hover:text-[#80b3b3]'>Resources</a></li>
-                <li><a href='#' class='hover:text-[#80b3b3]'>Locations</a></li>
-                <li><a href='#' class='hover:text-[#80b3b3]'>Newsletter</a></li>
-                <li><a href='#' class='hover:text-[#80b3b3]'>Your Library</a></li>
+            <ul class='flex flex-row gap-[1.7rem] justify-end mr-[2rem] mt-[-2.5rem] mb-[0.5rem] font-semibold text-[1.3rem] max-[768px]:hidden'>
+                <li><a href='index.html' class='hover:text-[#8FCFBC]'>Home</a></li>
+                <li><a href='#' class='hover:text-[#8FCFBC]'>Resources</a></li>
+                <li><a href='#' class='hover:text-[#8FCFBC]'>Locations</a></li>
+                <li><a href='#' class='hover:text-[#8FCFBC]'>Newsletter</a></li>
+                <li><a href='#' class='hover:text-[#8FCFBC]'>Your Library</a></li>
             </ul>  
 
             <!-- SMALL/MOBILE NAV  CLASS NAME (navbar-Menu) -->
@@ -64,30 +63,30 @@
 
 
     <!-- HERO SECTION -->
-    <main class="relative w-full min-h-[70vh] lg:min-h-[85vh] bg-[#dee1d5] flex items-center justify-center">
+    <main class='relative w-full min-h-[70vh] lg:min-h-[85vh] bg-[#dee1d5] flex items-center justify-center'>
 
-      <img src="../images/hero.png" alt="hero image" class="absolute inset-0 w-full h-full object-cover"/>
+      <img src='../images/images-h/hero.png' alt='hero image' class='absolute inset-0 w-full h-full object-cover'/>
 
-        <div class="relative max-w-3xl px-[2rem] text-center">
-            <h1 class="text-5xl md:text-[3rem] font-semibold text-[#f5e8df] leading-tight">
+        <div class='relative w-full mt-[5.5rem] px-[2rem] text-center'>
+            <h1 class='text-5xl md:text-[3rem] font-semibold text-[#f5e8df] leading-tight drop-shadow-2xl'>
             Rooted in community.<br>
             Driven by care.
             </h1>
 
-            <p class="mt-[2rem] mb-[2rem] text-lg text-[#E8EDDF]">
+            <p class='mt-[1.5rem] text-lg text-[#E8EDDF] drop-shadow-2xl'>
             Guidance, resources, and support built to help immigrants feel safe, informed, and supported in their community.
             </p>
             
 
-            
-            <div class="mt-[8rem] flex justify-start gap-[1rem]">
+
+            <div class='mt-[11.2rem] ml-[1rem] flex justify-start gap-[1.2rem] min-[1261px]:ml-[5rem] min-[1261px]:gap-[3.8rem] min-[1261px]:mt-[15.5rem]'>
                 <!-- Resources Link -->
-                <a href="#" aria-label="Explore immigrant resources" class="rounded-full bg-[#8FCFBC] px-[1.5rem] py-[0.75rem] font-medium text-[#1F3D36]">
+                <a href='#' aria-label='resources page' class='rounded-full bg-[#8FCFBC] hover:bg-[#80b3b3] px-[1rem] py-[0.70rem] font-medium text-[#1F3D36]'>
                     Explore Resources
                 </a>
                 <!-- Find Help Near You -->
-                <a href="#" aria-label="Find local immigrant support services"
-                class="rounded-full bg-[#8FCFBC] px-[1.5rem] py-[0.75rem] font-medium text-[#1F3D36]">
+                <a href='#' aria-label='local services near you'
+                class='rounded-full bg-[#8FCFBC] hover:bg-[#80b3b3] px-[1rem] py-[0.70rem] font-medium text-[#1F3D36]'>
                 Find Help Near You →
                 </a>
             </div>
@@ -97,53 +96,184 @@
 
 
 
-
-    <!-- HERO VIDEO
-    <video autoplay muted loop class='w-full object-cover z-[-1]'>
-        <source src='../Assets/hero.mp4' type='video/mp4'>
-    </video> -->
-
-
-
     <!-- MISSION STATEMENT-->
-    <section class='px-[2rem] py-[3rem] text-center'> 
+    <section class='px-[5.5rem] pt-[8rem] pb-[4rem] bg-[#f4e8df] text-center'> 
 
-        <p class='font-bold mb-[1.5rem] tracking-wide text-[1rem]'>ROOTED IN COMMUNITY. DRIVEN BY CARE.</p>
+        <p class='font-bold mb-[2rem] tracking-wide text-[1.5rem]'>ROOTED IN COMMUNITY. DRIVEN BY CARE.</p>
 
-        <p class="font-[Montserrat] font-medium tracking-wider  text-[1rem]">You deserve to feel safe, supported, and empowered in your community. Whether you're seeking guidance on your rights, looking for local services, or simply need to know where to turn, we're here for you. Our commitment is to provide accessible and timely information in a space where you are valued and your needs matter. Charlotte is stronger when all our communities thrive. We stand with you and are dedicated to helping you access the support available in our community.</p>
+        <p class="font-small tracking-wide leading-loose text-[1.4rem] max-[910px]:text-[1rem] max-[664px]:text-[0.8rem] max-[504px]:text-[0.6rem]">You deserve to feel safe, supported, and empowered in your community. Whether you're seeking guidance on your rights, looking for local services, or simply need to know where to turn, we're here for you. Our commitment is to provide accessible and timely information in a space where you are valued and your needs matter. Charlotte is stronger when all our communities thrive. We stand with you and are dedicated to helping you access the support available in our community.</p>
     </section>
 
 
 
-    <section class='p-[2rem]'>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae culpa cupiditate consequatur voluptatem temporibus voluptate reprehenderit harum tenetur? Laborum aliquid explicabo provident consequuntur, ratione culpa dolores blanditiis sed magnam quasi?</p>
+    <!-- FOUR PILLARS -->
+    <section class='px-[2rem] py-[12rem] pb-[4rem] bg-[linear-gradient(to_bottom,#f4e8df,#d4ded8)]'>
+
+        <div class='w-full mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-[3rem]'>
+
+            <article class='space-y-[0.75rem]'>
+                <h3 class='text-[1.5rem] tracking-wider font-bold'>Understanding</h3>
+                <p class='font-medium px-[1rem] '>
+                    We recognize how confusing and overwhelming navigating information can be. Resources here are shared in a way that respects where you are.
+                </p>
+            </article>
+
+            <article class='space-y-[0.75rem]'>
+                <h3 class='text-[1.5rem] tracking-wider font-bold'>Intention</h3>
+                <p class='font-medium px-[1rem] '>
+                    This space was created with the belief that people deserve dignity, support,
+                    and the opportunity to thrive in their communities.
+                </p>
+            </article>
+
+            <article class='space-y-[0.75rem]'>
+                <h3 class='text-[1.5rem] tracking-wider font-bold'>Respect</h3>
+                <p class='font-medium px-[1rem] '>
+                    Your experiences, questions, and decisions are your own. Information here is offered without judgment or pressure.
+                </p>
+            </article>
+
+            <article class='space-y-[0.75rem]'>
+                <h3 class='text-[1.5rem] tracking-wider font-bold'>Community</h3>
+                <p class='font-medium px-[1rem] '>
+                    We highlight resources rooted in real people, local organizations, and shared care for one another.
+                </p>
+            </article>
+        </div>
+    </section>
+
+
+    <!-- RESOURCES SECTION -->
+
+    <section class='mt-[15rem] mx-[3.5rem] py-[3.2rem] px-[2rem] rounded-[1rem] bg-[#f4e8df]/50 backdrop-blur-sm grid grid-cols-1 md:grid-cols-2 gap-[3rem] items-center'>
+
+      <img src='../Images/images-h/r-home.png'alt='Documents and guides representing immigration resources'class='w-full rounded-[1rem] object-cover'/>
+
+      <article>
+        <h2 class='text-[1.7rem] font-semibold mb-[0.75rem]'>
+          Trusted resources
+        </h2>
+
+        <p class='leading-[1.6] mb-[1.25rem]'>
+          Carefully gathered guides, documents, and links from trusted organizations to help you understand your options and access support — without feeling overwhelmed.
+        </p>
+
+        <a href='#' class='font-semibold hover:underline underline-offset-[0.2rem]'>
+          Explore resources →
+        </a>
+      </article>
+
     </section>
 
 
 
+    <!-- NEWS/STORIES SECTION -->
+    <section class='mt-[15rem] mx-[3.5rem] py-[3.2rem] px-[2rem] rounded-[1rem] bg-[#f4e8df]/50 backdrop-blur-sm grid grid-cols-1 md:grid-cols-2 gap-[3rem] items-center'>
 
+      <img src='../Images/images-h/n-home.png'alt='Map or image representing immigration stories and global context'class='w-full rounded-[1rem] object-cover'/>
+
+      <article>
+        <h2 class='text-[1.7rem] font-semibold mb-[0.75rem]'>
+          Stories and updates
+        </h2>
+
+        <p class='leading-[1.6] mb-[1.25rem]'>
+          Occasional stories related to immigration, community, and worldwide events. We share information thoughtfully — offering context and perspective without overwhelm.
+        </p>
+
+        <a href='#' class='font-semibold hover:underline underline-offset-[0.2rem]'>
+          View stories →
+        </a>
+      </article>
+    </section>
+
+
+    <!-- MAP/NEAR YOU -->
+    <section class='mt-[15rem] mx-[3.5rem] py-[2.5rem] px-[2rem] rounded-[1rem] bg-[#f4e8df]/50 backdrop-blur-sm grid grid-cols-1 md:grid-cols-2 gap-[3rem] items-center'>
+
+      <img src='../Images/images-h/l-home.png' alt='Charlotte Map' class='w-full rounded-[0.7rem]'/>
+
+      <article>
+        <h2 class='text-[1.7rem] font-semibold mb-[0.75rem]'>
+          Find help near you
+        </h2>
+
+        <p class='leading-[1.6] mb-[1.25rem]'>
+          A map of local organizations, law firms, and community services offering immigration-related support in your area. This tool is meant to help you explore nearby options and learn what resources may be available to you.
+        </p>
+
+        <a href='#' class='font-semibold hover:underline underline-offset-[0.2rem]'>
+          Open locator →
+        </a>
+      </article>
+    </section>
+
+
+    <!-- MEET THE TEAM -->
+
+    <section class='w-full pb-[28rem] mt-[20rem] bg-cover flex flex-col justify-center items-center'style="background-image: url('../Images/images-h/end-bk.png');">
+
+      <div class='text-center mb-[5rem] px-[2rem]'>
+        <p class='text-[1rem] font-medium mb-[0.75rem]'>
+          Our team
+        </p>
+
+        <h2 class='text-[2.5rem] font-semibold'>
+          The team driving our mission forward
+        </h2>
+      </div>
+
+      <div class='mx-auto max-w-[72rem] px-[2rem] grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-[3rem]'>
+
+        <div class='text-center'>
+          <img src='../Images/team-1.jpg'alt='Team member'class='w-full aspect-square object-cover rounded-[1rem] mb-[1rem]'/>
+          <p class='font-medium'>Name</p>
+        </div>
+
+        <div class='text-center'>
+          <img src='../Images/team-1.jpg'alt='Team member'class='w-full aspect-square object-cover rounded-[1rem] mb-[1rem]'/>
+          <p class='font-medium'>Name</p>
+        </div>
+
+        <div class='text-center'>
+          <img src='../Images/team-1.jpg'alt='Team member'class='w-full aspect-square object-cover rounded-[1rem] mb-[1rem]'/>
+          <p class='font-medium'>Name</p>
+        </div>
+
+        <div class='text-center'>
+          <img src='../Images/team-1.jpg'alt='Team member'class='w-full aspect-square object-cover rounded-[1rem] mb-[1rem]'/>
+          <p class='font-medium'>Name</p>
+        </div>
+
+        <div class='text-center'>
+          <img src='../Images/team-1.jpg'alt='Team member'class='w-full aspect-square object-cover rounded-[1rem] mb-[1rem]'/>
+          <p class='font-medium'>Name</p>
+        </div>
+      </div>
+    </section>
+
+
+    
     <!--FOOTER -->
-    <footer class='h-full w-full flex flex-col justify-evenly items-center py-[1.2rem] font-medium'>
-        <!-- NAVIGATION -->
-        <ul class='flex flex-row gap-[2rem] text-[1.5rem] max-[768px]:text-[1.2rem] gap-[1.5rem] max-[422px]:text-[0.6rem] gap-[0.7rem]'>
-            <li><a href='index.html' class='hover:text-[#80b3b3]'>Home</a></li>
-            <li><a href='#' class='hover:text-[#80b3b3]'>Resources</a></li>
-            <li><a href='#' class='hover:text-[#80b3b3]'>Locations</a></li>
-            <li><a href='#' class='hover:text-[#80b3b3]'>Newsletter</a></li>
-        </ul> 
+    <footer class='h-full w-full flex flex-col justify-evenly items-center pt-[0.2rem] font-semibold bg-[#fef6e7'>
+        
         <!-- SOCIAL MEDIA -->
-        <ul class='flex flex-row gap-[2rem] mt-[1.2rem]'>
-            <a href="https://www.facebook.com/" target="_blank" aria-label="facebook" style='width: 1.9rem'>
-                <img src="../Images/facebook.png" alt="Facebook">
-            </a>
-            <a href="https://www.instagram.com/" target="_blank" aria-label="Instagram" style='width: 2.1rem'>
-                <img src="../Images/instagram.png" alt="Instagram">
-            </a>
-            <a href="https://x.com/" target="_blank" aria-label="Twitter" style='width: 2rem'>
-                <img src="../Images/twitter.png" alt="Twitter">
-            </a>
-        </ul>
+      <ul class='flex flex-row gap-[2rem] mt-[1.2rem]'>
+        <a href="https://www.facebook.com/" target="_blank" aria-label="facebook" style='width: 1.9rem'>
+          <img src="../Images/facebook.png" alt="Facebook">
+        </a>
+        <a href="https://www.instagram.com/" target="_blank" aria-label="Instagram" style='width: 2.1rem'>
+          <img src="../Images/instagram.png" alt="Instagram">
+        </a>
+        <a href="https://x.com/" target="_blank" aria-label="Twitter" style='width: 2rem'>
+          <img src="../Images/twitter.png" alt="Twitter">
+        </a>
+      </ul>
+
+        <p class='my-[1rem] font-medium text-[1rem]'>@ 2025 Civic Clarity</p>
     </footer>
-<script src="../js/hamburger.js"></script>
+
+
+    <script src="../js/hamburger.js"></script>
 </body>
 </html>
