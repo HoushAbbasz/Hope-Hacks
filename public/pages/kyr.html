@@ -26,15 +26,20 @@
   }
 </script>
 
+<!-- TAB ICON -->
+    <link rel="icon" type="Custom Logo Icon" href="/public/Assets/images/nav/logo.png"/>
 </head>
-<header class='bk-filter backdrop-blur-lg w-full'>
+
+
+<body class="min-h-screen bg-gradient-to-br from-[#E8EDDF] via-[#CFDBD5] to-[#FDF0D5] font-sans text-[#242423]">
+    <header class='sticky top-0 z-50 backdrop-blur-lg w-full bg-[#fef6e7]'>
 
         <!-- LOGO AND SIGN IN BTN -->
         <div class='flex flex-row justify-between mt-[-1rem] mr-[2rem] text-[1.5rem] font-medium max-md:mr-[4.2rem] mb-[-1.5rem]'>
             <a class='navLogo' href='index.html'>
                 <img style='width: 9rem' src='../Assets/images/nav/logo.png' alt='Logo'>
             </a>
-            <button class='hover:text-[#396060]'><a href='#'>Sign in</a></button>
+            <button class='hover:text-[#8FCFBC]'><a href='#'>Sign in</a></button>
         </div>
 
         <!-- HAMBURGER CLASS NAME (hamburger-Menu)-->
@@ -43,34 +48,39 @@
 
         <nav>
             <!-- LARGE/DESKTOP NAV -->
-            <ul class='flex flex-row gap-[1.7rem] justify-end mr-[2rem] mt-[-2.5rem] text-[1.3rem] max-[768px]:hidden'>
-                <li><a href='/' class='hover:text-[#80b3b3]'>Home</a></li>
-                <li><a href='/kyr' class='hover:text-[#80b3b3]'>Resources</a></li>
-                <li><a href='/map' class='hover:text-[#80b3b3]'>Locations</a></li>
-                <li><a href='#' class='hover:text-[#80b3b3]'>Newsletter</a></li>
-                <li><a href='#' class='hover:text-[#80b3b3]'>Your Library</a></li>
+            <ul class='flex flex-row gap-[1.7rem] justify-end mr-[2rem] mt-[-2.5rem] mb-[0.5rem] font-semibold text-[1.3rem] max-[768px]:hidden'>
+                <li><a href='index.html' class='hover:text-[#8FCFBC]'>Home</a></li>
+                <li><a href='#' class='hover:text-[#8FCFBC]'>Resources</a></li>
+                <li><a href='#' class='hover:text-[#8FCFBC]'>Locations</a></li>
+                <li><a href='#' class='hover:text-[#8FCFBC]'>Newsletter</a></li>
+                <li><a href='#' class='hover:text-[#8FCFBC]'>Your Library</a></li>
             </ul>  
 
             <!-- SMALL/MOBILE NAV  CLASS NAME (navbar-Menu) -->
             <ul class='hidden flex flex-col text-center h-full w-full top-0 left-0 gap-[2.5rem] py-[2rem] text-black text-[1.5rem] font-medium navbar-Menu'>
-                <li><a href='/' class='hover:underline hover:decoration-[#396060]'>Home</a></li>
-                <li><a href='/kyr' class='hover:underline hover:decoration-[#396060]'>Resources</a></li>
-                <li><a href='/map' class='hover:underline hover:decoration-[#396060]'>Locations</a></li>
+                <li><a href='index.html' class='hover:underline hover:decoration-[#396060]'>Home</a></li>
+                <li><a href='#' class='hover:underline hover:decoration-[#396060]'>Resources</a></li>
+                <li><a href='#' class='hover:underline hover:decoration-[#396060]'>Locations</a></li>
                 <li><a href='#' class='hover:underline hover:decoration-[#396060]'>Newsletter</a></li>
                 <li><a href='#' class='hover:underline hover:decoration-[#396060]'>Your Library</a></li>
             </ul>
         </nav>
     </header>
-<body class="min-h-screen bg-gradient-to-br from-[#E8EDDF] via-[#CFDBD5] to-[#FDF0D5] font-sans text-[#242423]">
+
+
   <!-- HERO -->
   <section class="relative">
     <img src="../assets/images/kyr/kyr-hero.jpeg" class="w-full h-[450px] object-cover" alt="Hero image for know your rights page"
     />
            
-      <h1 class="text-4xl font-bold text-[#242423] mb-2 text-center">Know Your Rights</h1>
-      <p class="text-lg text-[#242423]/80 text-center">
-        Educational resources to help you understand your rights and find trusted support.
-      </p>
+      <h1 class="text-3xl md:text-4xl lg:text-5xl font-bold text-[#242423] mb-2 text-center px-4">
+  Know Your Rights
+      </h1>
+
+    <p class="text-base md:text-lg lg:text-xl text-[#242423]/80 text-center max-w-3xl mx-auto px-4">
+  Educational resources to help you understand your rights and find trusted support.
+    </p>
+
     </div>
   </section>
 
@@ -79,7 +89,7 @@
     <p class="text-lg text-[#242423]/80 mb-4">
       Need legal advice?
     </p>
-    <a href="#" 
+    <a href="/hopehacks-cc/public/pages/map.html" 
        class="bg-[#669BBC] text-white font-semibold px-6 py-3 rounded-full hover:bg-[#242423] transition">
       Find Legal Help Near You
     </a>
@@ -87,7 +97,7 @@
 
   <!-- CARDS GRID -->
   <section class="px-4 pb-12">
-    <div class="max-w-4xl mx-auto grid gap-6 md:grid-cols-2">
+    <div class="max-w-4xl mx-auto grid gap-6 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2">
 
       <!-- Card 1 ACLU-->
       <div class="bg-white rounded-xl shadow-lg transform hover:-translate-y-1 transition-all duration-300">
@@ -129,7 +139,7 @@
       <!--Card 3 NIJC-->
       <div class="bg-white rounded-xl shadow-lg transform hover:-translate-y-1 transition-all duration-300">
         <div class="p-4 flex items-start gap-4">
-          <img src="../assets/images/kyr/justice-icon.png"
+          <img src="/hopehacks-cc/public/Assets/images/kyr/justice-icon.png"
                alt="NIJC Logo" class="w-12 h-12">
           <div>
             <h3 class="font-semibold text-[#242423] text-xl">National Immigration Justice Center</h3>
@@ -147,7 +157,7 @@
       <!--Card 4 United We Dream-->
         <div class="bg-white rounded-xl shadow-lg transform hover:-translate-y-1 transition-all duration-300">
         <div class="p-4 flex items-start gap-4">
-          <img src="../assets/images/kyr/group-icon.png"
+          <img src="/hopehacks-cc/public/Assets/images/kyr/group-icon.png"
                alt="UWD" class="w-12 h-12">
           <div>
             <h3 class="font-semibold text-[#242423] text-xl">United We Dream</h3>
@@ -171,7 +181,7 @@
 
 <section class="px-6 py-16 bg-[#FFF5E6]">
   <div class="max-w-4xl mx-auto text-center">
-    <h2 class="text-3xl font-bold mb-4">
+    <h2 class="text-2xl md:text-3xl lg:text-4xl font-bold mb-4">
       Know Someone Who Has Been Detained?
     </h2>
 
@@ -200,18 +210,19 @@
     Downloadable Know Your Rights Posters
   </h2>
 
-  <div class="grid gap-8 md:grid-cols-2">
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-8 px-4">
+
     
     <!-- ENGLISH POSTER -->
     <div class="bg-white rounded-xl shadow-lg p-6 flex flex-col items-center">
       <img
-        src="../assets/images/kyr/KYR-POSTER-ENG.png"
+        src="/hopehacks-cc/public/Assets/images/kyr/KYR-POSTER-ENG.png"
         alt="Know Your Rights Poster - English"
         class="rounded-lg mb-4 max-h-[500px] object-contain"
       />
 
       <a
-        href="../assets/images/kyr/KYR-POSTER-ENG.png"
+        href="/hopehacks-cc/public/Assets/images/kyr/KYR-POSTER-ENG.png"
         download
         class="mt-4 inline-flex items-center gap-2 bg-[#669BBC] text-white px-6 py-3 rounded-full hover:bg-[#242423] transition"
       >
@@ -222,13 +233,13 @@
     <!-- SPANISH POSTER -->
     <div class="bg-white rounded-xl shadow-lg p-6 flex flex-col items-center">
       <img
-        src="../assets/images/kyr/KYR-POSTER-SPN.png"
+        src="/hopehacks-cc/public/Assets/images/kyr/KYR-POSTER-SPN.png"
         alt="Conoce Tus Derechos Poster - Español"
         class="rounded-lg mb-4 max-h-[500px] object-contain"
       />
 
       <a
-        href="../assets/images/kyr/KYR-POSTER-SPN.png"
+        href="/hopehacks-cc/public/Assets/images/kyr/KYR-POSTER-SPN.png"
         download
         class="mt-4 inline-flex items-center gap-2 bg-[#669BBC] text-white px-6 py-3 rounded-full hover:bg-[#242423] transition"
       >
@@ -247,24 +258,24 @@
   <div class="max-w-6xl mx-auto text-center">
 
 
-    <h2 class="text-3xl font-bold mb-4">
+    <h2 class="text-2xl md:text-3xl lg:text-4xl font-bold mb-4">
       Community & Support Resources
     </h2>
 
-    <p class="max-w-3xl mx-auto text-[#242423]/80">
+    <p class="max-w-xl md:max-w-2xl lg:max-w-3xl mx-auto text-sm md:text-base lg:text-lg text-[#242423]/80">
       Legal help alone sometimes isn't enough. These organizations provide food,
       healthcare, education, and community support.
     </p>
   <!-- DISCLAIMER  -->
-    <p class="text-md text-[#242423]/60 mb-6 max-w-3xl mx-auto">
-      ❗ Resources are provided for informational purposes only and do not constitute legal advice.
+    <p class="text-sm md:text-base text-[#242423]/60 mb-6 max-w-xl md:max-w-2xl lg:max-w-3xl mx-auto">
+  ❗ Resources are provided for informational purposes only and do not constitute legal advice.
     </p>
 
   </div>
 </section>
 
     <!-- Cards Grid -->
-    <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 px-4">
 
       <!-- CARD TEMPLATE -->
       <!-- ourBRIDGE for KIDS -->
@@ -405,48 +416,45 @@
 
   </div>
 </section>
+    <!--bottom of page disclaimer -->
+<!-- GENERAL INFORMATION DISCLAIMER -->
+<section class="bg-[#FFF5E6] border-t border-[#242423]/10 px-6 py-12">
+  <div class="max-w-4xl mx-auto text-center">
+
+    <p class="text-sm md:text-base lg:text-lg text-[#242423]/80 leading-relaxed">
+      We gather and share resources from trusted organizations to help you learn about available options.
+      This information is provided for general guidance only and may not apply to every situation.
+      For personalized advice, consider reaching out to a qualified legal professional or a local support organization.
+    </p>
+
+  </div>
+</section>
+
     <!--FOOTER -->
     <footer class='h-full w-full flex flex-col justify-evenly items-center py-[1.2rem] font-medium'>
         <!-- NAVIGATION -->
         <ul class='flex flex-row gap-[2rem] text-[1.5rem] max-[768px]:text-[1.2rem] gap-[1.5rem] max-[422px]:text-[0.6rem] gap-[0.7rem]'>
-            <li><a href='/' class='hover:text-[#80b3b3]'>Home</a></li>
-            <li><a href='/kyr' class='hover:text-[#80b3b3]'>Resources</a></li>
-            <li><a href='/map' class='hover:text-[#80b3b3]'>Locations</a></li>
+            <li><a href='#' class='hover:text-[#80b3b3]'>Home</a></li>
+            <li><a href='#' class='hover:text-[#80b3b3]'>Resources</a></li>
+            <li><a href='#' class='hover:text-[#80b3b3]'>Locations</a></li>
             <li><a href='#' class='hover:text-[#80b3b3]'>Newsletter</a></li>
         </ul> 
         <!-- SOCIAL MEDIA -->
-       <ul class='flex flex-row gap-[2rem] mt-[1.2rem]'>
+        <ul class='flex flex-row gap-[2rem] mt-[1.2rem]'>
             <a href="https://www.facebook.com/" target="_blank" aria-label="facebook" style='width: 1.9rem'>
-                <img src="../Assets/images/nav/facebook.png" alt="Facebook">
+                <img src="/hopehacks-cc/public/Assets/images/nav/facebook.png" alt="Facebook">
             </a>
             <a href="https://www.instagram.com/" target="_blank" aria-label="Instagram" style='width: 2.1rem'>
-                <img src="../Assets/images/nav/instagram.png" alt="Instagram">
+                <img src="/hopehacks-cc/public/Assets/images/nav/instagram.png" alt="Instagram">
             </a>
             <a href="https://x.com/" target="_blank" aria-label="Twitter" style='width: 2rem'>
-                <img src="../Assets/images/nav/twitter.png" alt="Twitter">
+                <img src="/hopehacks-cc/public/Assets/images/nav/twitter.png" alt="Twitter">
             </a>
         </ul>
     </footer>
-
-      <script src="../js/hamburger.js"></script>
-
+    <script src="#"></script>
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
