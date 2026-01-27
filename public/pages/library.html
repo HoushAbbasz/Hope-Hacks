@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Login/Register</title>
+  <title>My Library</title>
 
     <!-- MONTSERRAT FONT-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -61,81 +61,15 @@
             </ul>
         </nav>
     </header>
-<body class="min-h-screen flex flex-col">
-    <main class="flex-1 flex items-center justify-center px-4">
-  <div class="w-full max-w-md bg-white rounded-xl shadow-lg p-6">
+    <body>
+        <h2>Your Favorites</h2>
+        <ul id="favorites-list"></ul>
 
-    <!-- Toggle Buttons -->
-    <div class="flex mb-6 gap-2">
-      <button
-        id="show-login"
-        type="button"
-        class="flex-1 py-2 rounded-md border font-medium hover:bg-gray-100"
-      >
-        Login
-      </button>
-      <button
-        id="show-register"
-        type="button"
-        class="flex-1 py-2 rounded-md border font-medium hover:bg-gray-100"
-      >
-        Register
-      </button>
-    </div>
+        <button id="favorite-btn">Add Favorite</button>
+        <button id="logout-btn">Logout</button>
 
-    <!-- Login Form -->
-    <form id="login-form" class="space-y-4">
-      <input
-        id="login-email"
-        type="email"
-        placeholder="Email"
-        class="w-full border rounded-md px-3 py-2"
-        required
-      />
-      <input
-        id="login-password"
-        type="password"
-        placeholder="Password"
-        class="w-full border rounded-md px-3 py-2"
-        required
-      />
-      <button class="w-full bg-[#396060] text-white py-2 rounded-md">
-        Login
-      </button>
-    </form>
-
-    <!-- Register Form -->
-    <form id="register-form" class="space-y-4 hidden">
-      <input
-        id="reg-username"
-        type="text"
-        placeholder="Username"
-        class="w-full border rounded-md px-3 py-2"
-        required
-      />
-      <input
-        id="reg-email"
-        type="email"
-        placeholder="Email"
-        class="w-full border rounded-md px-3 py-2"
-        required
-      />
-      <input
-        id="reg-password"
-        type="password"
-        placeholder="Password"
-        class="w-full border rounded-md px-3 py-2"
-        required
-      />
-      <button class="w-full bg-[#396060] text-white py-2 rounded-md">
-        Register
-      </button>
-    </form>
-
-  </div>
-</main>
-
-
+        <script src="dashboard.js"></script>
+    </body>
     <!--FOOTER -->
     <footer class='h-full w-full flex flex-col justify-evenly items-center py-[1.2rem] font-medium'>
         <!-- NAVIGATION -->
