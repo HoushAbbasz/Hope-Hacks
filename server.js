@@ -87,7 +87,7 @@ app.get('/mapAPI', (req, res) => {
 
 // home page route
 app.get('/', (req, res) => {
-  res.sendFile(path.join(__dirname, 'index.html'));
+  res.sendFile(path.join(__dirname, 'public/pages/index.html'));
 });
 
 // map page route

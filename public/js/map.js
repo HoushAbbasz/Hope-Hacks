@@ -43,18 +43,18 @@ function initMap() {
     
     // legal assistance locations
     const legalLocations = [
-        { address: '5535 Albemarle Rd, Charlotte, NC 28212', title: 'Charlotte Center for Legal Advocacy' },
-        { address: '1611 E 7th St, Charlotte, NC 28204', title: 'International House' },
-        { address: '4938 Central Ave #101, Charlotte, NC 28205', title: 'Latin American Coalition' },
-        { address: '6100 Fairview Rd #1145, Charlotte, NC 28210', title: 'Elizabeth Rosario Law, PLC - Immigration Lawyer' },
-        { address: '6135 Park S Dr suite 510, Charlotte, NC 28210', title: 'Ify Immigration Law Firm' },
-        { address: '3117 Whiting Ave, Charlotte, NC 28205', title: 'VíaLegal Immigration' },
-        { address: '207 Regency Executive Park Dr Ste 120, Charlotte, NC 28217', title: 'Pardo Law Firm, PLLC.' },
-        { address: '5244 N Sharon Amity Rd, Ste A, Charlotte, NC 28215', title: 'The Gilchrist Law Firm' },
-        { address: '6100 Fairview Rd, Ste 200, Charlotte, NC 28210', title: 'Garfinkel Immigration Law Firm' },
-        { address: '6135 Park South Dr, Ste 593, Charlotte, NC 28210', title: 'Powers Immigration Law - Charlotte' },
-        { address: '10150 Mallard Creek Rd #105, Charlotte, NC 28262', title: 'Law Office of Kelli Y. Allen, PLLC' },
-        { address: '402 W Trade St #100, Charlotte, NC 28202', title: 'Cauley Forsythe Immigration' }
+        { address: '5535 Albemarle Rd, Charlotte, NC 28212', title: 'Charlotte Center for Legal Advocacy', pNum: '(704) 376-1600' },
+        { address: '1611 E 7th St, Charlotte, NC 28204', title: 'International House', pNum: '(704) 333-8099' },
+        { address: '4938 Central Ave #101, Charlotte, NC 28205', title: 'Latin American Coalition', pNum: '(704) 531-3848' },
+        { address: '6100 Fairview Rd #1145, Charlotte, NC 28210', title: 'Elizabeth Rosario Law, PLC - Immigration Lawyer', pNum: '(704) 520-2199' },
+        { address: '6135 Park S Dr suite 510, Charlotte, NC 28210', title: 'Ify Immigration Law Firm' , pNum: '(919) 925-2295' },
+        { address: '3117 Whiting Ave, Charlotte, NC 28205', title: 'VíaLegal Immigration', pNum: '(980) 443-5141' },
+        { address: '207 Regency Executive Park Dr Ste 120, Charlotte, NC 28217', title: 'Pardo Law Firm, PLLC.', pNum: '(704) 644-7065' },
+        { address: '5244 N Sharon Amity Rd, Ste A, Charlotte, NC 28215', title: 'The Gilchrist Law Firm', pNum: '(980) 219-8884' },
+        { address: '6100 Fairview Rd, Ste 200, Charlotte, NC 28210', title: 'Garfinkel Immigration Law Firm', pNum: '(704) 442-8000' },
+        { address: '6135 Park South Dr, Ste 593, Charlotte, NC 28210', title: 'Powers Immigration Law - Charlotte', pNum: '(704) 556-1156' },
+        { address: '10150 Mallard Creek Rd #105, Charlotte, NC 28262', title: 'Law Office of Kelli Y. Allen, PLLC', pNum: '(704) 870-0340' },
+        { address: '402 W Trade St #100, Charlotte, NC 28202', title: 'Cauley Forsythe Immigration', pNum: '(704) 522-6363' }
     ];
     
     // counter to track how many locations have been successfully geocoded
@@ -71,9 +71,10 @@ function initMap() {
                     title: location.title,
                     opacity: 1.0,
                     locationData: {
-                        title: location.title,
-                        address: location.address,
-                        position: results[0].geometry.location
+                    title: location.title,
+                    address: location.address,
+                    pNum: location.pNum,  
+                    position: results[0].geometry.location
                     }
                 });
                 
@@ -332,11 +333,12 @@ function findNearestByLabel(userLocation) {
             closestDistance = distance;
             // create object with marker data and distance
             closestMarker = {
-                title: marker.locationData.title,
-                address: marker.locationData.address,
-                distance: distance,
-                marker: marker,
-                position: marker.getPosition()
+            title: marker.locationData.title,
+            address: marker.locationData.address,
+            pNum: marker.locationData.pNum,  
+            distance: distance,
+            marker: marker,
+            position: marker.getPosition()
             };
         }
     });
@@ -547,16 +549,24 @@ function displayDirectionsPanel(directionsResult, destinationAddress) {
 function displayNearestCards(nearest, userAddress, userLocation = null) {
     const cardsContainer = document.getElementById('cardsContainer');
     
-    let html = `<h3>Nearest to: ${userAddress}</h3><div class="cards-grid">`;
+    let html = `<h3 class="text-base font-bold mb-4">Nearest to: ${userAddress}</h3>`;
     
     if (nearest) {
         html += `
-            <div class="location-card">
-                <div class="card-header">Legal Assistance</div>
-                <div class="card-title">${nearest.title}</div>
-                <div class="card-distance">${nearest.distance.toFixed(2)} miles away</div>
-                <div class="card-address">${nearest.address}</div>
-                <button class="directions-btn" data-lat="${nearest.position.lat()}" data-lng="${nearest.position.lng()}" data-address="${nearest.address}" data-origin-lat="${userLocation ? userLocation.lat() : ''}" data-origin-lng="${userLocation ? userLocation.lng() : ''}">Get Directions</button>
+            <div class="bg-white rounded-xl border border-black/10 p-4 shadow-sm hover:shadow-md transition mb-4">
+                <div class="text-xs font-semibold text-[#669BBC] uppercase mb-2">Legal Assistance</div>
+                <div class="text-lg font-bold text-[#242423] mb-2">${nearest.title}</div>
+                <div class="text-sm font-semibold text-[#34a853] mb-2">${nearest.distance.toFixed(2)} miles away</div>
+                <div class="text-sm text-[#242423]/70 mb-2">${nearest.address}</div>
+                <div class="text-sm text-[#669BBC] font-semibold mb-3">📞 ${nearest.pNum || 'Phone not available'}</div>
+                <button class="directions-btn w-full px-4 py-2 rounded-lg bg-[#669BBC] text-white font-semibold hover:bg-[#242423] transition" 
+                        data-lat="${nearest.position.lat()}" 
+                        data-lng="${nearest.position.lng()}" 
+                        data-address="${nearest.address}" 
+                        data-origin-lat="${userLocation ? userLocation.lat() : ''}" 
+                        data-origin-lng="${userLocation ? userLocation.lng() : ''}">
+                    Get Directions
+                </button>
             </div>
         `;
     }
@@ -574,7 +584,7 @@ function displayCards(markers, title) {
     const cardsContainer = document.getElementById('cardsContainer');
     
     // start building html string with title
-    let html = `<h3>${title}</h3><div class="cards-grid">`;
+    let html = `<h3 class="text-base font-bold mb-4">${title}</h3>`;
     
     // loop through each marker
     markers.forEach(marker => {
@@ -582,14 +592,19 @@ function displayCards(markers, title) {
         const data = marker.locationData;
         const pos = marker.getPosition();
         // add html for a location card
-        html += `
-            <div class="location-card">
-                <div class="card-header">Legal Assistance</div>
-                <div class="card-title">${data.title}</div>
-                <div class="card-address">${data.address}</div>
-                <button class="directions-btn" data-lat="${pos.lat()}" data-lng="${pos.lng()}" data-address="${data.address}">Get Directions</button>
-            </div>
-        `;
+    html += `
+        <div class="bg-white rounded-xl border border-black/10 p-4 shadow-sm hover:shadow-md transition mb-4">
+            <div class="text-xs font-semibold text-[#669BBC] uppercase mb-2">Legal Assistance</div>
+            <div class="text-lg font-bold text-[#242423] mb-2">${data.title}</div>
+            <div class="text-sm text-[#242423]/70 mb-2">${data.address}</div>
+            <div class="text-sm text-[#669BBC] font-semibold mb-3">📞 ${data.pNum || 'Phone not available'}</div>
+            <button class="directions-btn w-full px-4 py-2 rounded-lg bg-[#669BBC] text-white font-semibold hover:bg-[#242423] transition" 
+                    data-lat="${pos.lat()}" 
+                    data-lng="${pos.lng()}" 
+                    data-address="${data.address}">
+                Get Directions
+            </button>
+        </div> `;
     });
     
     // close the cards grid div
