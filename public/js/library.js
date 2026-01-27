@@ -2,7 +2,7 @@ const token = sessionStorage.getItem("token");
 
 // If not logged in, redirect
 if (!token) {
-  window.location.href = "auth.html";
+  window.location.href = '/auth';
 }
 
 const favoritesList = document.getElementById("favorites-list");
@@ -46,5 +46,5 @@ favoriteBtn.addEventListener("click", async () => {
 // Logout
 logoutBtn.addEventListener("click", () => {
   sessionStorage.removeItem("token");
-  window.location.href = "auth.html";
+  window.location.href = '/auth';
 });
