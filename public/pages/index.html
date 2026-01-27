@@ -29,31 +29,31 @@
 
         <!-- LOGO AND SIGN IN BTN -->
         <div class='flex flex-row justify-between mt-[-1rem] mr-[2rem] text-[1.5rem] font-medium max-md:mr-[4.2rem] mb-[-1.5rem]'>
-            <a class='navLogo' href='index.html'>
-                <img style='width: 9rem' src='/public/Assets/images/nav/logo.png' alt='Logo'>
+            <a class='navLogo' href='/'>
+                <img style='width: 9rem' src='../Assets/images/nav/logo.png' alt='Logo'>
             </a>
             <button class='hover:text-[#8FCFBC]'><a href='#'>Sign in</a></button>
         </div>
 
         <!-- HAMBURGER CLASS NAME (hamburger-Menu)-->
-            <img src='/public/Assets/images/nav/hamburger.png' alt='Hamburger Menu' class='fixed top-[2rem] right-[0.6rem] cursor-pointer hamburger-Menu min-[768px]:hidden z-[80]' style='width: 3rem'>
+            <img src='../Assets/images/nav/hamburger.png' alt='Hamburger Menu' class='fixed top-[2rem] right-[0.6rem] cursor-pointer hamburger-Menu min-[768px]:hidden z-[80]' style='width: 3rem'>
 
 
         <nav>
             <!-- LARGE/DESKTOP NAV -->
-            <ul class='flex flex-row gap-[1.7rem] justify-end mr-[2rem] mt-[-2.5rem] mb-[0.5rem] font-semibold text-[1.3rem] max-[768px]:hidden'>
-                <li><a href='index.html' class='hover:text-[#8FCFBC]'>Home</a></li>
-                <li><a href='#' class='hover:text-[#8FCFBC]'>Resources</a></li>
-                <li><a href='#' class='hover:text-[#8FCFBC]'>Locations</a></li>
-                <li><a href='#' class='hover:text-[#8FCFBC]'>Newsletter</a></li>
-                <li><a href='#' class='hover:text-[#8FCFBC]'>Your Library</a></li>
+            <ul class='flex flex-row gap-[1.7rem] justify-end mr-[2rem] mt-[-2.5rem] text-[1.3rem] max-[768px]:hidden'>
+                <li><a href='/' class='hover:text-[#80b3b3]'>Home</a></li>
+                <li><a href='/kyr' class='hover:text-[#80b3b3]'>Resources</a></li>
+                <li><a href='/map' class='hover:text-[#80b3b3]'>Locations</a></li>
+                <li><a href='#' class='hover:text-[#80b3b3]'>Newsletter</a></li>
+                <li><a href='#' class='hover:text-[#80b3b3]'>Your Library</a></li>
             </ul>  
 
             <!-- SMALL/MOBILE NAV  CLASS NAME (navbar-Menu) -->
             <ul class='hidden flex flex-col text-center h-full w-full top-0 left-0 gap-[2.5rem] py-[2rem] text-black text-[1.5rem] font-medium navbar-Menu'>
-                <li><a href='index.html' class='hover:underline hover:decoration-[#396060]'>Home</a></li>
-                <li><a href='#' class='hover:underline hover:decoration-[#396060]'>Resources</a></li>
-                <li><a href='#' class='hover:underline hover:decoration-[#396060]'>Locations</a></li>
+                <li><a href='/' class='hover:underline hover:decoration-[#396060]'>Home</a></li>
+                <li><a href='/kyr' class='hover:underline hover:decoration-[#396060]'>Resources</a></li>
+                <li><a href='/map' class='hover:underline hover:decoration-[#396060]'>Locations</a></li>
                 <li><a href='#' class='hover:underline hover:decoration-[#396060]'>Newsletter</a></li>
                 <li><a href='#' class='hover:underline hover:decoration-[#396060]'>Your Library</a></li>
             </ul>
@@ -65,7 +65,7 @@
     <!-- HERO SECTION -->
     <main class='relative w-full min-h-[70vh] lg:min-h-[85vh] bg-[#dee1d5] flex items-center justify-center'>
 
-      <img src='/public/Assets/images/home/hero.png' alt='hero image' class='absolute inset-0 w-full h-full object-cover'/>
+      <img src='../Assets/images/home/hero.png' alt='hero image' class='absolute inset-0 w-full h-full object-cover'/>
 
         <div class='relative w-full mt-[5.5rem] px-[2rem] text-center'>
             <h1 class='text-5xl md:text-[3rem] font-semibold text-[#f5e8df] leading-tight drop-shadow-2xl'>
@@ -81,11 +81,11 @@
 
             <div class='mt-[11.2rem] ml-[1rem] flex justify-start gap-[1.2rem] min-[1261px]:ml-[5rem] min-[1261px]:gap-[3.8rem] min-[1261px]:mt-[15.5rem]'>
                 <!-- Resources Link -->
-                <a href='#' aria-label='resources page' class='rounded-full bg-[#8FCFBC] hover:bg-[#80b3b3] px-[1rem] py-[0.70rem] font-medium text-[#1F3D36]'>
+                <a href='/kyr' aria-label='resources page' class='rounded-full bg-[#8FCFBC] hover:bg-[#80b3b3] px-[1rem] py-[0.70rem] font-medium text-[#1F3D36]'>
                     Explore Resources
                 </a>
                 <!-- Find Help Near You -->
-                <a href='#' aria-label='local services near you'
+                <a href='/map' aria-label='local services near you'
                 class='rounded-full bg-[#8FCFBC] hover:bg-[#80b3b3] px-[1rem] py-[0.70rem] font-medium text-[#1F3D36]'>
                 Find Help Near You →
                 </a>
@@ -147,7 +147,7 @@
 
     <section class='mt-[15rem] mx-[3.5rem] py-[3.2rem] px-[2rem] rounded-[1rem] backdrop-blur-sm bg-[#fef6e7] drop-shadow-2xl grid grid-cols-1 md:grid-cols-2 gap-[3rem] items-center'>
 
-      <img src='/public/Assets/images/home/r-home.png'alt='Documents and guides representing immigration resources'class='w-full rounded-[1rem] object-cover'/>
+      <img src='../Assets/images/home/r-home.png'alt='Documents and guides representing immigration resources'class='w-full rounded-[1rem] object-cover'/>
 
       <article>
         <h2 class='text-[1.7rem] font-semibold mb-[0.75rem]'>
@@ -170,7 +170,7 @@
     <!-- NEWS/STORIES SECTION -->
     <section class='mt-[15rem] mx-[3.5rem] py-[3rem] px-[2rem] rounded-[1rem] backdrop-blur-sm bg-[#fef6e7] drop-shadow-2xl grid grid-cols-1 md:grid-cols-2 gap-[3rem] items-center'>
 
-      <img src='/public/Assets/images/home/n-home.png'alt='Map or image representing immigration stories and global context'class='w-full rounded-[1rem] object-cover'/>
+      <img src='../Assets/images/home/n-home.png'alt='Map or image representing immigration stories and global context'class='w-full rounded-[1rem] object-cover'/>
 
       <article>
         <h2 class='text-[1.7rem] font-semibold mb-[0.75rem]'>
@@ -191,7 +191,7 @@
     <!-- MAP/NEAR YOU -->
     <section class='mt-[15rem] mx-[3.5rem] py-[2.5rem] px-[2rem] rounded-[1rem] backdrop-blur-sm bg-[#fef6e7] drop-shadow-2xl grid grid-cols-1 md:grid-cols-2 gap-[3rem] items-center'>
 
-      <img src='/public/Assets/images/home/l-home.png' alt='Charlotte Map' class='w-full rounded-[0.7rem]'/>
+      <img src='../Assets/images/home/l-home.png' alt='Charlotte Map' class='w-full rounded-[0.7rem]'/>
 
       <article>
         <h2 class='text-[1.7rem] font-semibold mb-[0.75rem]'>
@@ -202,7 +202,7 @@
           A map of local organizations, law firms, and community services offering immigration-related support in your area. This tool is meant to help you explore nearby options and learn what resources may be available to you.
         </p>
 
-        <a href='#' class='font-semibold hover:underline underline-offset-[0.2rem]'>
+        <a href='/map' class='font-semibold hover:underline underline-offset-[0.2rem]'>
           Open locator →
         </a>
       </article>
@@ -226,22 +226,22 @@
       <div class='mx-auto max-w-[72rem] px-[2rem] grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-[3rem]'>
 
         <div class='text-center'>
-          <img src='/public/Assets/images/home/jess.png'alt='Team member'class='w-full aspect-square object-cover rounded-[1rem] mb-[1rem]'/>
+          <img src='../Assets/images/home/jess.png'alt='Team member'class='w-full aspect-square object-cover rounded-[1rem] mb-[1rem]'/>
           <p class='font-medium'>Jessica<br> Cruz</p>
         </div>
 
         <div class='text-center'>
-          <img src='/public/Assets/images/home/marilyn.png'alt='Team member'class='w-full aspect-square object-cover rounded-[1rem] mb-[1rem]'/>
+          <img src='../Assets/images/home/marilyn.png'alt='Team member'class='w-full aspect-square object-cover rounded-[1rem] mb-[1rem]'/>
           <p class='font-medium'>Marilyn<br> Castro-Alonso</p>
         </div>
 
         <div class='text-center'>
-          <img src='/public/Assets/images/home/housh.png'alt='Team member'class='w-full aspect-square object-cover rounded-[1rem] mb-[1rem]'/>
+          <img src='../Assets/images/home/housh.png'alt='Team member'class='w-full aspect-square object-cover rounded-[1rem] mb-[1rem]'/>
           <p class='font-medium'>Houshmand<br> Abbaszadeh</p>
         </div>
 
         <div class='text-center'>
-          <img src='/public/Assets/images/home/brittany.png'alt='Team member'class='w-full aspect-square object-cover rounded-[1rem] mb-[1rem]'/>
+          <img src='../Assets/images/home/brittany.png'alt='Team member'class='w-full aspect-square object-cover rounded-[1rem] mb-[1rem]'/>
           <p class='font-medium'>Brittany<br> Ramirez</p>
         </div>
 
@@ -256,13 +256,13 @@
         <!-- SOCIAL MEDIA -->
       <ul class='flex flex-row gap-[2rem] mt-[1.2rem]'>
         <a href="https://www.facebook.com/" target="_blank" aria-label="facebook" style='width: 1.7rem'>
-          <img src="/public/Assets/images/nav/facebook.png" alt="Facebook">
+          <img src="../Assets/images/nav/facebook.png" alt="Facebook">
         </a>
         <a href="https://www.instagram.com/" target="_blank" aria-label="Instagram" style='width: 2rem'>
-          <img src="/public/Assets/images/nav/instagram.png" alt="Instagram">
+          <img src="../Assets/images/nav/instagram.png" alt="Instagram">
         </a>
         <a href="https://x.com/" target="_blank" aria-label="Twitter" style='width: 1.9rem'>
-          <img src="/public/Assets/images/nav/twitter.png" alt="Twitter">
+          <img src="../Assets/images/nav/twitter.png" alt="Twitter">
         </a>
       </ul>
 
