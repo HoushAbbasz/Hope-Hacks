@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Login/Register</title>
+
+    <!-- MONTSERRAT FONT-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+  <!-- TAILWIND -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!--linking tailwind-->
+  <script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        fontFamily: {
+          sans: ['Figtree', 'ui-sans-serif', 'system-ui'],
+        },
+      },
+    },
+  }
+</script>
+
+</head>
+<header class='bk-filter backdrop-blur-lg w-full'>
+
+        <!-- LOGO AND SIGN IN BTN -->
+        <div class='flex flex-row justify-between mt-[-1rem] mr-[2rem] text-[1.5rem] font-medium max-md:mr-[4.2rem] mb-[-1.5rem]'>
+            <a class='navLogo' href='index.html'>
+                <img style='width: 9rem' src='../Assets/images/nav/logo.png' alt='Logo'>
+            </a>
+            <button class='hover:text-[#396060]'><a href='/auth'>Sign in</a></button>
+        </div>
+
+        <!-- HAMBURGER CLASS NAME (hamburger-Menu)-->
+            <img src='../Assets/images/nav/hamburger.png' alt='Hamburger Menu' class='fixed top-[2rem] right-[0.6rem] cursor-pointer hamburger-Menu min-[768px]:hidden z-[80]' style='width: 3rem'>
+
+
+        <nav>
+            <!-- LARGE/DESKTOP NAV -->
+            <ul class='flex flex-row gap-[1.7rem] justify-end mr-[2rem] mt-[-2.5rem] text-[1.3rem] max-[768px]:hidden'>
+                <li><a href='/' class='hover:text-[#80b3b3]'>Home</a></li>
+                <li><a href='/kyr' class='hover:text-[#80b3b3]'>Resources</a></li>
+                <li><a href='/map' class='hover:text-[#80b3b3]'>Locations</a></li>
+                <li><a href='#' class='hover:text-[#80b3b3]'>Newsletter</a></li>
+                <li><a href='/library' class='hover:text-[#80b3b3]'>Your Library</a></li>
+            </ul>  
+
+            <!-- SMALL/MOBILE NAV  CLASS NAME (navbar-Menu) -->
+            <ul class='hidden flex flex-col text-center h-full w-full top-0 left-0 gap-[2.5rem] py-[2rem] text-black text-[1.5rem] font-medium navbar-Menu'>
+                <li><a href='/' class='hover:underline hover:decoration-[#396060]'>Home</a></li>
+                <li><a href='/kyr' class='hover:underline hover:decoration-[#396060]'>Resources</a></li>
+                <li><a href='/map' class='hover:underline hover:decoration-[#396060]'>Locations</a></li>
+                <li><a href='#' class='hover:underline hover:decoration-[#396060]'>Newsletter</a></li>
+                <li><a href='/library' class='hover:underline hover:decoration-[#396060]'>Your Library</a></li>
+            </ul>
+        </nav>
+    </header>
+<body class="min-h-screen flex flex-col">
+    <main class="flex-1 flex items-center justify-center px-4">
+  <div class="w-full max-w-md bg-white rounded-xl shadow-lg p-6">
+
+    <!-- Toggle Buttons -->
+    <div class="flex mb-6 gap-2">
+      <button
+        id="show-login"
+        type="button"
+        class="flex-1 py-2 rounded-md border font-medium hover:bg-gray-100"
+      >
+        Login
+      </button>
+      <button
+        id="show-register"
+        type="button"
+        class="flex-1 py-2 rounded-md border font-medium hover:bg-gray-100"
+      >
+        Register
+      </button>
+    </div>
+
+    <!-- Login Form -->
+    <form id="login-form" class="space-y-4">
+      <input
+        id="login-email"
+        type="email"
+        placeholder="Email"
+        class="w-full border rounded-md px-3 py-2"
+        required
+      />
+      <input
+        id="login-password"
+        type="password"
+        placeholder="Password"
+        class="w-full border rounded-md px-3 py-2"
+        required
+      />
+      <button class="w-full bg-[#396060] text-white py-2 rounded-md">
+        Login
+      </button>
+    </form>
+
+    <!-- Register Form -->
+    <form id="register-form" class="space-y-4 hidden">
+      <input
+        id="reg-username"
+        type="text"
+        placeholder="Username"
+        class="w-full border rounded-md px-3 py-2"
+        required
+      />
+      <input
+        id="reg-email"
+        type="email"
+        placeholder="Email"
+        class="w-full border rounded-md px-3 py-2"
+        required
+      />
+      <input
+        id="reg-password"
+        type="password"
+        placeholder="Password"
+        class="w-full border rounded-md px-3 py-2"
+        required
+      />
+      <button class="w-full bg-[#396060] text-white py-2 rounded-md">
+        Register
+      </button>
+    </form>
+
+  </div>
+</main>
+
+
+    <!--FOOTER -->
+    <footer class='h-full w-full flex flex-col justify-evenly items-center py-[1.2rem] font-medium'>
+        <!-- NAVIGATION -->
+        <ul class='flex flex-row gap-[2rem] text-[1.5rem] max-[768px]:text-[1.2rem] gap-[1.5rem] max-[422px]:text-[0.6rem] gap-[0.7rem]'>
+            <li><a href='/' class='hover:text-[#80b3b3]'>Home</a></li>
+            <li><a href='/kyr' class='hover:text-[#80b3b3]'>Resources</a></li>
+            <li><a href='/map' class='hover:text-[#80b3b3]'>Locations</a></li>
+            <li><a href='#' class='hover:text-[#80b3b3]'>Newsletter</a></li>
+        </ul> 
+        <!-- SOCIAL MEDIA -->
+       <ul class='flex flex-row gap-[2rem] mt-[1.2rem]'>
+            <a href="https://www.facebook.com/" target="_blank" aria-label="facebook" style='width: 1.9rem'>
+                <img src="../Assets/images/nav/facebook.png" alt="Facebook">
+            </a>
+            <a href="https://www.instagram.com/" target="_blank" aria-label="Instagram" style='width: 2.1rem'>
+                <img src="../Assets/images/nav/instagram.png" alt="Instagram">
+            </a>
+            <a href="https://x.com/" target="_blank" aria-label="Twitter" style='width: 2rem'>
+                <img src="../Assets/images/nav/twitter.png" alt="Twitter">
+            </a>
+        </ul>
+    </footer>
+
+      <script src="../js/hamburger.js"></script>
+
+</body>
+</html>

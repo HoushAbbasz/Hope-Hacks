@@ -14,7 +14,7 @@ const showLoginBtn = document.getElementById("show-login");
 const showRegisterBtn = document.getElementById("show-register");
 
 if (sessionStorage.getItem("token")) {
-  window.location.href = "dashboard.html";
+  window.location.href = '/library';
 }
 
   showLoginBtn.addEventListener("click", () => {
@@ -70,5 +70,5 @@ loginForm.addEventListener("submit", async (e) => {
     sessionStorage.setItem("token", data.token);
 
     // Redirect to dashboard
-    window.location.href = "dashboard.html";
+    window.location.href = '/library';
 });
