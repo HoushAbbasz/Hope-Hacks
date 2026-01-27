@@ -7,11 +7,4 @@ const connection = mysql.createConnection({
     database: 'CCLoginApp',
 });
 
-connection
-    .promise()
-    .query('SELECT * FROM users')
-    .then(([rows, fields]) => {
-    console.log(rows);
-});
-
 module.exports = connection;
