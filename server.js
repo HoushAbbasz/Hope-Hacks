@@ -66,7 +66,7 @@ try {
 
   // Create JWT containing user ID
   const token = jwt.sign(
-    { id: user.id }, 
+    { id: user.user_id }, 
     process.env.JWT_SECRET, 
     { expiresIn: '1h',}
   );
@@ -99,7 +99,7 @@ app.get('/kyr', (req, res) => {
   res.sendFile(path.join(__dirname, 'public/pages/kyr.html'));
 });
 
-app.get('/library', (req, res) => {
+app.get('/library', authenticate, (req, res) => {
   res.sendFile(path.join(__dirname, 'public/pages/library.html'));
 });
 
