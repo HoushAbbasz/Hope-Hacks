@@ -18,13 +18,13 @@ if (sessionStorage.getItem("token")) {
 }
 
   showLoginBtn.addEventListener("click", () => {
-    loginForm.classList.add("active");
-    registerForm.classList.remove("active");
+    loginForm.classList.remove("hidden");
+    registerForm.classList.add("hidden");
   });
 
   showRegisterBtn.addEventListener("click", () => {
-    registerForm.classList.add("active");
-    loginForm.classList.remove("active");
+    registerForm.classList.remove("hidden");
+    loginForm.classList.add("hidden");
   });
 
   // Handle Registration

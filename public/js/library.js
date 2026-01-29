@@ -2,7 +2,7 @@ const token = sessionStorage.getItem("token");
 
 // If not logged in, redirect
 if (!token) {
-  window.location.href = '/auth';
+  window.location.href = "/auth";
 }
 
 const favoritesList = document.getElementById("favorites-list");
