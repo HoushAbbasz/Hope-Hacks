@@ -23,39 +23,37 @@
  <!-- #ffffff WHITE, #669bbc80 BLUE LIGHT, #E8EDDF SEASALT, ##80b3b3 SEASALT HOVER, #396060 SEASALT UNDERLINE,#242423 BLACK-->
 
 
-<body class='flex flex-col items-center p-0 m-0 h-100 w-full bg-gradient-to-br from-[#E8EDDF] via-[#CFDBD5] to-[#FDF0D5] font-[Montserrat] text-[#242423] text-center text-[1.2rem]'>
+<body class='flex flex-col items-center p-0 m-0 h-full w-full bg-gradient-to-br from-[#E8EDDF] via-[#CFDBD5] to-[#FDF0D5] font-[Montserrat] text-[#242423] text-center text-[1.2rem]'>
 
-    <header class='sticky top-0 z-50 backdrop-blur-lg w-full bg-[#fef6e7]'>
+    <!-- HEADER -->
+    <header class='sticky top-0 z-50 bg-gradient-to-br from-[#E8EDDF] to-[#CFDBD5] w-full'>
 
-        <!-- LOGO AND SIGN IN BTN -->
-        <div class='flex flex-row justify-between mt-[-1rem] mr-[2rem] text-[1.5rem] font-medium max-md:mr-[4.2rem] mb-[-1.5rem]'>
+        <!-- LOGO -->
+        <div class='flex flex-row justify-between mt-[-1rem] text-[1.5rem] font-medium w-full mr-[2rem] max-md:mr-[4.2rem] mb-[-1.5rem]'>
             <a class='navLogo' href='/public/pages/'>
                 <img style='width: 9rem' src='/public/Assets/images/nav/logo.png' alt='Logo'>
             </a>
-            <button class='hover:text-[#8FCFBC]'><a href='/auth'>Sign in</a></button>
         </div>
 
         <!-- HAMBURGER CLASS NAME (hamburger-Menu)-->
-            <img src='../Assets/images/nav/hamburger.png' alt='Hamburger Menu' class='fixed top-[2rem] right-[0.6rem] cursor-pointer hamburger-Menu min-[768px]:hidden z-[80]' style='width: 3rem'>
+            <img src='../Assets/images/nav/hamburger.png' alt='Hamburger Menu' class='fixed top-[1.8rem] right-[0.6rem] cursor-pointer hamburger-Menu min-[768px]:hidden z-[80]' style='width: 3rem'>
 
 
         <nav>
             <!-- LARGE/DESKTOP NAV -->
-            <ul class='flex flex-row gap-[1.7rem] justify-end mr-[2rem] mt-[-2.5rem] mb-[0.5rem] font-semibold text-[1.3rem] max-[768px]:hidden'>
+            <ul class='flex flex-row gap-[1.7rem] justify-end mr-[2rem] mt-[-3.8rem] mb-[0.5rem] font-semibold text-[1.3rem] max-[768px]:hidden'>
                 <li><a href='/' class='hover:text-[#8FCFBC]'>Home</a></li>
                 <li><a href='/kyr' class='hover:text-[#8FCFBC]'>Resources</a></li>
                 <li><a href='/map' class='hover:text-[#8FCFBC]'>Locations</a></li>
-                <li><a href='#' class='hover:text-[#8FCFBC]'>Newsletter</a></li>
-                <li><a href='/library' class='hover:text-[#8FCFBC]'>Your Library</a></li>
+                <li><a href='/newsletter' class='hover:text-[#8FCFBC]'>Newsletter</a></li>
             </ul>  
 
             <!-- SMALL/MOBILE NAV  CLASS NAME (navbar-Menu) -->
-            <ul class='hidden flex flex-col text-center h-full w-full top-0 left-0 gap-[2.5rem] py-[2rem] text-black text-[1.5rem] font-medium navbar-Menu'>
-                <li><a href='/public/pages/index.html' class='hover:underline hover:decoration-[#396060]'>Home</a></li>
-                <li><a href='/public/pages/kyr.html' class='hover:underline hover:decoration-[#396060]'>Resources</a></li>
-                <li><a href='/public/pages/map.html' class='hover:underline hover:decoration-[#396060]'>Locations</a></li>
-                <li><a href='#' class='hover:underline hover:decoration-[#396060]'>Newsletter</a></li>
-                <li><a href='/library' class='hover:underline hover:decoration-[#396060]'>Your Library</a></li>
+            <ul class='hidden flex flex-col text-center h-full w-full top-0 left-0 gap-[2.5rem] py-[2rem] text-black text-[1.5rem] font-medium navbar-Menu min-[768px]:hidden'>
+                <li><a href='/' class='hover:underline hover:decoration-[#396060]'>Home</a></li>
+                <li><a href='/kyr' class='hover:underline hover:decoration-[#396060]'>Resources</a></li>
+                <li><a href='/map' class='hover:underline hover:decoration-[#396060]'>Locations</a></li>
+                <li><a href='/library' class='hover:underline hover:decoration-[#396060]'>Newsletter</a></li>
             </ul>
         </nav>
     </header>
@@ -158,7 +156,7 @@
           Carefully gathered guides, documents, and links from trusted organizations to help you understand your options and access support — without feeling overwhelmed.
         </p>
 
-        <a href='/public/pages/kyr.html' class='font-semibold hover:underline underline-offset-[0.2rem]'>
+        <a href='/kyr' class='font-semibold hover:underline underline-offset-[0.2rem]'>
           Explore resources →
         </a>
       </article>
@@ -202,7 +200,7 @@
           A map of local organizations, law firms, and community services offering immigration-related support in your area. This tool is meant to help you explore nearby options and learn what resources may be available to you.
         </p>
 
-        <a href='/public/pages/map.html' class='font-semibold hover:underline underline-offset-[0.2rem]'>
+        <a href='/map' class='font-semibold hover:underline underline-offset-[0.2rem]'>
           Open locator →
         </a>
       </article>
@@ -270,6 +268,6 @@
     </footer>
 
 
-    <script src="../js/hamburger.js"></script>
+    <script src="/public/js/hamburger.js"></script>
 </body>
 </html>

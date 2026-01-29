@@ -3,97 +3,89 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>My Library</title>
+
 
     <!-- MONTSERRAT FONT-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 
-  <!-- TAILWIND -->
-  <script src="https://cdn.tailwindcss.com"></script>
+    <!-- TAILWIND -->
+    <script src="https://cdn.tailwindcss.com"></script>
 
-  <!--linking tailwind-->
-  <script>
-  tailwind.config = {
-    theme: {
-      extend: {
-        fontFamily: {
-          sans: ['Figtree', 'ui-sans-serif', 'system-ui'],
-        },
-      },
-    },
-  }
-</script>
 
-</head>
-<header class='bk-filter backdrop-blur-lg w-full'>
+    <!-- TAB ICON -->
+    <link rel="icon" type="Custom Logo Icon" href="/public/Assets/images/nav/logo.png"/>
 
-        <!-- LOGO AND SIGN IN BTN -->
-        <div class='flex flex-row justify-between mt-[-1rem] mr-[2rem] text-[1.5rem] font-medium max-md:mr-[4.2rem] mb-[-1.5rem]'>
-            <a class='navLogo' href='index.html'>
-                <img style='width: 9rem' src='../Assets/images/nav/logo.png' alt='Logo'>
+    <title>Civic Clarity</title>
+</head> 
+
+
+
+    <body class='flex flex-col items-center p-0 m-0 h-full w-full bg-gradient-to-br from-[#E8EDDF] via-[#CFDBD5] to-[#FDF0D5] font-[Montserrat] text-[#242423]'>
+
+    <!-- HEADER -->
+    <header class='sticky top-0 z-50 bg-gradient-to-br from-[#E8EDDF] to-[#CFDBD5] w-full'>
+
+        <!-- LOGO -->
+        <div class='flex flex-row justify-between mt-[-1rem] text-[1.5rem] font-medium w-full mr-[2rem] max-md:mr-[4.2rem] mb-[-1.5rem]'>
+            <a class='navLogo' href='/public/pages/'>
+                <img style='width: 9rem' src='/public/Assets/images/nav/logo.png' alt='Logo'>
             </a>
-            <button class='hover:text-[#396060]'><a href='/auth'>Sign in</a></button>
         </div>
 
         <!-- HAMBURGER CLASS NAME (hamburger-Menu)-->
-            <img src='../Assets/images/nav/hamburger.png' alt='Hamburger Menu' class='fixed top-[2rem] right-[0.6rem] cursor-pointer hamburger-Menu min-[768px]:hidden z-[80]' style='width: 3rem'>
+            <img src='../Assets/images/nav/hamburger.png' alt='Hamburger Menu' class='fixed top-[1.8rem] right-[0.6rem] cursor-pointer hamburger-Menu min-[768px]:hidden z-[80]' style='width: 3rem'>
 
 
         <nav>
             <!-- LARGE/DESKTOP NAV -->
-            <ul class='flex flex-row gap-[1.7rem] justify-end mr-[2rem] mt-[-2.5rem] text-[1.3rem] max-[768px]:hidden'>
-                <li><a href='/' class='hover:text-[#80b3b3]'>Home</a></li>
-                <li><a href='/kyr' class='hover:text-[#80b3b3]'>Resources</a></li>
-                <li><a href='/map' class='hover:text-[#80b3b3]'>Locations</a></li>
-                <li><a href='#' class='hover:text-[#80b3b3]'>Newsletter</a></li>
-                <li><a href='#' class='hover:text-[#80b3b3]'>Your Library</a></li>
+            <ul class='flex flex-row gap-[1.7rem] justify-end mr-[2rem] mt-[-3.8rem] mb-[0.5rem] font-semibold text-[1.3rem] max-[768px]:hidden'>
+                <li><a href='/' class='hover:text-[#8FCFBC]'>Home</a></li>
+                <li><a href='/kyr' class='hover:text-[#8FCFBC]'>Resources</a></li>
+                <li><a href='/map' class='hover:text-[#8FCFBC]'>Locations</a></li>
+                <li><a href='/newsletter' class='hover:text-[#8FCFBC]'>Newsletter</a></li>
             </ul>  
 
             <!-- SMALL/MOBILE NAV  CLASS NAME (navbar-Menu) -->
-            <ul class='hidden flex flex-col text-center h-full w-full top-0 left-0 gap-[2.5rem] py-[2rem] text-black text-[1.5rem] font-medium navbar-Menu'>
+            <ul class='hidden flex flex-col text-center h-full w-full top-0 left-0 gap-[2.5rem] py-[2rem] text-black text-[1.5rem] font-medium navbar-Menu min-[768px]:hidden'>
                 <li><a href='/' class='hover:underline hover:decoration-[#396060]'>Home</a></li>
                 <li><a href='/kyr' class='hover:underline hover:decoration-[#396060]'>Resources</a></li>
                 <li><a href='/map' class='hover:underline hover:decoration-[#396060]'>Locations</a></li>
-                <li><a href='#' class='hover:underline hover:decoration-[#396060]'>Newsletter</a></li>
-                <li><a href='/library' class='hover:underline hover:decoration-[#396060]'>Your Library</a></li>
+                <li><a href='/library' class='hover:underline hover:decoration-[#396060]'>Newsletter</a></li>
             </ul>
         </nav>
     </header>
-    <body>
+
+
         <h2>Your Favorites</h2>
         <ul id="favorites-list"></ul>
 
         <button id="favorite-btn">Favorite</button>
         <button id="logout-btn">Logout</button>
 
-        <script src="../js/library.js"></script>
-    </body>
+
+
     <!--FOOTER -->
-    <footer class='h-full w-full flex flex-col justify-evenly items-center py-[1.2rem] font-medium'>
-        <!-- NAVIGATION -->
-        <ul class='flex flex-row gap-[2rem] text-[1.5rem] max-[768px]:text-[1.2rem] gap-[1.5rem] max-[422px]:text-[0.6rem] gap-[0.7rem]'>
-            <li><a href='/' class='hover:text-[#80b3b3]'>Home</a></li>
-            <li><a href='/kyr' class='hover:text-[#80b3b3]'>Resources</a></li>
-            <li><a href='/map' class='hover:text-[#80b3b3]'>Locations</a></li>
-            <li><a href='#' class='hover:text-[#80b3b3]'>Newsletter</a></li>
-        </ul> 
+    <footer class='h-full w-full flex flex-col justify-evenly items-center pt-[0.2rem] font-semibold bg-[#fef6e7'>
+        
         <!-- SOCIAL MEDIA -->
-       <ul class='flex flex-row gap-[2rem] mt-[1.2rem]'>
-            <a href="https://www.facebook.com/" target="_blank" aria-label="facebook" style='width: 1.9rem'>
-                <img src="../Assets/images/nav/facebook.png" alt="Facebook">
-            </a>
-            <a href="https://www.instagram.com/" target="_blank" aria-label="Instagram" style='width: 2.1rem'>
-                <img src="../Assets/images/nav/instagram.png" alt="Instagram">
-            </a>
-            <a href="https://x.com/" target="_blank" aria-label="Twitter" style='width: 2rem'>
-                <img src="../Assets/images/nav/twitter.png" alt="Twitter">
-            </a>
-        </ul>
+      <ul class='flex flex-row gap-[2rem] mt-[1.2rem]'>
+        <a href="https://www.facebook.com/" target="_blank" aria-label="facebook" style='width: 1.7rem'>
+          <img src="../Assets/images/nav/facebook.png" alt="Facebook">
+        </a>
+        <a href="https://www.instagram.com/" target="_blank" aria-label="Instagram" style='width: 2rem'>
+          <img src="../Assets/images/nav/instagram.png" alt="Instagram">
+        </a>
+        <a href="https://x.com/" target="_blank" aria-label="Twitter" style='width: 1.9rem'>
+          <img src="../Assets/images/nav/twitter.png" alt="Twitter">
+        </a>
+      </ul>
+
+        <p class='my-[1rem] font-medium text-[1rem]'>@ 2025 Civic Clarity</p>
     </footer>
 
       <script src="../js/hamburger.js"></script>
-
-</body>
+      <script src="../js/library.js"></script>
+    </body>
 </html>
