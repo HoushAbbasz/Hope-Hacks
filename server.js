@@ -99,8 +99,8 @@ app.get('/kyr', (req, res) => {
   res.sendFile(path.join(__dirname, 'public/pages/kyr.html'));
 });
 
-app.get('/library', authenticate, (req, res) => {
-  res.sendFile(path.join(__dirname, 'public/pages/library.html'));
+app.get('/newsletter', authenticate, (req, res) => {
+  res.sendFile(path.join(__dirname, 'public/pages/newsletter.html'));
 });
 
 app.get('/auth', (req, res) => {
