@@ -13,24 +13,21 @@
     <!-- TAILWIND -->
     <script src="https://cdn.tailwindcss.com"></script>
 
-
     <!-- TAB ICON -->
     <link rel="icon" type="Custom Logo Icon" href="../Assets/images/nav/logo.png"/>
 
     <title>Civic Clarity</title>
-</head> 
+</head>
 
+<body class="flex flex-col items-center p-0 m-0 h-full w-full bg-gradient-to-br from-[#E8EDDF] via-[#CFDBD5] to-[#FDF0D5] font-[Montserrat] text-[#242423]]">
 
-
-    <body class='flex flex-col items-center p-0 m-0 h-full w-full bg-gradient-to-br from-[#E8EDDF] via-[#CFDBD5] to-[#FDF0D5] font-[Montserrat] text-[#242423]'>
-
- <!-- HEADER -->
+    <!-- HEADER -->
     <header class='sticky top-0 z-50 bg-gradient-to-br from-[#E8EDDF] to-[#CFDBD5] w-full'>
 
         <!-- LOGO -->
         <div class='flex flex-row justify-between mt-[-1rem] text-[1.5rem] font-medium w-full mr-[2rem] max-md:mr-[4.2rem] mb-[-1.5rem]'>
-            <a class='navLogo' href='/public/pages/'>
-                <img style='width: 9rem' src='/public/Assets/images/nav/logo.png' alt='Logo'>
+            <a class='navLogo' href='/'>
+                <img style='width: 9rem' src='../Assets/images/nav/logo.png' alt='Logo'>
             </a>
         </div>
 
@@ -57,15 +54,35 @@
         </nav>
     </header>
 
+    <div class="w-full max-w-xl rounded-xl p-6 backdrop-blur-sm bg-[#fef6e7] drop-shadow-2xl">
 
-        <h2>Your Favorites</h2>
-        <ul id="favorites-list"></ul>
+      <!-- Form Header -->
+      <div class="flex flex-col items-center justify-between mb-6">
+        <h1 class="text-xl font-semibold mb-4">Subscribe</h3>
+        <h3 class="text-lg" >Subscribe to our newsletter to stay updated!</h4>
+      </div>
 
-        <button id="favorite-btn">Favorite</button>
-        <button id="logout-btn">Logout</button>
+      <!-- Register Form -->
+      <form id="register-form" class=" flex items-center gap-3 ">
 
+        <input
+          id="reg-email"
+          type="email"
+          placeholder="Enter your email address"
+          class="flex-1 w-full border rounded-full px-3 py-2"
+          required
+        />
 
+        <button class="shrink-0 font-semibold text-white py-2 px-5 bg-[#669BBC] rounded-full hover:bg-[#242423] transition">
+          submit
+        </button>
+      </form>
 
+    </div>
+
+  <script src="/public/js/hamburger.js"></script>
+  <script src="../js/auth.js"></script>
+</body>
     <!--FOOTER -->
     <footer class='h-full w-full flex flex-col justify-evenly items-center pt-[0.2rem] font-semibold bg-[#fef6e7'>
         
@@ -85,7 +102,4 @@
         <p class='my-[1rem] font-medium text-[1rem]'>@ 2025 Civic Clarity</p>
     </footer>
 
-      <script src="../js/hamburger.js"></script>
-      <script src="../js/library.js"></script>
-    </body>
 </html>
