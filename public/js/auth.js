@@ -3,13 +3,13 @@ const API_URL = '/';
 
 const registerForm = document.getElementById('register-form');
 const regEmail = document.getElementById("reg-email");
-const showRegisterBtn = document.getElementById("show-register");
+//const showRegisterBtn = document.getElementById("show-register");
 
 
-  showRegisterBtn.addEventListener("click", () => {
-    registerForm.classList.remove("hidden");
-    loginForm.classList.add("hidden");
-  });
+  // showRegisterBtn.addEventListener("click", () => {
+  //   registerForm.classList.remove("hidden");
+  //   loginForm.classList.add("hidden");
+  // });
 
   // Handle Registration
 registerForm.addEventListener("submit", async (e) => {
