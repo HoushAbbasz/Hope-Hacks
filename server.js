@@ -30,12 +30,11 @@ app.use(express.static(path.join(__dirname, 'public')));
 // ===== AUTH ROUTES =====
 // register
 app.post('/register', async (req, res) => {
-  const { username, email, password } = req.body;
+  const { email } = req.body;
 
   try {
-    const hashedPassword = await bcrypt.hash(password, 10);
-    await connection.promise().query('INSERT INTO users (username, email, password) VALUES (?, ?, ?)',
-      [username, email, hashedPassword,]
+    await connection.promise().query('INSERT INTO users (email) VALUES (?)',
+      [email,]
     );
 
     res.status(201).json({ message: 'User created!' });
