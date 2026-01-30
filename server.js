@@ -59,6 +59,20 @@ app.get('/auth', (req, res) => {
   res.sendFile(path.join(__dirname, 'public/pages/auth.html'));
 });
 
+app.get('/email', (req, res) => {
+ res.sendFile(path.join(__dirname, 'public/pages/email.html'));
+});
+
+
+app.get('/emailConfig', (req, res) => {
+ res.json({
+   apiKey: process.env.EMAIL_API_KEY,
+   serviceId: process.env.EMAIL_SERVICE_ID,
+   templateId: process.env.EMAIL_TEMPLATE_ID
+ });
+});
+
+
 app.listen(PORT, () => {
-  console.log(`Server is running on http://localhost:3000`);
+  console.log(`Server is running on http://localhost:${PORT}`);
 });
