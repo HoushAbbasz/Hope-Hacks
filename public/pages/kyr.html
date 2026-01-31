@@ -28,15 +28,21 @@
 
         <!-- LOGO -->
         <div class='flex flex-row justify-between mt-[-1rem] text-[1.5rem] font-medium w-full mr-[2rem] max-md:mr-[4.2rem] mb-[-1.5rem]'>
-            <a class='navLogo' href='/'>
+            <a class='navLogo' href='../pages/'>
                 <img style='width: 9rem' src='../Assets/images/nav/logo.png' alt='Logo'>
             </a>
         </div>
 
         <!-- HAMBURGER CLASS NAME (hamburger-Menu)-->
-            <img src='../Assets/images/nav/hamburger.png' alt='Hamburger Menu' class='fixed top-[1.8rem] right-[0.6rem] cursor-pointer hamburger-Menu min-[768px]:hidden z-[80]' style='width: 3rem'>
+            <img src='../Assets/images/nav/hamburger.png' alt='Hamburger Menu' class='fixed top-[1.8rem] right-[0.6rem] cursor-pointer hamburger-Menu min-[768px]:hidden' style='width: 3rem'>
 
-
+        <div class='fixed top-[1.8rem] right-[0.6rem] flex items-center gap-[0.8rem] min-[768px]:hidden z-[80]'>
+            <a href='/#' aria-label='translate webpage to spanish'
+            class='rounded-full bg-[#DC2626] hover:bg-[#B91C1C] px-[0.9rem] py-[0.5rem] font-bold text-white shadow-lg text-[0.85rem]'>
+            Para Español →
+            </a>
+            <img src='../Assets/images/nav/hamburger.png' alt='Hamburger Menu' class='cursor-pointer hamburger-Menu' style='width: 3rem'>
+        </div>
         <nav>
             <!-- LARGE/DESKTOP NAV -->
             <ul class='flex flex-row gap-[1.7rem] justify-end mr-[2.5rem] mt-[-3.8rem] mb-[1.2rem] font-semibold text-[1.3rem] max-[768px]:hidden'>
@@ -52,10 +58,6 @@
 
             <!-- SMALL/MOBILE NAV  CLASS NAME (navbar-Menu) -->
             <ul class='hidden flex flex-col text-center h-full w-full top-0 left-0 gap-[2.5rem] py-[2rem] text-black text-[1.5rem] font-medium navbar-Menu min-[768px]:hidden'>
-                <li><a href='/#' aria-label='translate webpage to spanish'
-                class='inline-block rounded-full bg-[#DC2626] hover:bg-[#B91C1C] px-[2rem] py-[0.9rem] font-bold text-white shadow-lg hover:shadow-xl transition-all duration-200 text-[1.3rem]'>
-                Para Español →
-                </a></li>  
                 <li><a href='/' class='hover:underline hover:decoration-[#396060]'>Home</a></li>
                 <li><a href='/kyr' class='hover:underline hover:decoration-[#396060]'>Resources</a></li>
                 <li><a href='/map' class='hover:underline hover:decoration-[#396060]'>Locations</a></li>
