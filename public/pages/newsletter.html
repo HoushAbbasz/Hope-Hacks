@@ -32,8 +32,6 @@
         </div>
 
         <!-- HAMBURGER CLASS NAME (hamburger-Menu)-->
-            <img src='../Assets/images/nav/hamburger.png' alt='Hamburger Menu' class='fixed top-[1.8rem] right-[0.6rem] cursor-pointer hamburger-Menu min-[768px]:hidden' style='width: 3rem'>
-
         <div class='fixed top-[1.8rem] right-[0.6rem] flex items-center gap-[0.8rem] min-[768px]:hidden z-[80]'>
             <a href='/#' aria-label='translate webpage to spanish'
             class='rounded-full bg-[#DC2626] hover:bg-[#B91C1C] px-[0.9rem] py-[0.5rem] font-bold text-white shadow-lg text-[0.85rem]'>
@@ -68,30 +66,39 @@
 
       <!-- Form Header -->
       <div class="flex flex-col items-center justify-between mb-6">
-        <h1 class="text-xl font-semibold mb-4">Subscribe</h3>
-        <h3 class="text-lg" >Subscribe to our newsletter to stay updated!</h4>
+        <h1 class="text-xl font-semibold mb-4">Subscribe</h1>
+        <h3 class="text-lg">Subscribe to our newsletter to stay updated!</h3>
       </div>
 
       <!-- Register Form -->
-      <form id="register-form" class=" flex items-center gap-3 ">
+      <form id="register-form" class="flex flex-col gap-3">
+
+        <input
+          id="reg-name"
+          type="text"
+          placeholder="Enter your name (optional)"
+          class="w-full border rounded-full px-3 py-2"
+        />
 
         <input
           id="reg-email"
           type="email"
           placeholder="Enter your email address"
-          class="flex-1 w-full border rounded-full px-3 py-2"
+          class="w-full border rounded-full px-3 py-2"
           required
         />
 
-        <button class="shrink-0 font-semibold text-white py-2 px-5 bg-[#669BBC] rounded-full hover:bg-[#242423] transition">
-          submit
+        <button id="submit" class="font-semibold text-white py-2 px-5 bg-[#669BBC] rounded-full hover:bg-[#242423] transition">
+          Submit
         </button>
       </form>
 
     </div>
 
   <script src="../js/hamburger.js"></script>
-  <script src="../js/auth.js"></script>
+  <!-- <script src="../js/auth.js"></script> -->
+  <script src="../js/email.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
 </body>
     <!--FOOTER -->
     <footer class='h-full w-full flex flex-col justify-evenly items-center pt-[0.2rem] font-semibold bg-[#fef6e7'>
