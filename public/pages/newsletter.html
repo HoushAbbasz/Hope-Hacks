@@ -26,15 +26,21 @@
 
         <!-- LOGO -->
         <div class='flex flex-row justify-between mt-[-1rem] text-[1.5rem] font-medium w-full mr-[2rem] max-md:mr-[4.2rem] mb-[-1.5rem]'>
-            <a class='navLogo' href='/'>
+            <a class='navLogo' href='../pages/'>
                 <img style='width: 9rem' src='../Assets/images/nav/logo.png' alt='Logo'>
             </a>
         </div>
 
         <!-- HAMBURGER CLASS NAME (hamburger-Menu)-->
-            <img src='../Assets/images/nav/hamburger.png' alt='Hamburger Menu' class='fixed top-[1.8rem] right-[0.6rem] cursor-pointer hamburger-Menu min-[768px]:hidden z-[80]' style='width: 3rem'>
+            <img src='../Assets/images/nav/hamburger.png' alt='Hamburger Menu' class='fixed top-[1.8rem] right-[0.6rem] cursor-pointer hamburger-Menu min-[768px]:hidden' style='width: 3rem'>
 
-
+        <div class='fixed top-[1.8rem] right-[0.6rem] flex items-center gap-[0.8rem] min-[768px]:hidden z-[80]'>
+            <a href='/#' aria-label='translate webpage to spanish'
+            class='rounded-full bg-[#DC2626] hover:bg-[#B91C1C] px-[0.9rem] py-[0.5rem] font-bold text-white shadow-lg text-[0.85rem]'>
+            Para Español →
+            </a>
+            <img src='../Assets/images/nav/hamburger.png' alt='Hamburger Menu' class='cursor-pointer hamburger-Menu' style='width: 3rem'>
+        </div>
         <nav>
             <!-- LARGE/DESKTOP NAV -->
             <ul class='flex flex-row gap-[1.7rem] justify-end mr-[2.5rem] mt-[-3.8rem] mb-[1.2rem] font-semibold text-[1.3rem] max-[768px]:hidden'>
@@ -50,10 +56,6 @@
 
             <!-- SMALL/MOBILE NAV  CLASS NAME (navbar-Menu) -->
             <ul class='hidden flex flex-col text-center h-full w-full top-0 left-0 gap-[2.5rem] py-[2rem] text-black text-[1.5rem] font-medium navbar-Menu min-[768px]:hidden'>
-                <li><a href='/#' aria-label='translate webpage to spanish'
-                class='inline-block rounded-full bg-[#DC2626] hover:bg-[#B91C1C] px-[2rem] py-[0.9rem] font-bold text-white shadow-lg hover:shadow-xl transition-all duration-200 text-[1.3rem]'>
-                Para Español →
-                </a></li>  
                 <li><a href='/' class='hover:underline hover:decoration-[#396060]'>Home</a></li>
                 <li><a href='/kyr' class='hover:underline hover:decoration-[#396060]'>Resources</a></li>
                 <li><a href='/map' class='hover:underline hover:decoration-[#396060]'>Locations</a></li>
@@ -62,11 +64,109 @@
         </nav>
     </header>
 
+<section class="max-w-6xl mx-auto px-6 py-12">
+    <h1 class="text-5xl md:text-[3rem] font-semibold leading-tight drop-shadow-2xl pb-12"">LATEST NEWS</h1>  
+  <div class="grid gap-8 sm:grid-cols-2 lg:grid-cols-2">
+
+    <!-- Card 1 -->
+    <article class="group rounded-2xl overflow-hidden bg-white shadow-lg hover:shadow-2xl transition">
+      <div class="overflow-hidden">
+        <a href="https://alabamareflector.com/2026/01/29/house-committee-approves-bill-to-allow-local-agencies-to-enforce-immigration-laws/">
+          <img 
+          src="../Assets/images/news/news1.jpg"
+          class="w-full h-56 object-cover group-hover:scale-105 transition duration-300"
+          >
+        </a>
+        
+      </div>
+
+      <div class="p-6">
+        <p class="text-xs uppercase tracking-wide text-gray-500 mb-2">
+          January 29, 2026
+        </p>
+
+        <h1 class="text-lg font-semibold leading-snug text-gray-900 group-hover:underline transition">
+          House committee approves bill to allow local agencies to enforce immigration laws
+        </h1>
+      </div>
+    </article>
+
+    <!-- Card 2 -->
+    <article class="group rounded-2xl overflow-hidden bg-white shadow-lg hover:shadow-2xl transition">
+      <div class="overflow-hidden">
+        <a href="https://www.pbs.org/newshour/politics/appeals-court-rules-noems-decision-to-end-protections-for-venezuelans-in-u-s-was-illegal">
+          <img 
+          src="../Assets/images/news/news2.jpg"
+          class="w-full h-56 object-cover group-hover:scale-105 transition duration-300"
+          >
+        </a>
+        
+      </div>
+
+      <div class="p-6">
+        <p class="text-xs uppercase tracking-wide text-gray-500 mb-2">
+          January 29, 2026
+        </p>
+
+        <h1 class="text-lg font-semibold leading-snug text-gray-900 group-hover:underline transition">
+          Appeals court rules Noem's decision to end protections for Venezuelans in U.S. was illegal
+        </h1>
+      </div>
+    </article>
+
+    <!-- Card 3 -->
+    <article class="group rounded-2xl overflow-hidden bg-white shadow-lg hover:shadow-2xl transition">
+      <div class="overflow-hidden">
+        <a href="https://www.bbc.com/news/articles/c78vgnz3z6eo">
+          <img 
+          src="../Assets/images/news/news3.jpg"
+          class="w-full h-56 object-cover group-hover:scale-105 transition duration-300"
+          >
+        </a>
+        
+      </div>
+
+      <div class="p-6">
+        <p class="text-xs uppercase tracking-wide text-gray-500 mb-2">
+          January 31, 2026
+        </p>
+
+        <h1 class="text-lg font-semibold leading-snug text-gray-900 group-hover:underline transition">
+          Federal judge denies request to block ICE surge in Minnesota
+        </h1>
+      </div>
+    </article>
+
+    <!-- Card 4 -->
+    <article class="group rounded-2xl overflow-hidden bg-white shadow-lg hover:shadow-2xl transition">
+      <div class="overflow-hidden">
+        <a href="https://www.nbcnews.com/news/us-news/lawsuit-challenges-ice-ability-enter-homes-warrants-judges-rcna256741">
+          <img 
+          src="../Assets/images/news/news4.jpg"
+          class="w-full h-56 object-cover group-hover:scale-105 transition duration-300"
+          >
+        </a>
+        
+      </div>
+
+      <div class="p-6">
+        <p class="text-xs uppercase tracking-wide text-gray-500 mb-2">
+          January 30, 2026
+        </p>
+
+        <h1 class="text-lg font-semibold leading-snug text-gray-900 group-hover:underline transition">
+          Lawsuit challenges ICE ability to enter homes without warrant from judges
+        </h1>
+      </div>
+    </article>
+</section>
+
     <div class="w-full max-w-xl rounded-xl p-6 backdrop-blur-sm bg-[#fef6e7] drop-shadow-2xl">
 
       <!-- Form Header -->
       <div class="flex flex-col items-center justify-between mb-6">
         <h1 class="text-xl font-semibold mb-4">Subscribe</h3>
+          <hr class="h-1">
         <h3 class="text-lg" >Subscribe to our newsletter to stay updated!</h4>
       </div>
 
