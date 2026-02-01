@@ -64,100 +64,133 @@
         </nav>
     </header>
 
-  <!-- Controls -->
-  <section class="max-w-7xl mx-auto px-4 pt-6">
-    <div class="bg-white/80 backdrop-blur border border-black/10 rounded-2xl shadow-sm p-4 sm:p-6">
-      <h2 class="text-base sm:text-lg font-bold mb-4">Search for nearby resources</h2>
+<section class="max-w-6xl mx-auto px-6 py-12">
+    <h1 class="text-5xl md:text-[3rem] font-semibold leading-tight drop-shadow-2xl pb-12"">LATEST NEWS</h1>  
+  <div class="grid gap-8 sm:grid-cols-2 lg:grid-cols-2">
 
-      <div class="grid gap-3 lg:grid-cols-12">
-        <!-- Address input -->
-        <div class="lg:col-span-6">
-          <label for="addressInput" class="block text-sm font-semibold mb-1">Charlotte area address</label>
-          <input
-            type="text"
-            id="addressInput"
-            placeholder="Enter an address in Charlotte..."
-            class="w-full rounded-xl border border-black/10 bg-white px-4 py-3 text-sm outline-none
-                   focus:ring-2 focus:ring-[#669BBC] focus:border-transparent"
-          />
-        </div>
-
-        <!-- Buttons -->
-        <div class="lg:col-span-6 flex flex-col sm:flex-row gap-3 sm:items-end">
-          <button
-            id="searchButton"
-            class="w-full sm:w-auto px-5 py-3 rounded-xl bg-[#669BBC] text-white font-semibold
-                   hover:bg-[#242423] transition shadow-sm"
+    <!-- Card 1 -->
+    <article class="group rounded-2xl overflow-hidden bg-white shadow-lg hover:shadow-2xl transition">
+      <div class="overflow-hidden">
+        <a href="https://alabamareflector.com/2026/01/29/house-committee-approves-bill-to-allow-local-agencies-to-enforce-immigration-laws/">
+          <img 
+          src="../Assets/images/news/news1.jpg"
+          class="w-full h-56 object-cover group-hover:scale-105 transition duration-300"
           >
-            Find Nearest
-          </button>
-
-          <button
-            id="currentLocationBtn"
-            class="w-full sm:w-auto px-5 py-3 rounded-xl bg-white text-[#242423] font-semibold
-                   border border-black/10 hover:bg-black/5 transition"
-          >
-            📍 Use My Location
-          </button>
-
-          <button
-            id="showAllBtn"
-            class="w-full sm:w-auto px-5 py-3 rounded-xl bg-white text-[#242423] font-semibold
-                   border border-black/10 hover:bg-black/5 transition"
-          >
-            View All
-          </button>
-        </div>
+        </a>
+        
       </div>
 
-      <p class="text-xs text-[#242423]/60 mt-4">
-        Educational resource finder. Results may vary and do not constitute legal advice.
-      </p>
+      <div class="p-6">
+        <p class="text-xs uppercase tracking-wide text-gray-500 mb-2">
+          January 29, 2026
+        </p>
+
+        <h1 class="text-lg font-semibold leading-snug text-gray-900 group-hover:underline transition">
+          House committee approves bill to allow local agencies to enforce immigration laws
+        </h1>
+      </div>
+    </article>
+
+    <!-- Card 2 -->
+    <article class="group rounded-2xl overflow-hidden bg-white shadow-lg hover:shadow-2xl transition">
+      <div class="overflow-hidden">
+        <a href="https://www.pbs.org/newshour/politics/appeals-court-rules-noems-decision-to-end-protections-for-venezuelans-in-u-s-was-illegal">
+          <img 
+          src="../Assets/images/news/news2.jpg"
+          class="w-full h-56 object-cover group-hover:scale-105 transition duration-300"
+          >
+        </a>
+        
+      </div>
+
+      <div class="p-6">
+        <p class="text-xs uppercase tracking-wide text-gray-500 mb-2">
+          January 29, 2026
+        </p>
+
+        <h1 class="text-lg font-semibold leading-snug text-gray-900 group-hover:underline transition">
+          Appeals court rules Noem's decision to end protections for Venezuelans in U.S. was illegal
+        </h1>
+      </div>
+    </article>
+
+    <!-- Card 3 -->
+    <article class="group rounded-2xl overflow-hidden bg-white shadow-lg hover:shadow-2xl transition">
+      <div class="overflow-hidden">
+        <a href="https://www.bbc.com/news/articles/c78vgnz3z6eo">
+          <img 
+          src="../Assets/images/news/news3.jpg"
+          class="w-full h-56 object-cover group-hover:scale-105 transition duration-300"
+          >
+        </a>
+        
+      </div>
+
+      <div class="p-6">
+        <p class="text-xs uppercase tracking-wide text-gray-500 mb-2">
+          January 31, 2026
+        </p>
+
+        <h1 class="text-lg font-semibold leading-snug text-gray-900 group-hover:underline transition">
+          Federal judge denies request to block ICE surge in Minnesota
+        </h1>
+      </div>
+    </article>
+
+    <!-- Card 4 -->
+    <article class="group rounded-2xl overflow-hidden bg-white shadow-lg hover:shadow-2xl transition">
+      <div class="overflow-hidden">
+        <a href="https://www.nbcnews.com/news/us-news/lawsuit-challenges-ice-ability-enter-homes-warrants-judges-rcna256741">
+          <img 
+          src="../Assets/images/news/news4.jpg"
+          class="w-full h-56 object-cover group-hover:scale-105 transition duration-300"
+          >
+        </a>
+        
+      </div>
+
+      <div class="p-6">
+        <p class="text-xs uppercase tracking-wide text-gray-500 mb-2">
+          January 30, 2026
+        </p>
+
+        <h1 class="text-lg font-semibold leading-snug text-gray-900 group-hover:underline transition">
+          Lawsuit challenges ICE ability to enter homes without warrant from judges
+        </h1>
+      </div>
+    </article>
+</section>
+
+    <div class="w-full max-w-xl rounded-xl p-6 backdrop-blur-sm bg-[#fef6e7] drop-shadow-2xl">
+
+      <!-- Form Header -->
+      <div class="flex flex-col items-center justify-between mb-6">
+        <h1 class="text-xl font-semibold mb-4">Subscribe</h3>
+          <hr class="h-1">
+        <h3 class="text-lg" >Subscribe to our newsletter to stay updated!</h4>
+      </div>
+
+      <!-- Register Form -->
+      <form id="register-form" class=" flex items-center gap-3 ">
+
+        <input
+          id="reg-email"
+          type="email"
+          placeholder="Enter your email address"
+          class="flex-1 w-full border rounded-full px-3 py-2"
+          required
+        />
+
+        <button class="shrink-0 font-semibold text-white py-2 px-5 bg-[#669BBC] rounded-full hover:bg-[#242423] transition">
+          submit
+        </button>
+      </form>
+
     </div>
-  </section>
 
-  <!-- Main layout: Results + Map -->
-  <main class="max-w-7xl mx-auto px-4 py-6">
-    <div class="grid gap-6 lg:grid-cols-12">
-
-      <!-- Results Panel -->
-      <aside class="lg:col-span-4">
-        <div class="bg-white/80 backdrop-blur border border-black/10 rounded-2xl shadow-sm overflow-hidden">
-          <div class="px-5 py-4 border-b border-black/10 flex items-center justify-between">
-            <h3 class="font-bold">Results</h3>
-            <span class="text-xs text-[#242423]/60">Charlotte, NC</span>
-          </div>
-
-          
-          <div id="cardsContainer" class="p-4 max-h-[420px] lg:max-h-[650px] overflow-y-auto">
-            <p class="text-sm text-[#242423]/70 text-center py-10">
-              Enter an address or click <span class="font-semibold">“View All”</span> to see nearby resources.
-            </p>
-          </div>
-        </div>
-      </aside>
-
-      <!-- Map Panel -->
-      <section class="lg:col-span-8">
-        <div class="bg-white/80 backdrop-blur border border-black/10 rounded-2xl shadow-sm overflow-hidden">
-          <div class="px-5 py-4 border-b border-black/10 flex items-center justify-between">
-            <h3 class="font-bold">Map</h3>
-            <span class="text-xs text-[#242423]/60">Interactive view</span>
-          </div>
-
-   
-          <div id="map" class="w-full h-[420px] lg:h-[650px]">
-          </div>
-        </div>
-      </section>
-
-    </div>
-  </main>
-
-  <script src="../js/map.js"></script>
   <script src="../js/hamburger.js"></script>
+  <script src="../js/auth.js"></script>
 </body>
-
     <!--FOOTER -->
     <footer class='h-full w-full flex flex-col justify-evenly items-center pt-[0.2rem] font-semibold bg-[#fef6e7'>
         
@@ -178,6 +211,3 @@
     </footer>
 
 </html>
-
-
-
