@@ -40,18 +40,18 @@
         <nav>
             <!-- LARGE/DESKTOP NAV -->
             <ul class='flex flex-row gap-[1.7rem] justify-end mr-[2rem] mt-[-3.8rem] mb-[0.5rem] font-semibold text-[1.3rem] max-[768px]:hidden'>
-                <li><a href='/' class='hover:text-[#8FCFBC]'>Home</a></li>
-                <li><a href='/kyr' class='hover:text-[#8FCFBC]'>Resources</a></li>
-                <li><a href='/map' class='hover:text-[#8FCFBC]'>Locations</a></li>
-                <li><a href='/newsletter' class='hover:text-[#8FCFBC]'>Newsletter</a></li>
+                <li><a href='../pages/index.html' class='hover:text-[#8FCFBC]'>Home</a></li>
+                <li><a href='../pages/kyr.html' class='hover:text-[#8FCFBC]'>Resources</a></li>
+                <li><a href='../pages/map.html' class='hover:text-[#8FCFBC]'>Locations</a></li>
+                <li><a href='#' class='hover:text-[#8FCFBC]'>Newsletter</a></li>
             </ul>  
 
             <!-- SMALL/MOBILE NAV  CLASS NAME (navbar-Menu) -->
             <ul class='hidden flex flex-col text-center h-full w-full top-0 left-0 gap-[2.5rem] py-[2rem] text-black text-[1.5rem] font-medium navbar-Menu min-[768px]:hidden'>
-                <li><a href='/' class='hover:underline hover:decoration-[#396060]'>Home</a></li>
-                <li><a href='/kyr' class='hover:underline hover:decoration-[#396060]'>Resources</a></li>
-                <li><a href='/map' class='hover:underline hover:decoration-[#396060]'>Locations</a></li>
-                <li><a href='/newsletter' class='hover:underline hover:decoration-[#396060]'>Newsletter</a></li>
+                <li><a href='../pages/index.html' class='hover:underline hover:decoration-[#396060]'>Home</a></li>
+                <li><a href='../pages/kyr.html' class='hover:underline hover:decoration-[#396060]'>Resources</a></li>
+                <li><a href='../pages/map.html' class='hover:underline hover:decoration-[#396060]'>Locations</a></li>
+                <li><a href='#' class='hover:underline hover:decoration-[#396060]'>Newsletter</a></li>
             </ul>
         </nav>
     </header>
@@ -60,65 +60,102 @@
 
 
   <!-- HERO -->
-  <section class="relative">
-    <img src="../assets/images/kyr/kyr-hero.jpeg" class="w-full h-[450px] object-cover" alt="Hero image for know your rights page"
-    />
-           
-      <h1 class="text-3xl md:text-4xl lg:text-5xl font-bold text-[#242423] mb-2 text-center px-4">
-  Know Your Rights
+<section class="relative w-full h-[450px]">
+
+  <img
+    src="../Assets/images/kyr/kyr-hero.jpeg"
+    alt="Hero image for Know Your Rights page"
+    class="absolute inset-0 w-full h-full object-cover"
+  />
+<!--title-->
+  <div class="absolute inset-0 bg-black/30"></div>
+
+  <div class="relative z-10 h-full flex flex-col text-center px-4">
+
+<div class="flex-1 flex items-center justify-center pt-16 md:pt-20 lg:pt-12">
+
+      <h1
+        class="text-3xl md:text-4xl lg:text-5xl font-bold text-white"
+        style="text-shadow: 0 4px 12px black;"
+      >
+        Know Your Rights
       </h1>
-
-    <p class="text-base md:text-lg lg:text-xl text-[#242423]/80 text-center max-w-3xl mx-auto px-4">
-  Educational resources to help you understand your rights and find trusted support.
-    </p>
-
     </div>
-  </section>
 
- <!-- Find Legal Help Near You Button -->
-  <section class="text-center pb-12">
-    <p class="text-lg text-[#242423]/80 mb-4">
-      Need legal advice?
+    <!-- subtitlee -->
+    <p
+      class="mb-8 text-base md:text-lg lg:text-xl text-white max-w-3xl mx-auto"
+      style="text-shadow: 0 2px 6px rgba(0,0,0,0.7);"
+    >
+      Educational resources to help you understand your rights and find trusted support.
     </p>
-    <a href="/hopehacks-cc/public/pages/map.html" 
-       class="bg-[#669BBC] text-white font-semibold px-6 py-3 rounded-full hover:bg-[#242423] transition">
-      Find Legal Help Near You
-    </a>
-  </section>
+
+  </div>
+</section>
+
+<!--Detention Locator -->
+
+<section class="px-6 py-16 ">
+  <div class="max-w-4xl mx-auto text-center">
+    <h2 class="text-2xl md:text-3xl lg:text-4xl font-bold mb-4">
+      Know Someone Who Has Been Detained?
+    </h2>
+
+    <p class="text-lg mb-6">
+      You can use official ICE detainee locator to find someone currently in custody.
+    </p>
+  <!--button-->
+    <a
+    href="https://locator.ice.gov/odls/#/search"
+    target="_blank"
+    rel="noopener noreferrer"
+    class="relative inline-block overflow-hidden rounded-full border-2 bg-[#003049] px-8 py-4 font-semibold text-[#ffffff] transition-colors duration-300 group">
+    <!--filling layer animationn-->
+    <span 
+      class="absolute inset-0 -translate-x-full bg-[#669bbc] transition-transform duration-300 group-hover:translate-x-0"></span>
+      <!--button text-->
+      <span class="relative z-10 group-hover:text-white transition-colors duration-300">
+        Locate a Detainee
+      </span>
+  </a>
+  
+  <p class="text-sm text-[#242423]/70 mt-6">
+    This link directs you to an official U.S government website.
+  </p>
+  </div>
+</section>
+
 
   <!-- CARDS GRID -->
   <section class="px-4 pb-12">
     <div class="max-w-4xl mx-auto grid gap-6 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2">
 
       <!-- Card 1 ACLU-->
-      <div class="bg-white rounded-xl shadow-lg transform hover:-translate-y-1 transition-all duration-300">
+      <div class="bg-[#fdf0d5] rounded-xl shadow-lg transform hover:-translate-y-1 transition-all duration-300">
         <div class="p-4 flex items-start gap-4">
           <img src="../assets/images/kyr/law-document-icon.png" 
                alt="ACLU Logo" class="w-12 h-12">
           <div>
             <h3 class="font-semibold text-[#242423] text-xl">ACLU Immigrants Rights</h3>
             <p class="text-sm text-[#242423]/80 my-1">
-              Educational guidance on immigrant rights and enforcement encounters.<br>
-              <br>
-              Orientación educativa sobre los derechos de los inmigrantes y los encuentros con las fuerzas del orden.
+              Educational guidance on immigrant rights and enforcement encounters.
             </p>
             <a href="https://www.aclu.org/know-your-rights/immigrants-rights"
                class="text-[#669BBC] font-medium hover:underline text-sm" target="_blank">
-              Visit ACLU Resources →
+              <br> Visit ACLU Resources →
             </a>
           </div>
         </div>
       </div>
       <!-- Card 2 NILC-->
-      <div class="bg-white rounded-xl shadow-lg transform hover:-translate-y-1 transition-all duration-300">
+      <div class="bg-[#fdf0d5] rounded-xl shadow-lg transform hover:-translate-y-1 transition-all duration-300">
         <div class="p-4 flex items-start gap-4">
           <img src="../assets/images/kyr/law-icon.png"
                alt="NILC Logo" class="w-12 h-12">
           <div>
             <h3 class="font-semibold text-[#242423] text-xl">National Immigration Law Center</h3>
             <p class="text-sm text-[#242423]/80 my-1">
-              Advocacy and plain-language immigration rights info. <br> <br>
-              Defensa de los derechos de los inmigrantes e información sobre los mismos en lenguaje sencillo.
+              Advocacy and plain-language immigration rights info.
             </p>
             <a href="https://www.nilc.org" class="text-[#669BBC] font-medium hover:underline text-sm" 
                target="_blank">
@@ -128,15 +165,14 @@
         </div>
       </div>
       <!--Card 3 NIJC-->
-      <div class="bg-white rounded-xl shadow-lg transform hover:-translate-y-1 transition-all duration-300">
+      <div class="bg-[#fdf0d5] rounded-xl shadow-lg transform hover:-translate-y-1 transition-all duration-300">
         <div class="p-4 flex items-start gap-4">
-          <img src="/public/Assets/images/kyr/justice-icon.png"
+          <img src="../Assets/images/kyr/justice-icon.png"
                alt="NIJC Logo" class="w-12 h-12">
           <div>
             <h3 class="font-semibold text-[#242423] text-xl">National Immigration Justice Center</h3>
             <p class="text-sm text-[#242423]/80 my-1">
-             The National Immigrant Justice Center (NIJC) defends the rights of immigrants, refugees, and asylum seekers. <br> <br>
-             El Centro Nacional de Justicia para Inmigrantes (NIJC) defiende los derechos de los inmigrantes, refugiados y solicitantes de asilo.
+             The National Immigrant Justice Center (NIJC) defends the rights of immigrants, refugees, and asylum seekers.
             </p>
             <a href="https://immigrantjustice.org/for-immigrants/know-your-rights/ice-encounter/" class="text-[#669BBC] font-medium hover:underline text-sm" 
                target="_blank">
@@ -146,15 +182,14 @@
         </div>
       </div>
       <!--Card 4 United We Dream-->
-        <div class="bg-white rounded-xl shadow-lg transform hover:-translate-y-1 transition-all duration-300">
+        <div class="bg-[#fdf0d5] rounded-xl shadow-lg transform hover:-translate-y-1 transition-all duration-300">
         <div class="p-4 flex items-start gap-4">
-          <img src="/public/Assets/images/kyr/group-icon.png"
+          <img src="../Assets/images/kyr/group-icon.png"
                alt="UWD" class="w-12 h-12">
           <div>
             <h3 class="font-semibold text-[#242423] text-xl">United We Dream</h3>
             <p class="text-sm text-[#242423]/80 my-1">
-              United We Dream is committed to ensuring that people who are, have been, or will be directly impacted by the immigrant experience are at the forefront of decision-making and throughout UWD<br><br>
-              United We Dream se compromete a garantizar que las personas que son, han sido o serán directamente afectadas por la experiencia migratoria estén en la primera línea de la toma de decisiones y en todos los ámbitos de UWD.
+              United We Dream is committed to ensuring that people who are, have been, or will be directly impacted by the immigrant experience are at the forefront of decision-making and throughout UWD
             </p>
             <a href="https://unitedwedream.org/resources/know-your-rights/?gad_source=1&gad_campaignid=12715220287&gbraid=0AAAAABjeV0P3fVUouOAMaYsT0NPt-lmyh&gclid=Cj0KCQiA1czLBhDhARIsAIEc7ugZvx8BYlOqQiKdE3UntNfmyJeIRsGB_bagD78iFDOTWSl_G6BuCskaAhRTEALw_wcB" class="text-[#669BBC] font-medium hover:underline text-sm" 
                target="_blank">
@@ -167,249 +202,101 @@
   </div>
 </section>
 
-
-<!--Detention Locator -->
-
-<section class="px-6 py-16 bg-[#FFF5E6]">
-  <div class="max-w-4xl mx-auto text-center">
-    <h2 class="text-2xl md:text-3xl lg:text-4xl font-bold mb-4">
-      Know Someone Who Has Been Detained?
-    </h2>
-
-    <p class="text-lg mb-6">
-      You can use official ICE detainee locator to find someone currently in custody.
-    </p>
-  
-    <a
-    href="https://locator.ice.gov/odls/#/search"
-    target="_blank"
-    rel="noopener noreferrer"
-    class="inline-block bg-[#E8A83D] text-white px-8 py-4 rounded-full font-semibold hover:bg-[#d8952f] transition">
-  Locate a Detainee
-  </a>
-  
-  <p class="text-sm text-[#242423]/70 mt-6">
-    This link directs you to an official U.S government website.
-  </p>
-  </div>
-</section>
-
-
-<!--Know Your Rights Posters section-->
+<!-- Know Your Rights Posters section -->
 <section class="px-6 py-16 max-w-7xl mx-auto">
   <h2 class="text-3xl font-bold text-center mb-10">
     Downloadable Know Your Rights Posters
   </h2>
 
+  
+
+
+<section>
   <div class="grid grid-cols-1 md:grid-cols-2 gap-8 px-4">
 
-    
     <!-- ENGLISH POSTER -->
-    <div class="bg-white rounded-xl shadow-lg p-6 flex flex-col items-center">
+    <div class="bg-[#fdf0d5] rounded-xl shadow-lg p-6 flex flex-col items-center">
       <img
-        src="/public/Assets/images/kyr/KYR-POSTER-ENG.png"
+        src="../Assets/images/kyr/KYR-POSTER-ENG.png"
         alt="Know Your Rights Poster - English"
         class="rounded-lg mb-4 max-h-[500px] object-contain"
       />
 
       <a
-        href="/public/Assets/images/kyr/KYR-POSTER-ENG.png"
+        href="../Assets/images/kyr/KYR-POSTER-ENG.png"
         download
-        class="mt-4 inline-flex items-center gap-2 bg-[#669BBC] text-white px-6 py-3 rounded-full hover:bg-[#242423] transition"
+        class="relative mt-4 inline-flex items-center gap-2 overflow-hidden rounded-full border-2 bg-[#003049] px-6 py-3 font-semibold text-[#ffffff] group hover:-translate-y-0.5 hover:shadow-lg transition"
       >
-        Download (English)
+        <!-- Fill animation -->
+        <span
+          class="absolute inset-0 -translate-x-full bg-[#669bbc] transition-transform duration-300 group-hover:translate-x-0"
+        ></span>
+
+        <!-- Button text -->
+        <span class="relative z-10 group-hover:text-white transition-colors duration-300">
+          Download (English)
+        </span>
       </a>
     </div>
 
     <!-- SPANISH POSTER -->
-    <div class="bg-white rounded-xl shadow-lg p-6 flex flex-col items-center">
+    <div class="bg-[#fdf0d5] rounded-xl shadow-lg p-6 flex flex-col items-center">
       <img
-        src="/public/Assets/images/kyr/KYR-POSTER-SPN.png"
+        src="../Assets/images/kyr/KYR-POSTER-SPN.png"
         alt="Conoce Tus Derechos Poster - Español"
         class="rounded-lg mb-4 max-h-[500px] object-contain"
       />
 
       <a
-        href="/public/Assets/images/kyr/KYR-POSTER-SPN.png"
+        href="../Assets/images/kyr/KYR-POSTER-SPN.png"
         download
-        class="mt-4 inline-flex items-center gap-2 bg-[#669BBC] text-white px-6 py-3 rounded-full hover:bg-[#242423] transition"
+        class="relative mt-4 inline-flex items-center gap-2 overflow-hidden rounded-full border-2 bg-[#003049] px-6 py-3 font-semibold text-[#ffffff] group hover:-translate-y-0.5 hover:shadow-lg transition"
       >
-        Descargar (Español)
+        <!-- Fill animation -->
+        <span
+          class="absolute inset-0 -translate-x-full bg-[#669bbc] transition-transform duration-300 group-hover:translate-x-0"
+        ></span>
+
+        <!-- Button text -->
+        <span class="relative z-10 group-hover:text-white transition-colors duration-300">
+          Descargar (Español)
+        </span>
       </a>
     </div>
 
   </div>
 </section>
 
+<!-- Find Legal Help Near You Button -->
+<section class="text-center mt-12 md:mt-16 lg:mt-20 pb-12">
 
-
-
-<!-- Community & Support Resources HEADER ONLY -->
-<section class="bg-[#FFF5E6] w-full px-6 py-16">
-  <div class="max-w-6xl mx-auto text-center">
-
-
-    <h2 class="text-2xl md:text-3xl lg:text-4xl font-bold mb-4">
-      Community & Support Resources
-    </h2>
-
-    <p class="max-w-xl md:max-w-2xl lg:max-w-3xl mx-auto text-sm md:text-base lg:text-lg text-[#242423]/80">
-      Legal help alone sometimes isn't enough. These organizations provide food,
-      healthcare, education, and community support.
+    <p class="text-lg text-[#242423]/80 mb-8">
+      Need legal advice?
     </p>
-  <!-- DISCLAIMER  -->
-    <p class="text-sm md:text-base text-[#242423]/60 mb-6 max-w-xl md:max-w-2xl lg:max-w-3xl mx-auto">
-  ❗ Resources are provided for informational purposes only and do not constitute legal advice.
-    </p>
+    <a
+      href="../pages/map.html"
+      class="relative inline-block overflow-hidden rounded-full border-2 bg-[#003049] px-6 py-3 font-semibold text-[#ffffff] group hover:-translate-y-0.5 hover:shadow-lg transition"
+    >
+      <!-- Fill animation -->
+      <span
+        class="absolute inset-0 -translate-x-full bg-[#669bbc] transition-transform duration-300 group-hover:translate-x-0"
+      ></span>
 
-  </div>
+      <!-- Button text -->
+      <span class="relative z-10 group-hover:text-white transition-colors duration-300">
+        Find Legal Help Near You
+      </span>
+    </a>
+  </section>
 </section>
 
-    <!-- Cards Grid -->
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 px-4">
 
-      <!-- CARD TEMPLATE -->
-      <!-- ourBRIDGE for KIDS -->
-      <div class="relative overflow-hidden border border-zinc-900 rounded-xl p-6 shadow-sm
-                  group transition transform hover:-translate-y-1 hover:shadow-lg">
-
-        <!-- hover fill -->
-        <div class="absolute inset-0 bg-[#FDF0D5]
-                    translate-y-full
-                    transition-transform duration-500 ease-out
-                    group-hover:translate-y-0"></div>
-
-        <!-- content -->
-        <div class="relative z-10">
-          <h3 class="font-semibold text-lg mb-2">ourBRIDGE for KIDS</h3>
-          <p class="text-sm text-[#242423]/80 mb-2">
-            Provides support for immigrant and refugee children and families,
-            including food assistance and Know Your Rights materials.
-          </p>
-          <p class="text-sm font-medium">
-            📍 3925 Willard Farrow Drive Charlotte, NC 28215<br>
-            📞 (980) 272-6022<br>
-            📧 info@joinourbridge.org<br>
-            <a href="https://joinourbridge.org/" target="_blank"
-               class="font-medium underline">
-              🌐 ourBRIDGE for KIDS Website
-            </a>
-          </p>
-        </div>
-      </div>
-
-      <!-- Camino Health Center -->
-      <div class="relative overflow-hidden border border-zinc-900 rounded-xl p-6 shadow-sm
-                  group transition transform hover:-translate-y-1 hover:shadow-lg">
-        <div class="absolute inset-0 bg-[#FDF0D5]
-                    translate-y-full transition-transform duration-500 ease-out
-                    group-hover:translate-y-0"></div>
-
-        <div class="relative z-10">
-          <h3 class="font-semibold text-lg">Camino Health Center</h3>
-          <p class="text-sm text-[#242423]/80 mt-2">
-            Bilingual food pantry, medical services, and low cost clothing.
-          </p>
-          <p class="text-sm mt-2">
-            📍 133 Stetson Dr, Charlotte, NC 28262<br>
-            📞 (704) 596-5606<br>
-            <a href="https://www.caminosalud.com/" target="_blank" class="underline">
-              🌐 Camino Health Center Website
-            </a>
-          </p>
-        </div>
-      </div>
-
-      <!-- International House -->
-      <div class="relative overflow-hidden border border-zinc-900 rounded-xl p-6 shadow-sm
-                  group transition transform hover:-translate-y-1 hover:shadow-lg">
-        <div class="absolute inset-0 bg-[#FDF0D5]
-                    translate-y-full transition-transform duration-500 ease-out
-                    group-hover:translate-y-0"></div>
-
-        <div class="relative z-10">
-          <h3 class="font-semibold text-lg">International House</h3>
-          <p class="text-sm text-[#242423]/80 mt-2">
-            Immigration legal services and community food drives.
-          </p>
-          <p class="text-sm mt-2">
-            📍 1611 E 7th St, Charlotte, NC 28204<br>
-            📞 (704) 333-8099<br>
-            <a href="https://www.ihclt.org/" target="_blank" class="underline">
-              🌐 International House Website
-            </a>
-          </p>
-        </div>
-      </div>
-
-      <!-- Nourish Up -->
-      <div class="relative overflow-hidden border border-zinc-900 rounded-xl p-6 shadow-sm
-                  group transition transform hover:-translate-y-1 hover:shadow-lg">
-        <div class="absolute inset-0 bg-[#FDF0D5]
-                    translate-y-full transition-transform duration-500 ease-out
-                    group-hover:translate-y-0"></div>
-
-        <div class="relative z-10">
-          <h3 class="font-semibold text-lg">Nourish Up</h3>
-          <p class="text-sm text-[#242423]/80 mt-2">
-            Emergency food assistance.<br>
-            📍 901 Carrier Drive, Charlotte, NC 28216<br>
-            📞 (704) 523-4333<br>
-            📧 contact@nourishup.org<br>
-            <a href="https://nourishup.org/" target="_blank" class="underline">
-              🌐 Nourish Up Website
-            </a>
-          </p>
-        </div>
-      </div>
-
-      <!-- Hope Street Food Pantry -->
-      <div class="relative overflow-hidden border border-zinc-900 rounded-xl p-6 shadow-sm
-                  group transition transform hover:-translate-y-1 hover:shadow-lg">
-        <div class="absolute inset-0 bg-[#FDF0D5]
-                    translate-y-full transition-transform duration-500 ease-out
-                    group-hover:translate-y-0"></div>
-
-        <div class="relative z-10">
-          <h3 class="font-semibold text-lg">Hope Street Food Pantry</h3>
-          <p class="text-sm text-[#242423]/80 mt-2">
-            📍 4100 Johnston Oehler Rd, Charlotte, NC 28269<br>
-            📞 (704) 584-9073<br>
-            📧 food@hopestreetfoodpantry.com<br>
-            <a href="https://hopestreetfoodpantry.com/" target="_blank" class="underline">
-              🌐 Hope Street Food Pantry Website
-            </a>
-          </p>
-        </div>
-      </div>
-
-      <!-- Siembra NC -->
-      <div class="relative overflow-hidden border border-zinc-900 rounded-xl p-6 shadow-sm
-                  group transition transform hover:-translate-y-1 hover:shadow-lg">
-        <div class="absolute inset-0 bg-[#FDF0D5]
-                    translate-y-full transition-transform duration-500 ease-out
-                    group-hover:translate-y-0"></div>
-
-        <div class="relative z-10">
-          <h3 class="font-semibold text-lg">Siembra NC</h3>
-          <p class="text-sm text-[#242423]/80 mt-2">
-            Organizing and protecting Latino immigrant families.<br><br>
-            📞 (336) 543-0353<br>
-            <a href="https://siembranc.org/" target="_blank" class="underline">
-              🌐 Siembra NC Website
-            </a>
-          </p>
-        </div>
-      </div>
-
-    </div>
-
-
-  </div>
-</section>
-    <!--bottom of page disclaimer -->
+    
+       
 <!-- GENERAL INFORMATION DISCLAIMER -->
-<section class="bg-[#FFF5E6] border-t border-[#242423]/10 px-6 py-12">
+<section class="border-[#242423]/10 px-6 pt-4 pb-12 -mt-8 md:-mt-12 lg:-mt-16">
+
+
   <div class="max-w-4xl mx-auto text-center">
 
     <p class="text-sm md:text-base lg:text-lg text-[#242423]/80 leading-relaxed">
@@ -441,7 +328,7 @@
     </footer>
 
 
-    <script src="/public/js/hamburger.js"></script>
+    <script src="../js/hamburger.js"></script>
 </body>
 </html>
 
