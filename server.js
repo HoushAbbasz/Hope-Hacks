@@ -67,12 +67,34 @@ app.get('/map', (req, res) => {
   res.sendFile(path.join(__dirname, 'public/pages/map.html'));
 });
 
+// know your rights page route
 app.get('/kyr', (req, res) => {
   res.sendFile(path.join(__dirname, 'public/pages/kyr.html'));
 });
 
+// newsletter page route 
 app.get('/newsletter', (req, res) => {
   res.sendFile(path.join(__dirname, 'public/pages/newsletter.html'));
+});
+
+// home spanish page route
+app.get('/es', (req, res) => {
+  res.sendFile(path.join(__dirname, 'public/pages/indexES.html'));
+});
+
+// map spanish page route
+app.get('/mapes', (req, res) => {
+  res.sendFile(path.join(__dirname, 'public/pages/mapES.html'));
+});
+
+// know your rights spanish page route
+app.get('/kyres', (req, res) => {
+  res.sendFile(path.join(__dirname, 'public/pages/kyrES.html'));
+});
+
+// newsletter spanish page route 
+app.get('/newsletteres', (req, res) => {
+  res.sendFile(path.join(__dirname, 'public/pages/newsletterES.html'));
 });
 
 app.get('/auth', (req, res) => {
