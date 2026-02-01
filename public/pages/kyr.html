@@ -28,22 +28,32 @@
 
         <!-- LOGO -->
         <div class='flex flex-row justify-between mt-[-1rem] text-[1.5rem] font-medium w-full mr-[2rem] max-md:mr-[4.2rem] mb-[-1.5rem]'>
-            <a class='navLogo' href='/'>
+            <a class='navLogo' href='../pages/'>
                 <img style='width: 9rem' src='../Assets/images/nav/logo.png' alt='Logo'>
             </a>
         </div>
 
         <!-- HAMBURGER CLASS NAME (hamburger-Menu)-->
-            <img src='../Assets/images/nav/hamburger.png' alt='Hamburger Menu' class='fixed top-[1.8rem] right-[0.6rem] cursor-pointer hamburger-Menu min-[768px]:hidden z-[80]' style='width: 3rem'>
+            <img src='../Assets/images/nav/hamburger.png' alt='Hamburger Menu' class='fixed top-[1.8rem] right-[0.6rem] cursor-pointer hamburger-Menu min-[768px]:hidden' style='width: 3rem'>
 
-
+        <div class='fixed top-[1.8rem] right-[0.6rem] flex items-center gap-[0.8rem] min-[768px]:hidden z-[80]'>
+            <a href='/#' aria-label='translate webpage to spanish'
+            class='rounded-full bg-[#DC2626] hover:bg-[#B91C1C] px-[0.9rem] py-[0.5rem] font-bold text-white shadow-lg text-[0.85rem]'>
+            Para Español →
+            </a>
+            <img src='../Assets/images/nav/hamburger.png' alt='Hamburger Menu' class='cursor-pointer hamburger-Menu' style='width: 3rem'>
+        </div>
         <nav>
             <!-- LARGE/DESKTOP NAV -->
-            <ul class='flex flex-row gap-[1.7rem] justify-end mr-[2rem] mt-[-3.8rem] mb-[0.5rem] font-semibold text-[1.3rem] max-[768px]:hidden'>
-                <li><a href='../pages/index.html' class='hover:text-[#8FCFBC]'>Home</a></li>
-                <li><a href='../pages/kyr.html' class='hover:text-[#8FCFBC]'>Resources</a></li>
-                <li><a href='../pages/map.html' class='hover:text-[#8FCFBC]'>Locations</a></li>
-                <li><a href='#' class='hover:text-[#8FCFBC]'>Newsletter</a></li>
+            <ul class='flex flex-row gap-[1.7rem] justify-end mr-[2.5rem] mt-[-3.8rem] mb-[1.2rem] font-semibold text-[1.3rem] max-[768px]:hidden'>
+                <li><a href='/' class='hover:text-[#8FCFBC]'>Home</a></li>
+                <li><a href='/kyr' class='hover:text-[#8FCFBC]'>Resources</a></li>
+                <li><a href='/map' class='hover:text-[#8FCFBC]'>Locations</a></li>
+                <li><a href='/newsletter' class='hover:text-[#8FCFBC]'>Newsletter</a></li>
+                <li><a href='/#' aria-label='translate webpage to spanish'
+                class='rounded-full bg-[#DC2626] hover:bg-[#B91C1C] px-[1.2rem] py-[0.75rem] font-bold text-white shadow-lg hover:shadow-xl transition-all duration-200'>
+                Para Español →
+                </a></li>
             </ul>  
 
             <!-- SMALL/MOBILE NAV  CLASS NAME (navbar-Menu) -->

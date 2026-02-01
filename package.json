@@ -1,18 +1,22 @@
 {
-  "name": "hope-hacks",
-  "version": "1.0.0",
-  "description": "Currently empty read me",
-  "main": "index.js",
-  "scripts": {
-    "start": "node server.js"
-  },
-  "author": "",
-  "license": "ISC",
-  "dependencies": {
-    "bcryptjs": "^3.0.3",
-    "dotenv": "^17.2.3",
-    "express": "^5.2.1",
-    "jsonwebtoken": "^9.0.3",
-    "mysql2": "^3.16.2"
-  }
+ "name": "hope-hacks",
+ "version": "1.0.0",
+ "description": "Currently empty read me",
+ "main": "index.js",
+ "scripts": {
+   "start": "node server.js"
+ },
+ "author": "",
+ "license": "ISC",
+ "dependencies": {
+   "@emailjs/browser": "^4.4.1",
+   "bcryptjs": "^3.0.3",
+   "dotenv": "^17.2.3",
+   "express": "^5.2.1",
+   "jsonwebtoken": "^9.0.3",
+   "mysql2": "^3.16.2"
+ }
 }
+
+
+
