@@ -157,24 +157,30 @@
 
       <!-- Form Header -->
       <div class="flex flex-col items-center justify-between mb-6">
-        <h1 class="text-xl font-semibold mb-4">Subscribe</h3>
-          <hr class="h-1">
-        <h3 class="text-lg" >Subscribe to our newsletter to stay updated!</h4>
+        <h1 class="text-xl font-semibold mb-4">Subscribe</h1>
+        <h3 class="text-lg">Subscribe to our newsletter to stay updated!</h3>
       </div>
 
       <!-- Register Form -->
-      <form id="register-form" class=" flex items-center gap-3 ">
+      <form id="register-form" class="flex flex-col gap-3">
+
+        <input
+          id="reg-name"
+          type="text"
+          placeholder="Enter your name (optional)"
+          class="w-full border rounded-full px-3 py-2"
+        />
 
         <input
           id="reg-email"
           type="email"
           placeholder="Enter your email address"
-          class="flex-1 w-full border rounded-full px-3 py-2"
+          class="w-full border rounded-full px-3 py-2"
           required
         />
 
-        <button class="shrink-0 font-semibold text-white py-2 px-5 bg-[#669BBC] rounded-full hover:bg-[#242423] transition">
-          submit
+        <button id="submit" class="font-semibold text-white py-2 px-5 bg-[#669BBC] rounded-full hover:bg-[#242423] transition">
+          Submit
         </button>
       </form>
 
@@ -235,6 +241,8 @@
 
   <script src="../js/hamburger.js"></script>
   <script src="../js/auth.js"></script>
+  <script src="../js/email.js"></script>
+  <script src="../js/backToTop.js"></script>
 </body>
 
 
