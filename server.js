@@ -15,16 +15,36 @@ app.use(express.static(path.join(__dirname, 'public')));
 // ===== AUTH ROUTES =====
 // register
 app.post('/register', async (req, res) => {
-  const { email } = req.body;
+  console.log('/register endpoint hit');
+  console.log('Request body:', req.body);
+  
+  const { email, name } = req.body;
+  
+  console.log('=== REGISTRATION REQUEST ===');
+  console.log('Email:', email);
+  console.log('Name:', name);
 
   try {
-    await connection.promise().query('INSERT INTO users (email) VALUES (?)',
-      [email,]
+    const [result] = await connection.promise().query(
+      'INSERT INTO users (email, name) VALUES (?, ?)',
+      [email, name || null]
     );
+    
+    console.log('DATABASE INSERT SUCCESSFUL!');
 
     res.status(201).json({ message: 'User Registered!' });
   } catch (error) {
-    res.status(400).json({ error: 'Registration failed.' });
+    console.error('REGISTRATION ERROR:');
+    console.error('Error message:', error.message);
+    console.error('Error code:', error.code);
+    console.error('Full error:', error);
+    
+    // check if it's a duplicate entry error
+    if (error.code === 'ER_DUP_ENTRY') {
+      res.status(400).json({ error: 'This email is already registered.' });
+    } else {
+      res.status(400).json({ error: 'Registration failed: ' + error.message });
+    }
   }
 });
 
@@ -47,12 +67,34 @@ app.get('/map', (req, res) => {
   res.sendFile(path.join(__dirname, 'public/pages/map.html'));
 });
 
+// know your rights page route
 app.get('/kyr', (req, res) => {
   res.sendFile(path.join(__dirname, 'public/pages/kyr.html'));
 });
 
+// newsletter page route 
 app.get('/newsletter', (req, res) => {
   res.sendFile(path.join(__dirname, 'public/pages/newsletter.html'));
+});
+
+// home spanish page route
+app.get('/es', (req, res) => {
+  res.sendFile(path.join(__dirname, 'public/pages/indexES.html'));
+});
+
+// map spanish page route
+app.get('/mapes', (req, res) => {
+  res.sendFile(path.join(__dirname, 'public/pages/mapES.html'));
+});
+
+// know your rights spanish page route
+app.get('/kyres', (req, res) => {
+  res.sendFile(path.join(__dirname, 'public/pages/kyrES.html'));
+});
+
+// newsletter spanish page route 
+app.get('/newsletteres', (req, res) => {
+  res.sendFile(path.join(__dirname, 'public/pages/newsletterES.html'));
 });
 
 app.get('/auth', (req, res) => {
@@ -75,4 +117,5 @@ app.get('/emailConfig', (req, res) => {
 
 app.listen(PORT, () => {
   console.log(`Server is running on http://localhost:${PORT}`);
+  console.log(`Database: ${process.env.DB_NAME}`);
 });
