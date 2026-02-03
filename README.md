@@ -117,7 +117,7 @@ Database connection managed via Node.js + Express
 
 ### 👥 Team Contributions
 
-###Brittany Ramirez — Team Lead & Front End Developer
+### Brittany Ramirez — Team Lead & Front End Developer
 
 
 - Served as team lead, coordinating project timelines, setting meeting deadlines, submitting daily forms, and communicating with the project manager
