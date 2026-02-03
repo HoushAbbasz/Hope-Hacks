@@ -58,23 +58,10 @@ document.addEventListener('DOMContentLoaded', async () => {
             return;
         }
         
-        const update = '📢 New civic engagement tools launched in your area';
-        const update2 = '🗳️ Upcoming town hall meeting on January 15th at 7 PM';
-        const update3 = '📚 Free workshops on understanding local government this weekend';
-        const updateSpanish = '📢 Nuevas herramientas de participación cívica lanzadas en tu área';
-        const updateSpanish2 = '🗳️ Próxima reunión municipal el 15 de enero a las 7 PM';
-        const updateSpanish3 = '📚 Talleres gratuitos sobre gobierno local este fin de semana';
-        
         // template parameters with test updates
         const templateParams = {
             name: name || '',
             toEmail: email,
-            update: update,
-            update2: update2,
-            update3: update3,
-            updateSpanish: updateSpanish,
-            updateSpanish2: updateSpanish2,
-            updateSpanish3: updateSpanish3
         };
         
         submitButton.disabled = true;
