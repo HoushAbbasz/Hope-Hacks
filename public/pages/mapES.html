@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -13,10 +13,10 @@
     <!-- TAILWIND -->
     <script src="https://cdn.tailwindcss.com"></script>
 
-    <!-- TAB ICON -->
-    <link rel="icon" type="Custom Logo Icon" href="../Assets/images/nav/logo.png"/>
+   <!-- TAB ICON -->
+    <link rel="icon" type="Custom Logo Icon" href="../Assets/images/nav/tab.png"/>
 
-    <title>Civic Clarity</title>
+    <title>Claridad Cívica</title>
 </head>
 
 <body class="flex flex-col items-center p-0 m-0 h-full w-full bg-gradient-to-br from-[#E8EDDF] via-[#CFDBD5] to-[#FDF0D5] font-[Montserrat] text-[#242423]]">
@@ -27,34 +27,31 @@
 
         <!-- LOGO -->
         <div class='flex flex-row justify-between text-[1.5rem] font-medium w-full'>
-            <a href='../pages/'>
+            <a href='../pages/indexES.html'>
               <img style='width: 9.5rem' src='../Assets/images/nav/logo.png' alt='Logo'>
             </a>
-            <!-- BUTTON -->
-            <a class='mt-[2rem] mr-[4.5rem] min-[768px]:mr-[2.5rem]' href='../pages/mapES.html' aria-label='translate webpage to spanish'>
-            <button class='relative overflow-hidden text-[0.9rem] p-[0.6rem] bg-[#003049] rounded-[2rem] shadow-md active:translate-y-0.5 text-[white] lg:mt-[-5rem] lg:text-[1.1rem] before:absolute before:inset-0 before:bg-[#669bbc] before:origin-left before:scale-x-0 before:transition-transform before:duration-300 hover:before:scale-x-100 z-0'>
-              <span class="relative z-10">Para Español</span>
-            </button>
+            <a class='mt-[2rem] mr-[4.5rem] min-[768px]:mr-[2.5rem]' href='../pages/map.html' aria-label='traducir página web al inglés'>
+              <button class='text-[0.9rem] font-light p-[0.6rem] bg-[#dce3da] rounded-[2rem] shadow-md active:translate-y-0.5 hover:bg-[#8FCFBC] lg:mt-[-5rem] lg:text-[1.1rem]'>To English</button>
             </a>
         </div>
 
         <!-- HAMBURGER CLASS NAME (hamburger-Menu)-->
-            <img src='../Assets/images/nav/hamburger.png' alt='Hamburger Menu' class='fixed top-[1.8rem] right-[0.6rem] cursor-pointer hamburger-Menu min-[768px]:hidden' style='width: 3rem'>
+            <img src='../Assets/images/nav/hamburger.png' alt='Menú Hamburguesa' class='fixed top-[1.8rem] right-[0.6rem] cursor-pointer hamburger-Menu min-[768px]:hidden' style='width: 3rem'>
         <nav>
             <!-- LARGE/DESKTOP NAV -->
             <ul class='flex flex-row gap-[1.2rem] justify-end mr-[2.5rem] mt-[-1rem] mb-[0.2rem] font-[1rem] tracking-wide text-[1.2rem] max-[767px]:hidden lg:text-[1.3rem]'>
-                <li><a href='../pages/index.html' class='hover:text-[#4db394]'>Home</a></li>
-                <li><a href='../pages/kyr.html' class='hover:text-[#4db394]'>Resources</a></li>
-                <li><a href='../pages/map.html' class='hover:text-[#4db394]'>Locations</a></li>
-                <li><a href='../pages/newsletter.html' class='hover:text-[#4db394]'>Newsletter</a></li>
+                <li><a href='../pages/indexES.html' class='hover:text-[#4db394]'>Inicio</a></li>
+                <li><a href='../pages/kyrES.html' class='hover:text-[#4db394]'>Recursos</a></li>
+                <li><a href='../pages/mapES.html' class='hover:text-[#4db394]'>Ubicaciones</a></li>
+                <li><a href='../pages/newsletterES.html' class='hover:text-[#4db394]'>Boletín</a></li>
             </ul>  
 
             <!-- SMALL/MOBILE NAV  CLASS NAME (navbar-Menu) -->
             <ul class='hidden flex flex-col text-center h-full w-full top-0 left-0 gap-[2.5rem] py-[2rem] text-black text-[1.5rem] font-medium navbar-Menu min-[768px]:hidden'>
-                <li><a href='../pages/index.html' class='hover:underline hover:decoration-[#4db394]'>Home</a></li>
-                <li><a href='../pages/kyr.html' class='hover:underline hover:decoration-[#4db394]'>Resources</a></li>
-                <li><a href='../pages/map.html' class='hover:underline hover:decoration-[#4db394]'>Locations</a></li>
-                <li><a href='../pages/newsletter.html' class='hover:underline hover:decoration-[#4db394]'>Newsletter</a></li>
+                <li><a href='../pages/indexES.html' class='hover:underline hover:decoration-[#4db394]'>Inicio</a></li>
+                <li><a href='../pages/kyrES.html' class='hover:underline hover:decoration-[#4db394]'>Recursos</a></li>
+                <li><a href='../pages/mapES.html' class='hover:underline hover:decoration-[#4db394]'>Ubicaciones</a></li>
+                <li><a href='../pages/newsletterES.html' class='hover:underline hover:decoration-[#4db394]'>Boletín</a></li>
             </ul>
         </nav>
     </header>
@@ -62,16 +59,16 @@
   <!-- Controls -->
   <section class="max-w-7xl mx-auto px-4 pt-6">
     <div class="bg-white/80 backdrop-blur border border-black/10 rounded-2xl shadow-sm p-4 sm:p-6">
-      <h2 class="text-base sm:text-lg font-bold mb-4">Search for nearby resources</h2>
+      <h2 class="text-base sm:text-lg font-bold mb-4">Buscar recursos cercanos</h2>
 
       <div class="grid gap-3 lg:grid-cols-12">
         <!-- Address input -->
         <div class="lg:col-span-6">
-          <label for="addressInput" class="block text-sm font-semibold mb-1">Charlotte area address</label>
+          <label for="addressInput" class="block text-sm font-semibold mb-1">Dirección en el área de Charlotte</label>
           <input
             type="text"
             id="addressInput"
-            placeholder="Enter an address in Charlotte..."
+            placeholder="Ingrese una dirección en Charlotte..."
             class="w-full rounded-xl border border-black/10 bg-white px-4 py-3 text-sm outline-none
                    focus:ring-2 focus:ring-[#669BBC] focus:border-transparent"
           />
@@ -84,7 +81,7 @@
             class="w-full sm:w-auto px-5 py-3 rounded-xl bg-[#669BBC] text-white font-semibold
                    hover:bg-[#242423] transition shadow-sm"
           >
-            Find Nearest
+            Encontrar Más Cercano
           </button>
 
           <button
@@ -92,7 +89,7 @@
             class="w-full sm:w-auto px-5 py-3 rounded-xl bg-white text-[#242423] font-semibold
                    border border-black/10 hover:bg-black/5 transition"
           >
-            📍 Use My Location
+            📍 Usar Mi Ubicación
           </button>
 
           <button
@@ -100,13 +97,13 @@
             class="w-full sm:w-auto px-5 py-3 rounded-xl bg-white text-[#242423] font-semibold
                    border border-black/10 hover:bg-black/5 transition"
           >
-            View All
+            Ver Todos
           </button>
         </div>
       </div>
 
       <p class="text-xs text-[#242423]/60 mt-4">
-        Educational resource finder. Results may vary and do not constitute legal advice.
+        Buscador de recursos educativos. Los resultados pueden variar y no constituyen asesoría legal.
       </p>
     </div>
   </section>
@@ -119,14 +116,14 @@
       <aside class="lg:col-span-4">
         <div class="bg-white/80 backdrop-blur border border-black/10 rounded-2xl shadow-sm overflow-hidden">
           <div class="px-5 py-4 border-b border-black/10 flex items-center justify-between">
-            <h3 class="font-bold">Results</h3>
+            <h3 class="font-bold">Resultados</h3>
             <span class="text-xs text-[#242423]/60">Charlotte, NC</span>
           </div>
 
           
           <div id="cardsContainer" class="p-4 max-h-[420px] lg:max-h-[650px] overflow-y-auto">
             <p class="text-sm text-[#242423]/70 text-center py-10">
-              Enter an address or click <span class="font-semibold">“View All”</span> to see nearby resources.
+              Ingrese una dirección o haga clic en <span class="font-semibold">"Ver Todos"</span> para ver recursos cercanos.
             </p>
           </div>
         </div>
@@ -136,8 +133,8 @@
       <section class="lg:col-span-8">
         <div class="bg-white/80 backdrop-blur border border-black/10 rounded-2xl shadow-sm overflow-hidden">
           <div class="px-5 py-4 border-b border-black/10 flex items-center justify-between">
-            <h3 class="font-bold">Map</h3>
-            <span class="text-xs text-[#242423]/60">Interactive view</span>
+            <h3 class="font-bold">Mapa</h3>
+            <span class="text-xs text-[#242423]/60">Vista interactiva</span>
           </div>
 
    
@@ -154,26 +151,26 @@
 
     <footer class='flex flex-col bg-gradient-to-br from-[#f5ecd5] to-[#FDF0D5] pt-[0.8rem]'>
 
-      <h2 class='font-semibold tracking-wider text-[1.2rem] text-left pl-[0.5rem] lg:text-[1.5rem]'>CIVIC CLARITY</h2>
-      <p class='text-[0.7rem] text-left pl-[0.5rem] text-[#595959] pb-[0.5rem] lg:text-[1rem]'>Designed And Powdered By The Youth.</p>
+      <h2 class='font-semibold tracking-wider text-[1.2rem] text-left pl-[0.5rem] lg:text-[1.5rem]'>CLARIDAD CÍVICA</h2>
+      <p class='text-[0.7rem] text-left pl-[0.5rem] text-[#595959] pb-[0.5rem] lg:text-[1rem]'>Diseñado y Potenciado Por La Juventud.</p>
 
       <div class='flex flex-row px-[1.5rem] justify-end gap-[3rem] font-medium text-[0.8rem] py-[1.2rem]'>
 
         <!-- FOOTER COL 1 -->
         <div class='flex flex-col'>
           <ol class='text-[#595959] lg:text-[1.1rem]'>
-            <li><a href='../pages/map.html' class='hover:underline hover:decoration-black'>Firms Near You</a></li>
-            <li><a href='../pages/newsletter.html' class='hover:underline hover:decoration-black'>Article's</a></li>
-            <li><a href='#' class='hover:underline hover:decoration-black'>Contact Us</a></li>
+            <li><a href='../pages/mapES.html' class='hover:underline hover:decoration-black'>Firmas Cerca de Usted</a></li>
+            <li><a href='../pages/newsletterES.html' class='hover:underline hover:decoration-black'>Artículos</a></li>
+            <li><a href='#' class='hover:underline hover:decoration-black'>Contáctenos</a></li>
           </ol>
         </div>
 
         <!-- FOOTER COL 2 -->
         <div class="flex flex-col">
           <ol class='text-[#595959] lg:text-[1.1rem]'>
-            <li><a href='#' class='hover:underline hover:decoration-black'>Privacy Policy</a></li>
-            <li><a href='#' class='hover:underline hover:decoration-black'>Licence</a></li>
-            <li><a href='#' class='hover:underline hover:decoration-black'>Terms Of Use</a></li>
+            <li><a href='#' class='hover:underline hover:decoration-black'>Política de Privacidad</a></li>
+            <li><a href='#' class='hover:underline hover:decoration-black'>Licencia</a></li>
+            <li><a href='#' class='hover:underline hover:decoration-black'>Términos de Uso</a></li>
           </ol>
 
         </div>
@@ -182,7 +179,7 @@
 
       <div class='w-full h-full flex flex-row justify-between p-[0.5rem] border-t-[0.1px] border-[#595959]'>
         <!-- COPYRIGHT -->
-        <p class='my-[0.2rem] font-[medium] text-[0.9rem] lg:text-[1.3rem]'>@ 2025 Civic Clarity</p>
+        <p class='my-[0.2rem] font-[medium] text-[0.9rem] lg:text-[1.3rem]'>@ 2025 Claridad Cívica</p>
 
             <!-- SOCIAL MEDIA -->
           <ul class='flex flex-row gap-[1.2rem]'>
@@ -206,6 +203,3 @@
   <script src="../js/backToTop.js"></script>
 </body>
 </html>
-
-
-
