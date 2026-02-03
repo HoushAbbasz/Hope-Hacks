@@ -20,7 +20,7 @@
     <title>Civic Clarity</title>
 </head>
 
-<body class='flex flex-col items-center p-0 m-0 h-full w-full bg-gradient-to-br from-[#E8EDDF] via-[#CFDBD5] to-[#FDF0D5] font-[Montserrat] text-[#242423]'>
+<body class='flex flex-col items-center p-0 m-0 h-full w-full bg-gradient-to-br from-[#E8EDDF] via-[#CFDBD5] to-[#FDF0D5] font-[Montserrat] text-[#242423]text-center text-[1.2rem]'>
 
   
     <!-- HEADER -->
@@ -72,22 +72,24 @@
 <!--title-->
   <div class="absolute inset-0 bg-black/30"></div>
 
+  <!-- Content wrapper -->
   <div class="relative z-10 h-full flex flex-col text-center px-4">
 
-<div class="flex-1 flex items-center justify-center pt-16 md:pt-20 lg:pt-12">
-
+    <!-- CENTERED TITLE -->
+    <div class="flex-1 flex items-center justify-center">
       <h1
-        class="text-3xl md:text-4xl lg:text-5xl font-bold text-white"
-        style="text-shadow: 0 4px 12px black;"
+        class="text-[2.1rem] md:text-[2.4rem] lg:text-[2.7rem]
+               font-extrabold text-[#fef6e7] leading-tight"
+        style="text-shadow: 0 4px 12px rgba(0,0,0,0.65);"
       >
         Know Your Rights
       </h1>
     </div>
 
-    <!-- subtitlee -->
+    <!-- BOTTOM SUBTEXT -->
     <p
-      class="mb-8 text-base md:text-lg lg:text-xl text-white max-w-3xl mx-auto"
-      style="text-shadow: 0 2px 6px rgba(0,0,0,0.7);"
+      class="mb-8 text-base md:text-lg text-[#fef6e7] max-w-3xl mx-auto"
+      style="text-shadow: 0 2px 6px rgba(0,0,0,0.6);"
     >
       Educational resources to help you understand your rights and find trusted support.
     </p>
@@ -99,7 +101,7 @@
 
 <section class="px-6 py-16 ">
   <div class="max-w-4xl mx-auto text-center">
-    <h2 class="text-2xl md:text-3xl lg:text-4xl font-bold mb-4">
+    <h1 class="text-3xl md:text-4xl font-bold mb-4">
       Know Someone Who Has Been Detained?
     </h2>
 
@@ -108,18 +110,22 @@
     </p>
   <!--button-->
     <a
-    href="https://locator.ice.gov/odls/#/search"
-    target="_blank"
-    rel="noopener noreferrer"
-    class="relative inline-block overflow-hidden rounded-full border-2 bg-[#003049] px-8 py-4 font-semibold text-[#ffffff] transition-colors duration-300 group">
-    <!--filling layer animationn-->
-    <span 
-      class="absolute inset-0 -translate-x-full bg-[#669bbc] transition-transform duration-300 group-hover:translate-x-0"></span>
-      <!--button text-->
-      <span class="relative z-10 group-hover:text-white transition-colors duration-300">
-        Locate a Detainee
-      </span>
-  </a>
+  href="https://locator.ice.gov/odls/#/search"
+  target="_blank"
+  rel="noopener noreferrer"
+  class="relative inline-block min-w-[260px] overflow-hidden rounded-full border-2
+         bg-[#003049] px-8 py-4 text-base font-semibold text-white
+         transition group hover:-translate-y-0.5 hover:shadow-lg">
+  <span
+    class="absolute inset-0 -translate-x-full bg-[#669bbc]
+           transition-transform duration-300 group-hover:translate-x-0"
+  ></span>
+
+  <span class="relative z-10 transition-colors duration-300 group-hover:text-white">
+    Locate a Detainee
+  </span>
+</a>
+
   
   <p class="text-sm text-[#242423]/70 mt-6">
     This link directs you to an official U.S government website.
@@ -133,7 +139,7 @@
     <div class="max-w-4xl mx-auto grid gap-6 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2">
 
       <!-- Card 1 ACLU-->
-      <div class="bg-[#fdf0d5] rounded-xl shadow-lg transform hover:-translate-y-1 transition-all duration-300">
+      <div class="bg-[#fffbfa] rounded-xl shadow-lg transform hover:-translate-y-1 transition-all duration-300">
         <div class="p-4 flex items-start gap-4">
           <img src="../assets/images/kyr/law-document-icon.png" 
                alt="ACLU Logo" class="w-12 h-12">
@@ -150,7 +156,7 @@
         </div>
       </div>
       <!-- Card 2 NILC-->
-      <div class="bg-[#fdf0d5] rounded-xl shadow-lg transform hover:-translate-y-1 transition-all duration-300">
+      <div class="bg-[#fffbfa] rounded-xl shadow-lg transform hover:-translate-y-1 transition-all duration-300">
         <div class="p-4 flex items-start gap-4">
           <img src="../assets/images/kyr/law-icon.png"
                alt="NILC Logo" class="w-12 h-12">
@@ -167,7 +173,7 @@
         </div>
       </div>
       <!--Card 3 NIJC-->
-      <div class="bg-[#fdf0d5] rounded-xl shadow-lg transform hover:-translate-y-1 transition-all duration-300">
+      <div class="bg-[#fffbfa] rounded-xl shadow-lg transform hover:-translate-y-1 transition-all duration-300">
         <div class="p-4 flex items-start gap-4">
           <img src="../Assets/images/kyr/justice-icon.png"
                alt="NIJC Logo" class="w-12 h-12">
@@ -184,7 +190,7 @@
         </div>
       </div>
       <!--Card 4 United We Dream-->
-        <div class="bg-[#fdf0d5] rounded-xl shadow-lg transform hover:-translate-y-1 transition-all duration-300">
+        <div class="bg-[#fffbfa] rounded-xl shadow-lg transform hover:-translate-y-1 transition-all duration-300">
         <div class="p-4 flex items-start gap-4">
           <img src="../Assets/images/kyr/group-icon.png"
                alt="UWD" class="w-12 h-12">
@@ -217,18 +223,17 @@
   <div class="grid grid-cols-1 md:grid-cols-2 gap-8 px-4">
 
     <!-- ENGLISH POSTER -->
-    <div class="bg-[#fdf0d5] rounded-xl shadow-lg p-6 flex flex-col items-center">
+    <div class="bg-[#fffbfa] rounded-xl shadow-lg p-6 flex flex-col items-center">
       <img
-        src="../Assets/images/kyr/KYR-POSTER-ENG.png"
+        src="../Assets/images/kyr/ENG-CC-POSTER.png"
         alt="Know Your Rights Poster - English"
         class="rounded-lg mb-4 max-h-[500px] object-contain"
       />
 
       <a
-        href="../Assets/images/kyr/KYR-POSTER-ENG.png"
+        href="../Assets/images/kyr/ENG-CC-POSTER.png"
         download
-        class="relative mt-4 inline-flex items-center gap-2 overflow-hidden rounded-full border-2 bg-[#003049] px-6 py-3 font-semibold text-[#ffffff] group hover:-translate-y-0.5 hover:shadow-lg transition"
-      >
+        class="relative mt-4 inline-flex items-center gap-2 overflow-hidden rounded-full border-2 bg-[#003049] px-6 py-3 font-semibold text-[#ffffff] group hover:-translate-y-0.5 hover:shadow-lg transition">
         <!-- Fill animation -->
         <span
           class="absolute inset-0 -translate-x-full bg-[#669bbc] transition-transform duration-300 group-hover:translate-x-0"
@@ -242,15 +247,15 @@
     </div>
 
     <!-- SPANISH POSTER -->
-    <div class="bg-[#fdf0d5] rounded-xl shadow-lg p-6 flex flex-col items-center">
+    <div class="bg-[#fffbfa] rounded-xl shadow-lg p-6 flex flex-col items-center">
       <img
-        src="../Assets/images/kyr/KYR-POSTER-SPN.png"
+        src="../Assets/images/kyr/SPN-CC-POSTER.png"
         alt="Conoce Tus Derechos Poster - Español"
         class="rounded-lg mb-4 max-h-[500px] object-contain"
       />
 
       <a
-        href="../Assets/images/kyr/KYR-POSTER-SPN.png"
+        href="../Assets/images/kyr/SPN-CC-POSTER.png"
         download
         class="relative mt-4 inline-flex items-center gap-2 overflow-hidden rounded-full border-2 bg-[#003049] px-6 py-3 font-semibold text-[#ffffff] group hover:-translate-y-0.5 hover:shadow-lg transition"
       >
@@ -276,19 +281,20 @@
       Need legal advice?
     </p>
     <a
-      href="../pages/map.html"
-      class="relative inline-block overflow-hidden rounded-full border-2 bg-[#003049] px-6 py-3 font-semibold text-[#ffffff] group hover:-translate-y-0.5 hover:shadow-lg transition"
-    >
-      <!-- Fill animation -->
-      <span
-        class="absolute inset-0 -translate-x-full bg-[#669bbc] transition-transform duration-300 group-hover:translate-x-0"
-      ></span>
+  href="../pages/map.html"
+  class="relative inline-block min-w-[260px] overflow-hidden rounded-full border-2
+         bg-[#003049] px-8 py-4 text-base font-semibold text-white
+         transition group hover:-translate-y-0.5 hover:shadow-lg"
+>
+  <span
+    class="absolute inset-0 -translate-x-full bg-[#669bbc]
+           transition-transform duration-300 group-hover:translate-x-0"
+  ></span>
 
-      <!-- Button text -->
-      <span class="relative z-10 group-hover:text-white transition-colors duration-300">
-        Find Legal Help Near You
-      </span>
-    </a>
+  <span class="relative z-10 transition-colors duration-300 group-hover:text-white">
+    Find Legal Help Near You
+  </span>
+</a>
   </section>
 </section>
 
@@ -309,6 +315,16 @@
 
   </div>
 </section>
+<button
+  id="backToTop"
+  aria-label="Back to top"
+  class="fixed bottom-6 right-6 z-50 hidden
+         rounded-full bg-[#003049] text-white
+         p-4 shadow-lg transition
+         hover:bg-[#669bbc] hover:-translate-y-1
+         focus:outline-none focus:ring-2 focus:ring-[#669bbc]/60">
+  Back To Top ↑
+</button>
 
     <!--FOOTER -->
   <div class='relative z-20 w-full h-full shadow-[0_-2px_4px_rgba(0,0,0,0.1)]'>
