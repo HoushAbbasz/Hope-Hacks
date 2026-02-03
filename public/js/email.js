@@ -61,7 +61,7 @@ document.addEventListener('DOMContentLoaded', async () => {
         // template parameters with test updates
         const templateParams = {
             name: name || '',
-            toEmail: email,
+            email: email,
         };
         
         submitButton.disabled = true;
