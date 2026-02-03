@@ -31,7 +31,7 @@
               <img style='width: 9.5rem' src='../Assets/images/nav/logo.png' alt='Logo'>
             </a>
             <!-- BUTTON -->
-            <a class='mt-[2rem] mr-[4.5rem] min-[768px]:mr-[2.5rem]' href='../pages/newsletter.html' aria-label='translate webpage to spanish'>
+            <a class='mt-[2rem] mr-[4.5rem] min-[768px]:mr-[2.5rem]' href='/newsletter' aria-label='translate webpage to spanish'>
             <button class='relative overflow-hidden text-[0.9rem] p-[0.6rem] bg-[#003049] rounded-[2rem] shadow-md active:translate-y-0.5 text-[white] lg:mt-[-5rem] lg:text-[1.1rem] before:absolute before:inset-0 before:bg-[#669bbc] before:origin-left before:scale-x-0 before:transition-transform before:duration-300 hover:before:scale-x-100 z-0'>
               <span class="relative z-10">Para Ingles</span>
             </button>
@@ -43,18 +43,18 @@
         <nav>
             <!-- LARGE/DESKTOP NAV -->
             <ul class='flex flex-row gap-[1.2rem] justify-end mr-[2.5rem] mt-[-1rem] mb-[0.2rem] font-[1rem] tracking-wide text-[1.2rem] max-[767px]:hidden lg:text-[1.3rem]'>
-                <li><a href='../pages/indexES.html' class='hover:text-[#4db394]'>Inicio</a></li>
-                <li><a href='../pages/kyrES.html' class='hover:text-[#4db394]'>Recursos</a></li>
-                <li><a href='../pages/mapES.html' class='hover:text-[#4db394]'>Ubicaciones</a></li>
-                <li><a href='../pages/newsletterES.html' class='hover:text-[#4db394]'>Boletín</a></li>
+                <li><a href='/es' class='hover:text-[#4db394]'>Inicio</a></li>
+                <li><a href='/kyres' class='hover:text-[#4db394]'>Recursos</a></li>
+                <li><a href='/mapes' class='hover:text-[#4db394]'>Ubicaciones</a></li>
+                <li><a href='/newsletteres' class='hover:text-[#4db394]'>Boletín</a></li>
             </ul>  
 
             <!-- SMALL/MOBILE NAV  CLASS NAME (navbar-Menu) -->
             <ul class='hidden flex flex-col text-center h-full w-full top-0 left-0 gap-[2.5rem] py-[2rem] text-black text-[1.5rem] font-medium navbar-Menu min-[768px]:hidden'>
-                <li><a href='../pages/indexES.html' class='hover:underline hover:decoration-[#4db394]'>Inicio</a></li>
-                <li><a href='../pages/kyrES.html' class='hover:underline hover:decoration-[#4db394]'>Recursos</a></li>
-                <li><a href='../pages/mapES.html' class='hover:underline hover:decoration-[#4db394]'>Ubicaciones</a></li>
-                <li><a href='../pages/newsletterES.html' class='hover:underline hover:decoration-[#4db394]'>Boletín</a></li>
+                <li><a href='/es' class='hover:underline hover:decoration-[#4db394]'>Inicio</a></li>
+                <li><a href='/kyres' class='hover:underline hover:decoration-[#4db394]'>Recursos</a></li>
+                <li><a href='/mapes' class='hover:underline hover:decoration-[#4db394]'>Ubicaciones</a></li>
+                <li><a href='/newsletteres' class='hover:underline hover:decoration-[#4db394]'>Boletín</a></li>
             </ul>
         </nav>
     </header>
@@ -166,18 +166,25 @@
       </div>
 
       <!-- Register Form -->
-      <form id="register-form" class=" flex items-center gap-3 ">
+      <form id="register-form" class="flex flex-col gap-3">
+
+        <input
+          id="reg-name"
+          type="name"
+          placeholder="Ingrese su nombre (opcional)"
+          class="w-full border rounded-full px-3 py-2"
+        />
 
         <input
           id="reg-email"
           type="email"
           placeholder="Ingrese su dirección de correo electrónico"
-          class="flex-1 w-full border rounded-full px-3 py-2"
+          class="w-full border rounded-full px-3 py-2"
           required
         />
-
-        <button class="shrink-0 font-semibold text-white py-2 px-5 bg-[#669BBC] rounded-full hover:bg-[#242423] transition">
-          enviar
+        <button id="submit" class=" relative overflow-hidden group font-semibold text-white py-2 px-5 rounded-full bg-[#003049]">
+          <span class="absolute inset-0 -translate-x-full bg-[#669bbc] transition-transform duration-300 group-hover:translate-x-0"></span>
+          <span class="relative z-10 group-hover:text-white transition-colors duration-300">Enviar</span>
         </button>
       </form>
 
@@ -196,8 +203,8 @@
         <!-- FOOTER COL 1 -->
         <div class='flex flex-col'>
           <ol class='text-[#595959] lg:text-[1.1rem]'>
-            <li><a href='../pages/mapES.html' class='hover:underline hover:decoration-black'>Firmas Cerca de Usted</a></li>
-            <li><a href='../pages/newsletterES.html' class='hover:underline hover:decoration-black'>Artículos</a></li>
+            <li><a href='/mapes' class='hover:underline hover:decoration-black'>Firmas Cerca de Usted</a></li>
+            <li><a href='/newsletteres' class='hover:underline hover:decoration-black'>Artículos</a></li>
             <li><a href='#' class='hover:underline hover:decoration-black'>Contáctenos</a></li>
           </ol>
         </div>
@@ -237,8 +244,9 @@
 
 
   <script src="../js/hamburger.js"></script>
-  <script src="../js/auth.js"></script>
+  <script src="../js/email.js"></script>
   <script src="../js/backToTop.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
 </body>
 
 
