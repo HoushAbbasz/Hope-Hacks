@@ -246,17 +246,16 @@ function showAllLocations() {
    });
   
    // display all markers as cards in the sidebar, adjust the map zoom and center to fit all visible markers
-   displayCards(allMarkers, 'Todas las ubicaciones de asistencia legal');
+   displayCards(allMarkers, 'All Legal Assistance Locations');
    fitMapToMarkers(allMarkers);
 }
 
-// Error message display
-const mapError = document.getElementById('map-errors');
+const mapError = document.getElementById('map-error');
 
 function displayError(message) {
-    const errorEll = document.getElementById('map-errors');
-    errorEll.textContent = message;
-    errorEll.classList.remove('hidden');
+    const errorEl = document.getElementById('map-error');
+    errorEl.textContent = message;
+    errorEl.classList.remove('hidden');
 }
 
 // function to find nearest markers from a entered address or user's location
@@ -274,14 +273,14 @@ function findNearestMarkers(geocoder, userAddress) {
            };
           
            if (!isWithinBounds(locationObj)) {
-               displayError('Esta dirección está fuera del área de Charlotte. Ingrese una dirección del área de Charlotte.');
+               displayError('This address is outside the Charlotte area. Please enter a Charlotte area address.');
                return;
            }
           
            // find nearest markers
            findNearestMarkersFromCoords(userLocation, userAddress);
        } else {
-           displayError('Dirección no encontrada. Inténtalo de nuevo con una dirección del área de Charlotte.');
+           displayError('Address not found. Please try again with a Charlotte area address.');
        }
    });
 }
@@ -510,23 +509,23 @@ function openGoogleMaps(origin, destination) {
 function displayNearestCards(nearest, userAddress, userLocation = null) {
    const cardsContainer = document.getElementById('cardsContainer');
   
-   let html = `<h3 class="text-base font-bold mb-4">Más cercano: ${userAddress}</h3>`;
+   let html = `<h3 class="text-base font-bold mb-4">Nearest to: ${userAddress}</h3>`;
   
    if (nearest) {
        html += `
            <div class="bg-white rounded-xl border border-black/10 p-4 shadow-sm hover:shadow-md transition mb-4">
-               <div class="text-xs font-semibold text-[#669BBC] uppercase mb-2">Asistencia legal</div>
+               <div class="text-xs font-semibold text-[#669BBC] uppercase mb-2">Legal Assistance</div>
                <div class="text-lg font-bold text-[#242423] mb-2">${nearest.title}</div>
-               <div class="text-sm font-semibold text-[#34a853] mb-2">A ${nearest.distance.toFixed(2)} millas de distancia</div>
+               <div class="text-sm font-semibold text-[#34a853] mb-2">${nearest.distance.toFixed(2)} miles away</div>
                <div class="text-sm text-[#242423]/70 mb-2">${nearest.address}</div>
-               <div class="text-sm text-[#669BBC] font-semibold mb-3">📞 ${nearest.pNum || 'Teléfono no disponible'}</div>
+               <div class="text-sm text-[#669BBC] font-semibold mb-3">📞 ${nearest.pNum || 'Phone not available'}</div>
                <button class="route-btn w-full px-4 py-2 rounded-lg bg-[#669BBC] text-white font-semibold hover:bg-[#242423] transition mb-2"
                        data-lat="${nearest.position.lat()}"
                        data-lng="${nearest.position.lng()}"
                        data-address="${nearest.address}"
                        data-origin-lat="${userLocation ? userLocation.lat() : ''}"
                        data-origin-lng="${userLocation ? userLocation.lng() : ''}">
-                   Mostrar ruta
+                   Show Route
                </button>
                <button class="directions-btn w-full px-4 py-2 rounded-lg bg-[#242423] text-white font-semibold hover:bg-[#669BBC] transition"
                        data-lat="${nearest.position.lat()}"
@@ -534,7 +533,7 @@ function displayNearestCards(nearest, userAddress, userLocation = null) {
                        data-address="${nearest.address}"
                        data-origin-lat="${userLocation ? userLocation.lat() : ''}"
                        data-origin-lng="${userLocation ? userLocation.lng() : ''}">
-                   Abierto en Google Maps
+                   Open in Google Maps
                </button>
            </div>
        `;
@@ -564,7 +563,7 @@ function displayCards(markers, title) {
        // add html for a location card
    html += `
        <div class="bg-white rounded-xl border border-black/10 p-4 shadow-sm hover:shadow-md transition mb-4">
-           <div class="text-xs font-semibold text-[#669BBC] uppercase mb-2">Asistencia legal</div>
+           <div class="text-xs font-semibold text-[#669BBC] uppercase mb-2">Legal Assistance</div>
            <div class="text-lg font-bold text-[#242423] mb-2">${data.title}</div>
            <div class="text-sm text-[#242423]/70 mb-2">${data.address}</div>
            <div class="text-sm text-[#669BBC] font-semibold mb-3">📞 ${data.pNum || 'Phone not available'}</div>
@@ -572,13 +571,13 @@ function displayCards(markers, title) {
                    data-lat="${pos.lat()}"
                    data-lng="${pos.lng()}"
                    data-address="${data.address}">
-               Mostrar ruta
+               Show Route
            </button>
            <button class="directions-btn w-full px-4 py-2 rounded-lg bg-[#242423] text-white font-semibold hover:bg-[#669BBC] transition"
                    data-lat="${pos.lat()}"
                    data-lng="${pos.lng()}"
                    data-address="${data.address}">
-               Abierto en Google Maps
+               Open in Google Maps
            </button>
        </div> `;
    });
@@ -771,7 +770,7 @@ function calculateBounds(center, radiusInMiles) {
 
 // waits for DOM to load before fetching api key
 window.addEventListener('DOMContentLoaded', () => {
-   fetch('/mapAPI')
+   fetch('http://localhost:3000/mapAPI')
        .then(response => response.json())
        .then(mapAPI => {
            // append google maps script tag with api key to document body
