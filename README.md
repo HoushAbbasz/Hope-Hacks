@@ -116,49 +116,54 @@ Stores optional name and email from newsletter signup
 Database connection managed via Node.js + Express
 
 ### 👥 Team Contributions
-Brittany Ramirez — Team Lead & Front End Developer
 
-Served as team lead, coordinating project timelines, setting meeting deadlines, submitting daily forms, and communicating with the project manager
+###Brittany Ramirez — Team Lead & Front End Developer
 
-Designed and implemented all UI/UX for the Know Your Rights (Resources) page
 
-Designed and built the Map / Legal Help Locator page UI, including layout, responsiveness, and user flow
+- Served as team lead, coordinating project timelines, setting meeting deadlines, submitting daily forms, and communicating with the project manager
 
-Ensured consistent styling, accessibility, and responsiveness across mobile, tablet, and desktop views
+- Designed and implemented all UI/UX for the Know Your Rights (Resources) page
 
-Collaborated closely with backend development to integrate APIs smoothly into the UI
+- Designed and built the Map / Legal Help Locator page UI, including layout, responsiveness, and user flow
 
-Housh Abbaszadeh — Back End Developer
+- Ensured consistent styling, accessibility, and responsiveness across mobile, tablet, and desktop views
 
-Implemented backend architecture for the application
+- Collaborated closely with backend development to integrate APIs smoothly into the UI
 
-Set up and integrated the Google Maps and Google Places APIs for the Legal Help Locator
+### Housh Abbaszadeh — Back End Developer
 
-Developed backend logic for the Map page, including search functionality and location handling
 
-Implemented the Newsletter subscription API
+- Implemented backend architecture for the application
 
-Built backend functionality for the Back to Top feature
+- Set up and integrated the Google Maps and Google Places APIs for the Legal Help Locator
 
-Jessica Cruz — Front End Developer
+- Developed backend logic for the Map page, including search functionality and location handling
 
-Designed and developed the Home page UI
+- Implemented the Newsletter subscription API
 
-Built the navigation bar and footer used across the application
+- Built backend functionality for the Back to Top feature
 
-Ensured full responsive design across mobile, tablet, and desktop breakpoints
+### Jessica Cruz — Front End Developer
 
-Focused on consistent layout structure, visual hierarchy, and accessibility
 
-Marilyn Castro Alonso — Full Stack Developer
+- Designed and developed the Home page UI
 
-Implemented error handling and validation for the newsletter subscription form
+- Built the navigation bar and footer used across the application
 
-Added validation for map searches when users input locations outside the supported area
+- Ensured full responsive design across mobile, tablet, and desktop breakpoints
 
-Designed and developed the Newsletter / Articles page
+- Focused on consistent layout structure, visual hierarchy, and accessibility
 
-Improved user feedback and form behavior to enhance usability
+### Marilyn Castro Alonso — Full Stack Developer
+
+
+- Implemented error handling and validation for the newsletter subscription form
+
+- Added validation for map searches when users input locations outside the supported area
+
+- Designed and developed the Newsletter / Articles page
+
+- Improved user feedback and form behavior to enhance usability
 
 
 
