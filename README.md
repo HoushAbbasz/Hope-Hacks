@@ -3,7 +3,7 @@
   <img src="public/Assets/images/nav/logo.png" alt="Civic Clarity Logo" width="180">
 </p>
 
-Civic Clarity is a community centered web application designed to support individuals—especially immigrants and mixed status families—by providing access to trusted information, legal resources, and local support in the Charlotte, NC area.
+Civic Clarity is a community centered web application designed to support individuals—especially immigrants and mixed status families by providing access to trusted information, legal resources, and local support in the Charlotte, NC area.
 
 The application prioritizes accessibility, clarity, and safety, offering users a welcoming space to learn about their rights, locate legal help, and connect with verified organizations without fear or misinformation.
 
