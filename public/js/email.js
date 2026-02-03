@@ -35,6 +35,11 @@ document.addEventListener('DOMContentLoaded', async () => {
     const nameInput = document.getElementById('reg-name');
     const emailInput = document.getElementById('reg-email');
     const submitButton = form.querySelector('button');
+
+    const emailError = document.getElementById('email-error');
+    const successMessage = document.getElementById('success-message');
+
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     
     // check if button exists
     if (!submitButton) {
@@ -44,17 +49,26 @@ document.addEventListener('DOMContentLoaded', async () => {
     
     form.addEventListener('submit', async function(e) {
         e.preventDefault();
+
+        emailError.classList.add('hidden');
+        successMessage.classList.add('hidden');
+
         const name = nameInput.value.trim();
         const email = emailInput.value.trim();
         
         // basic email validation
-        if (!email || !email.includes('@')) {
-            alert('Please enter a valid email address');
+        if (!email) {
+            showError('Email is required');
+            return;
+        }
+
+        if (!emailRegex.test(email)) {
+            showError('Please enter a valid email address');
             return;
         }
         
         if (!emailConfig) {
-            alert('Email service not ready. Please try again.');
+            showError('Email service not ready. Please try again.');
             return;
         }
         
@@ -86,30 +100,42 @@ document.addEventListener('DOMContentLoaded', async () => {
                 throw new Error(errorData.error || 'Registration failed');
             }
             
+            successMessage.textContent = 'Thank you for subscribing! Check your inbox.';
+            successMessage.classList.remove('hidden');
+            form.reset();
+
             const registerData = await registerResponse.json();
             
             // send confirmation email via EmailJS
             console.log('Sending email via EmailJS...');
-            const response = await emailjs.send(
+            try {
+                await emailjs.send(
                 emailConfig.serviceId,
                 emailConfig.templateId,
                 templateParams
-            );
-            
-            alert('Thank you for subscribing! Check your inbox.');
+                );
+            } catch (emailError) {
+                console.log('EmailJS failed:', emailError);
+            }
+
             nameInput.value = '';
             emailInput.value = '';
         } catch (error) {
             console.error('✗ Error:', error);
             
             if (error.message.includes('already registered')) {
-                alert('This email is already subscribed to our newsletter.');
+                showError('This email is already subscribed to our newsletter.');
             } else {
-                alert('Failed to complete subscription. Please try again.');
+                showError('Failed to complete subscription. Please try again.');
             }
         } finally {
             submitButton.disabled = false;
             submitButton.textContent = 'Submit';
         }
     });
+
+    function showError(message) {
+        emailError.textContent = message;
+        emailError.classList.remove('hidden');
+    }
 });
