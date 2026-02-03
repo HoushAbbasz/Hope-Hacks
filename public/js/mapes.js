@@ -250,6 +250,14 @@ function showAllLocations() {
    fitMapToMarkers(allMarkers);
 }
 
+// Error message display
+const mapError = document.getElementById('map-errors');
+
+function displayError(message) {
+    const errorEll = document.getElementById('map-errors');
+    errorEll.textContent = message;
+    errorEll.classList.remove('hidden');
+}
 
 // function to find nearest markers from a entered address or user's location
 function findNearestMarkers(geocoder, userAddress) {
@@ -266,14 +274,14 @@ function findNearestMarkers(geocoder, userAddress) {
            };
           
            if (!isWithinBounds(locationObj)) {
-               alert('This address is outside the Charlotte area. Please enter a Charlotte area address.');
+               displayError('Esta dirección está fuera del área de Charlotte. Ingrese una dirección del área de Charlotte.');
                return;
            }
           
            // find nearest markers
            findNearestMarkersFromCoords(userLocation, userAddress);
        } else {
-           alert('Address not found. Please try again with a Charlotte area address.');
+           displayError('Dirección no encontrada. Inténtalo de nuevo con una dirección del área de Charlotte.');
        }
    });
 }
