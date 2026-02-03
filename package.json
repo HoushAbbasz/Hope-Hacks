@@ -2,9 +2,12 @@
  "name": "hope-hacks",
  "version": "1.0.0",
  "description": "Currently empty read me",
- "main": "index.js",
+ "main": "server.js",
  "scripts": {
    "start": "node server.js"
+ },
+ "engines": {
+   "node": ">=14.0.0"
  },
  "author": "",
  "license": "ISC",
@@ -17,6 +20,3 @@
    "mysql2": "^3.16.2"
  }
 }
-
-
-

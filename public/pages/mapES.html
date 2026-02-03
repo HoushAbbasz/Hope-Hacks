@@ -19,7 +19,7 @@
     <title>Claridad Cívica</title>
 </head>
 
-<body class="flex flex-col items-center p-0 m-0 h-full w-full bg-gradient-to-br from-[#E8EDDF] via-[#CFDBD5] to-[#FDF0D5] font-[Montserrat] text-[#242423]]">
+<body class="flex flex-col items-center p-0 m-0 h-full w-full bg-gradient-to-br from-[#E8EDDF] via-[#CFDBD5] to-[#FDF0D5] font-[Montserrat] text-[#242423]">
 
     <!-- HEADER -->
     <header class='sticky top-0 z-50 bg-gradient-to-br from-[#f5ecd5] to-[#FDF0D5] w-full shadow-[0_4px_8px_rgba(0,0,0,0.2)]'>
@@ -27,7 +27,7 @@
 
         <!-- LOGO -->
         <div class='flex flex-row justify-between text-[1.5rem] font-medium w-full'>
-            <a href='../pages/indexES.html'>
+            <a href='/es'>
               <img style='width: 9.5rem' src='../Assets/images/nav/logo.png' alt='Logo'>
             </a>
             <!-- BUTTON -->
@@ -45,108 +45,153 @@
             <ul class='flex flex-row gap-[1.2rem] justify-end mr-[2.5rem] mt-[-1rem] mb-[0.2rem] font-[1rem] tracking-wide text-[1.2rem] max-[767px]:hidden lg:text-[1.3rem]'>
                 <li><a href='/es' class='hover:text-[#4db394]'>Inicio</a></li>
                 <li><a href='/kyres' class='hover:text-[#4db394]'>Recursos</a></li>
-                <li><a href='/mapes' class='hover:text-[#4db394]'>Ubicaciones</a></li>
-                <li><a href='/newsletteres' class='hover:text-[#4db394]'>Boletín</a></li>
+                <li><a href='/mapes' class='hover:text-[#4db394]'>Buscar</a></li>
+                <li><a href='/newsletteres' class='hover:text-[#4db394]'>Articulos</a></li>
             </ul>  
 
             <!-- SMALL/MOBILE NAV  CLASS NAME (navbar-Menu) -->
             <ul class='hidden flex flex-col text-center h-full w-full top-0 left-0 gap-[2.5rem] py-[2rem] text-black text-[1.5rem] font-medium navbar-Menu min-[768px]:hidden'>
                 <li><a href='/es' class='hover:underline hover:decoration-[#4db394]'>Inicio</a></li>
                 <li><a href='/kyres' class='hover:underline hover:decoration-[#4db394]'>Recursos</a></li>
-                <li><a href='/mapes' class='hover:underline hover:decoration-[#4db394]'>Ubicaciones</a></li>
-                <li><a href='/newsletteres' class='hover:underline hover:decoration-[#4db394]'>Boletín</a></li>
+                <li><a href='/mapes' class='hover:underline hover:decoration-[#4db394]'>Buscar</a></li>
+                <li><a href='/newsletteres' class='hover:underline hover:decoration-[#4db394]'>Articulos</a></li>
             </ul>
         </nav>
+    </header>
+  <!--Title and sub-->
+<section class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 pt-10 sm:pt-12 pb-6 text-center">
+  <h1 class="text-3xl md:text-4xl font-bold mb-4">
+    Encuentre Ayuda Legal de Inmigración Cerca de Usted
+  </h1>
 
-  <!-- Controls -->
-  <section class="max-w-7xl mx-auto px-4 pt-6">
-    <div class="bg-white/80 backdrop-blur border border-black/10 rounded-2xl shadow-sm p-4 sm:p-6">
-      <h2 class="text-base sm:text-lg font-bold mb-4">Buscar recursos cercanos</h2>
+  <p class="text-lg text-[#242423]/80 max-w-3xl mx-auto mb-3">
+    Busque abogados de inmigración confiables y organizaciones legales acreditadas
+    que sirven el área de Charlotte.
+  </p>
 
-      <div class="grid gap-3 lg:grid-cols-12">
-        <!-- Address input -->
-        <div class="lg:col-span-6">
-          <label for="addressInput" class="block text-sm font-semibold mb-1">Dirección en el área de Charlotte</label>
-          <input
-            type="text"
-            id="addressInput"
-            placeholder="Ingrese una dirección en Charlotte..."
-            class="w-full rounded-xl border border-black/10 bg-white px-4 py-3 text-sm outline-none
-                   focus:ring-2 focus:ring-[#669BBC] focus:border-transparent"
-          />
-        </div>
+  <p class="text-sm text-[#242423]/60">
+    Esta herramienta proporciona información general y no constituye asesoramiento legal.
+  </p>
+</section>
 
-        <!-- Buttons -->
-        <div class="lg:col-span-6 flex flex-col sm:flex-row gap-3 sm:items-end">
-          <button
-            id="searchButton"
-            class="w-full sm:w-auto px-5 py-3 rounded-xl bg-[#669BBC] text-white font-semibold
-                   hover:bg-[#242423] transition shadow-sm"
-          >
-            Encontrar Más Cercano
-          </button>
+<!-- search container -->
+<section class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 pt-4 sm:pt-6">
+  <p class="text-sm uppercase tracking-wide text-[#242423]/60 mb-2">
+    Paso 1: Ingrese una ubicación
+  </p>
 
-          <button
-            id="currentLocationBtn"
-            class="w-full sm:w-auto px-5 py-3 rounded-xl bg-white text-[#242423] font-semibold
-                   border border-black/10 hover:bg-black/5 transition"
-          >
-            📍 Usar Mi Ubicación
-          </button>
+  <div class="bg-[#fffbfa] border border-black/10 rounded-2xl shadow-sm p-4 sm:p-6">
+    <h2 class="text-base sm:text-lg font-bold mb-4">Busque recursos cercanos</h2>
 
-          <button
-            id="showAllBtn"
-            class="w-full sm:w-auto px-5 py-3 rounded-xl bg-white text-[#242423] font-semibold
-                   border border-black/10 hover:bg-black/5 transition"
-          >
-            Ver Todos
-          </button>
-        </div>
+    <div class="grid gap-3 md:gap-4 lg:grid-cols-12">
+      <!-- Address input -->
+      <div class="lg:col-span-6">
+        <label for="addressInput" class="block text-sm font-semibold mb-1">Dirección del área de Charlotte</label>
+        <input
+          type="text"
+          id="addressInput"
+          placeholder="Introduzca una dirección en Charlotte..."
+          class="w-full rounded-xl border border-black/10 bg-white px-4 py-3 text-sm outline-none
+                 focus:ring-2 focus:ring-[#669BBC] focus:border-transparent"/>
       </div>
 
-      <p class="text-xs text-[#242423]/60 mt-4">
-        Buscador de recursos educativos. Los resultados pueden variar y no constituyen asesoría legal.
-      </p>
+      <!-- Buttons -->
+      <div class="lg:col-span-6 flex flex-col sm:flex-row gap-3 sm:items-end">
+        <button
+          id="searchButton"
+          class="relative group w-full sm:w-auto px-5 py-3 rounded-xl 
+                 bg-[#003049] font-semibold text-white
+                 overflow-hidden transition shadow-sm">
+          <!-- filling layer animation -->
+           
+          <span
+            class="absolute inset-0 -translate-x-full bg-[#669BBC]
+                   transition-transform duration-300 ease-out
+                   group-hover:translate-x-0"></span>
+
+          <!-- button text -->
+           <!--find nearest buttton-->
+          <span
+            class="relative z-10 transition-colors duration-300
+                   group-hover:text-white">
+            Buscar Más Cercano
+          </span>
+        </button>
+        <!--use my location button-->
+        <button
+          id="currentLocationBtn"
+          class="w-full sm:w-auto px-5 py-3 rounded-xl bg-white text-[#242423] font-semibold
+                 border border-black/10 hover:bg-black/5 transition">
+          📍 Usar Mi Ubicación
+        </button>
+        <!--view all button-->
+        <button
+          id="showAllBtn"
+          class="w-full sm:w-auto px-5 py-3 rounded-xl bg-white text-[#242423] font-semibold
+                 border border-black/10 hover:bg-black/5 transition">
+          Ver Todo
+        </button>
+      </div>
     </div>
-  </section>
+    <!-- Error message-->
+    <p id="map-errors" class="hidden text-sm text-red-600 ml-2"></p>
+    <p class="text-xs text-[#242423]/60 mt-4">
+      Buscador de recursos educativos. Los resultados pueden variar y no constituyen asesoramiento legal.
+    </p>
+  </div>
+</section>
 
-  <!-- Main layout: Results + Map -->
-  <main class="max-w-7xl mx-auto px-4 py-6">
-    <div class="grid gap-6 lg:grid-cols-12">
+<!-- results container-->
+<main class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
+  <div class="grid gap-6 lg:grid-cols-12 lg:items-start">
 
-      <!-- Results Panel -->
-      <aside class="lg:col-span-4">
-        <div class="bg-white/80 backdrop-blur border border-black/10 rounded-2xl shadow-sm overflow-hidden">
-          <div class="px-5 py-4 border-b border-black/10 flex items-center justify-between">
-            <h3 class="font-bold">Resultados</h3>
-            <span class="text-xs text-[#242423]/60">Charlotte, NC</span>
-          </div>
+    <p class="text-sm uppercase tracking-wide text-[#242423]/60 mb-2 lg:col-span-4 lg:text-center">
+  Paso 2: Revisar Resultados:
+</p>
 
-          
-          <div id="cardsContainer" class="p-4 max-h-[420px] lg:max-h-[650px] overflow-y-auto">
-            <p class="text-sm text-[#242423]/70 text-center py-10">
-              Ingrese una dirección o haga clic en <span class="font-semibold">"Ver Todos"</span> para ver recursos cercanos.
-            </p>
-          </div>
+<p class="hidden lg:block text-sm uppercase tracking-wide text-[#242423]/60 mb-2 lg:col-span-8 lg:text-center">
+  Paso 3: Revisar Mapa/Ruta:
+</p>
+
+
+
+    <!-- Results container-->
+    <aside class="lg:col-span-4">
+      <div class="bg-[#fffbfa] border border-black/10 rounded-2xl shadow-sm overflow-hidden lg:h-[650px] flex flex-col">
+
+        <div class="px-5 py-4 border-b border-black/10 flex items-center justify-between">
+          <h3 class="font-bold">Resultados</h3>
+          <span class="text-xs text-[#242423]/60">Charlotte, NC</span>
         </div>
-      </aside>
 
-      <!-- Map Panel -->
-      <section class="lg:col-span-8">
-        <div class="bg-white/80 backdrop-blur border border-black/10 rounded-2xl shadow-sm overflow-hidden">
-          <div class="px-5 py-4 border-b border-black/10 flex items-center justify-between">
-            <h3 class="font-bold">Mapa</h3>
-            <span class="text-xs text-[#242423]/60">Vista interactiva</span>
-          </div>
-
-   
-          <div id="map" class="w-full h-[420px] lg:h-[650px]">
-          </div>
+        <div id="cardsContainer" class="p-4 flex-1 overflow-y-auto">
+          <p class="text-sm text-[#242423]/70 text-center py-10">
+            Ingrese una dirección o haga clic en<span class="font-semibold">"Ver Todo"</span> para ver recursos cercanos.
+          </p>
         </div>
-      </section>
+      </div>
+    </aside>
 
+    <!-- Map container -->
+  <section class="lg:col-span-8">
+  <p class="block lg:hidden text-sm uppercase tracking-wide text-[#242423]/60 mb-3">
+  Paso 3: Revisar Mapa/Ruta:
+  </p>
+
+  <div class="bg-[#fffbfa] border border-black/10 rounded-2xl shadow-sm overflow-hidden">
+    <!-- map header -->
+    <div class="px-5 py-4 border-b border-black/10 flex items-center justify-between">
+      <h3 class="font-bold">Mapa</h3>
+      <span class="text-xs text-[#242423]/60">Vista interactiva</span>
     </div>
-  </main>
+
+    <div id="map" class="w-full h-[360px] sm:h-[420px] lg:h-[650px]"></div>
+  </div>
+</section>
+
+
+  </div>
+</main>
 
   <!--FOOTER -->
   <div class='relative z-20 w-full h-full shadow-[0_-2px_4px_rgba(0,0,0,0.1)]'>
@@ -163,7 +208,7 @@
           <ol class='text-[#595959] lg:text-[1.1rem]'>
             <li><a href='/mapes' class='hover:underline hover:decoration-black'>Firmas Cerca de Usted</a></li>
             <li><a href='/newsletteres' class='hover:underline hover:decoration-black'>Artículos</a></li>
-            <li><a href='#' class='hover:underline hover:decoration-black'>Contáctenos</a></li>
+            <li><a href='mailto:civicclarity18@gmail.com?subject=Contact%20Civic%20Clarity&body=Hello%20Civic%20Clarity%20Team,%0A%0A" aria-label="Email Civic Clarity support' class='hover:underline hover:decoration-black'>Contáctenos</a></li>
           </ol>
         </div>
 
@@ -181,7 +226,7 @@
 
       <div class='w-full h-full flex flex-row justify-between p-[0.5rem] border-t-[0.1px] border-[#595959]'>
         <!-- COPYRIGHT -->
-        <p class='my-[0.2rem] font-[medium] text-[0.9rem] lg:text-[1.3rem]'>@ 2025 Claridad Cívica</p>
+        <p class='my-[0.2rem] font-[medium] text-[0.9rem] lg:text-[1.3rem]'>@ 2026 Claridad Cívica</p>
 
             <!-- SOCIAL MEDIA -->
           <ul class='flex flex-row gap-[1.2rem]'>
@@ -200,7 +245,7 @@
     </footer>
 
 
-  <script src="../js/map.js"></script>
+  <script src="../js/mapes.js"></script>
   <script src="../js/hamburger.js"></script>
   <script src="../js/backToTop.js"></script>
 </body>

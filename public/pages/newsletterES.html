@@ -27,7 +27,7 @@
 
         <!-- LOGO -->
         <div class='flex flex-row justify-between text-[1.5rem] font-medium w-full'>
-            <a href='../pages/indexES.html'>
+            <a href='/es'>
               <img style='width: 9.5rem' src='../Assets/images/nav/logo.png' alt='Logo'>
             </a>
             <!-- BUTTON -->
@@ -45,30 +45,31 @@
             <ul class='flex flex-row gap-[1.2rem] justify-end mr-[2.5rem] mt-[-1rem] mb-[0.2rem] font-[1rem] tracking-wide text-[1.2rem] max-[767px]:hidden lg:text-[1.3rem]'>
                 <li><a href='/es' class='hover:text-[#4db394]'>Inicio</a></li>
                 <li><a href='/kyres' class='hover:text-[#4db394]'>Recursos</a></li>
-                <li><a href='/mapes' class='hover:text-[#4db394]'>Ubicaciones</a></li>
-                <li><a href='/newsletteres' class='hover:text-[#4db394]'>Boletín</a></li>
+                <li><a href='/mapes' class='hover:text-[#4db394]'>Buscar</a></li>
+                <li><a href='/newsletteres' class='hover:text-[#4db394]'>Articulos</a></li>
             </ul>  
 
             <!-- SMALL/MOBILE NAV  CLASS NAME (navbar-Menu) -->
             <ul class='hidden flex flex-col text-center h-full w-full top-0 left-0 gap-[2.5rem] py-[2rem] text-black text-[1.5rem] font-medium navbar-Menu min-[768px]:hidden'>
                 <li><a href='/es' class='hover:underline hover:decoration-[#4db394]'>Inicio</a></li>
                 <li><a href='/kyres' class='hover:underline hover:decoration-[#4db394]'>Recursos</a></li>
-                <li><a href='/mapes' class='hover:underline hover:decoration-[#4db394]'>Ubicaciones</a></li>
-                <li><a href='/newsletteres' class='hover:underline hover:decoration-[#4db394]'>Boletín</a></li>
+                <li><a href='/mapes' class='hover:underline hover:decoration-[#4db394]'>Buscar</a></li>
+                <li><a href='/newsletteres' class='hover:underline hover:decoration-[#4db394]'>Articulos</a></li>
             </ul>
         </nav>
     </header>
 
 <section class="max-w-6xl mx-auto px-6 py-12">
-    <h1 class="text-5xl md:text-[3rem] font-semibold leading-tight drop-shadow-2xl pb-12"">ÚLTIMAS NOTICIAS</h1>  
+    <h1 class="pb-8 text-3xl md:text-4xl font-bold mb-4">ÚLTIMAS NOTICIAS</h1>  
   <div class="grid gap-8 sm:grid-cols-2 lg:grid-cols-2">
 
     <!-- Card 1 -->
-    <article class="group rounded-2xl overflow-hidden bg-[#fdf0d5] shadow-lg hover:shadow-2xl transition">
+    <article class="group rounded-2xl overflow-hidden bg-[#fffbfa] shadow-lg hover:shadow-2xl transition">
       <div class="overflow-hidden">
         <a href="https://alabamareflector.com/2026/01/29/house-committee-approves-bill-to-allow-local-agencies-to-enforce-immigration-laws/">
           <img 
           src="../Assets/images/news/news1.jpg"
+          alt="profile of Ernie Yarbrough (politician)"
           class="w-full h-56 object-cover group-hover:scale-105 transition duration-300"
           >
         </a>
@@ -87,12 +88,13 @@
     </article>
 
     <!-- Card 2 -->
-    <article class="group rounded-2xl overflow-hidden bg-[#fdf0d5] shadow-lg hover:shadow-2xl transition">
+    <article class="group rounded-2xl overflow-hidden bg-[#fffbfa] shadow-lg hover:shadow-2xl transition">
       <div class="overflow-hidden">
         <a href="https://www.pbs.org/newshour/politics/appeals-court-rules-noems-decision-to-end-protections-for-venezuelans-in-u-s-was-illegal">
           <img 
           src="../Assets/images/news/news2.jpg"
-          class="w-full h-56 object-cover group-hover:scale-105 transition duration-300"
+          alt="profile of Homeland Security Secretary Kristi Noem"
+          class="w-full h-56 object-cover group-hover:scale-105 transition duration-300" 
           >
         </a>
         
@@ -110,12 +112,13 @@
     </article>
 
     <!-- Card 3 -->
-    <article class="group rounded-2xl overflow-hidden bg-[#fdf0d5] shadow-lg hover:shadow-2xl transition">
+    <article class="group rounded-2xl overflow-hidden bg-[#fffbfa] shadow-lg hover:shadow-2xl transition">
       <div class="overflow-hidden">
         <a href="https://www.bbc.com/news/articles/c78vgnz3z6eo">
           <img 
           src="../Assets/images/news/news3.jpg"
-          class="w-full h-56 object-cover group-hover:scale-105 transition duration-300"
+          alt="protesters holding 'We the people' banner"
+          class="w-full h-56 object-cover group-hover:scale-105 transition duration-300" 
           >
         </a>
         
@@ -133,12 +136,13 @@
     </article>
 
     <!-- Card 4 -->
-    <article class="group rounded-2xl overflow-hidden bg-[#fdf0d5] shadow-lg hover:shadow-2xl transition">
+    <article class="group rounded-2xl overflow-hidden bg-[#fffbfa] shadow-lg hover:shadow-2xl transition">
       <div class="overflow-hidden">
         <a href="https://www.nbcnews.com/news/us-news/lawsuit-challenges-ice-ability-enter-homes-warrants-judges-rcna256741">
           <img 
-          src="../Assets/images/news/news4.jpg"
-          class="w-full h-56 object-cover group-hover:scale-105 transition duration-300"
+          src="../Assets/images/news/news4.jpg" 
+          alt="Ice agents detaining a man in a grey sweater"
+          class="w-full h-56 object-cover group-hover:scale-105 transition duration-300" 
           >
         </a>
         
@@ -182,6 +186,12 @@
           class="w-full border rounded-full px-3 py-2"
           required
         />
+
+        <!-- Error Message -->
+        <p id="email-error" class="hidden text-sm text-red-600 ml-2"></p>
+        <!-- Success Message -->
+        <p id="success-message" class="hidden text-sm text-green-700 ml-2"></p>
+
         <button id="submit" class=" relative overflow-hidden group font-semibold text-white py-2 px-5 rounded-full bg-[#003049]">
           <span class="absolute inset-0 -translate-x-full bg-[#669bbc] transition-transform duration-300 group-hover:translate-x-0"></span>
           <span class="relative z-10 group-hover:text-white transition-colors duration-300">Enviar</span>
@@ -205,7 +215,7 @@
           <ol class='text-[#595959] lg:text-[1.1rem]'>
             <li><a href='/mapes' class='hover:underline hover:decoration-black'>Firmas Cerca de Usted</a></li>
             <li><a href='/newsletteres' class='hover:underline hover:decoration-black'>Artículos</a></li>
-            <li><a href='#' class='hover:underline hover:decoration-black'>Contáctenos</a></li>
+            <li><a href='mailto:civicclarity18@gmail.com?subject=Contact%20Civic%20Clarity&body=Hello%20Civic%20Clarity%20Team,%0A%0A" aria-label="Email Civic Clarity support' class='hover:underline hover:decoration-black'>Contáctenos</a></li>
           </ol>
         </div>
 
@@ -223,7 +233,7 @@
 
       <div class='w-full h-full flex flex-row justify-between p-[0.5rem] border-t-[0.1px] border-[#595959]'>
         <!-- COPYRIGHT -->
-        <p class='my-[0.2rem] font-[medium] text-[0.9rem] lg:text-[1.3rem]'>@ 2025 Claridad Cívica</p>
+        <p class='my-[0.2rem] font-[medium] text-[0.9rem] lg:text-[1.3rem]'>@ 2026 Claridad Cívica</p>
 
             <!-- SOCIAL MEDIA -->
           <ul class='flex flex-row gap-[1.2rem]'>
@@ -244,8 +254,9 @@
 
 
   <script src="../js/hamburger.js"></script>
-  <script src="../js/auth.js"></script>
+  <script src="../js/emailes.js"></script>
   <script src="../js/backToTop.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
 </body>
 
 

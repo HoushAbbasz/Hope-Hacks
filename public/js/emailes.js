@@ -58,17 +58,17 @@ document.addEventListener('DOMContentLoaded', async () => {
         
         // basic email validation
         if (!email) {
-            showError('Email is required');
+            showError('El correo electrónico es requerido');
             return;
         }
 
         if (!emailRegex.test(email)) {
-            showError('Please enter a valid email address');
+            showError('Por favor ingrese una dirección de correo electrónico válida');
             return;
         }
         
         if (!emailConfig) {
-            showError('Email service not ready. Please try again.');
+            showError('Servicio de correo no disponible. Por favor intente nuevamente.');
             return;
         }
         
@@ -79,7 +79,7 @@ document.addEventListener('DOMContentLoaded', async () => {
         };
         
         submitButton.disabled = true;
-        submitButton.textContent = 'Sending...';
+        submitButton.textContent = 'Enviando...';
         
         try {
             // register user in database
@@ -96,11 +96,11 @@ document.addEventListener('DOMContentLoaded', async () => {
             
             if (!registerResponse.ok) {
                 const errorData = await registerResponse.json();
-                console.error('Registration failed:', errorData);
-                throw new Error(errorData.error || 'Registration failed');
+                console.error('Registro fallido:', errorData);
+                throw new Error(errorData.error || 'Registro fallido');
             }
             
-            successMessage.textContent = 'Thank you for subscribing! Check your inbox.';
+            successMessage.textContent = '¡Gracias por suscribirse! Revise su bandeja de entrada.';
             successMessage.classList.remove('hidden');
             form.reset();
 
@@ -124,9 +124,9 @@ document.addEventListener('DOMContentLoaded', async () => {
             console.error('✗ Error:', error);
             
             if (error.message.includes('already registered')) {
-                showError('This email is already subscribed to our newsletter.');
+                showError('Este correo electrónico ya está suscrito a nuestro boletín.');
             } else {
-                showError('Failed to complete subscription. Please try again.');
+                showError('No se pudo completar la suscripción. Por favor intente nuevamente.');
             }
         } finally {
             submitButton.disabled = false;

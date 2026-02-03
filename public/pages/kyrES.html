@@ -20,16 +20,16 @@
     <title>Claridad Cívica</title>
 </head>
 
-<body class='flex flex-col items-center p-0 m-0 h-full w-full bg-gradient-to-br from-[#E8EDDF] via-[#CFDBD5] to-[#FDF0D5] font-[Montserrat] text-[#242423]'>
+<body class='flex flex-col items-center p-0 m-0 h-full w-full bg-gradient-to-br from-[#E8EDDF] via-[#CFDBD5] to-[#FDF0D5] font-[Montserrat] text-[#242423]text-center text-[1.2rem]'>
 
   
     <!-- HEADER -->
     <header class='sticky top-0 z-50 bg-gradient-to-br from-[#f5ecd5] to-[#FDF0D5] w-full shadow-[0_4px_8px_rgba(0,0,0,0.2)]'>
 
 
-        <!-- LOGO -->
+       <!-- LOGO -->
         <div class='flex flex-row justify-between text-[1.5rem] font-medium w-full'>
-            <a href='../pages/indexES.html'>
+            <a href='/es'>
               <img style='width: 9.5rem' src='../Assets/images/nav/logo.png' alt='Logo'>
             </a>
             <!-- BUTTON -->
@@ -47,16 +47,16 @@
             <ul class='flex flex-row gap-[1.2rem] justify-end mr-[2.5rem] mt-[-1rem] mb-[0.2rem] font-[1rem] tracking-wide text-[1.2rem] max-[767px]:hidden lg:text-[1.3rem]'>
                 <li><a href='/es' class='hover:text-[#4db394]'>Inicio</a></li>
                 <li><a href='/kyres' class='hover:text-[#4db394]'>Recursos</a></li>
-                <li><a href='/mapes' class='hover:text-[#4db394]'>Ubicaciones</a></li>
-                <li><a href='/newsletteres' class='hover:text-[#4db394]'>Boletín</a></li>
+                <li><a href='/mapes' class='hover:text-[#4db394]'>Buscar</a></li>
+                <li><a href='/newsletteres' class='hover:text-[#4db394]'>Articulos</a></li>
             </ul>  
 
             <!-- SMALL/MOBILE NAV  CLASS NAME (navbar-Menu) -->
             <ul class='hidden flex flex-col text-center h-full w-full top-0 left-0 gap-[2.5rem] py-[2rem] text-black text-[1.5rem] font-medium navbar-Menu min-[768px]:hidden'>
                 <li><a href='/es' class='hover:underline hover:decoration-[#4db394]'>Inicio</a></li>
                 <li><a href='/kyres' class='hover:underline hover:decoration-[#4db394]'>Recursos</a></li>
-                <li><a href='/mapes' class='hover:underline hover:decoration-[#4db394]'>Ubicaciones</a></li>
-                <li><a href='/newsletteres' class='hover:underline hover:decoration-[#4db394]'>Boletín</a></li>
+                <li><a href='/mapes' class='hover:underline hover:decoration-[#4db394]'>Buscar</a></li>
+                <li><a href='/newsletteres' class='hover:underline hover:decoration-[#4db394]'>Articulos</a></li>
             </ul>
         </nav>
     </header>
@@ -77,20 +77,21 @@
 
   <div class="relative z-10 h-full flex flex-col text-center px-4">
 
-<div class="flex-1 flex items-center justify-center pt-16 md:pt-20 lg:pt-12">
-
+    <!-- CENTERED TITLE -->
+    <div class="flex-1 flex items-center justify-center">
       <h1
-        class="text-3xl md:text-4xl lg:text-5xl font-bold text-white"
-        style="text-shadow: 0 4px 12px black;"
+        class="text-[2.1rem] md:text-[2.4rem] lg:text-[2.7rem]
+               font-extrabold text-[#fef6e7] leading-tight"
+        style="text-shadow: 0 4px 12px rgba(0,0,0,0.65);"
       >
         Conozca Sus Derechos
       </h1>
     </div>
 
-    <!-- subtitlee -->
+    <!-- BOTTOM SUBTEXT -->
     <p
-      class="mb-8 text-base md:text-lg lg:text-xl text-white max-w-3xl mx-auto"
-      style="text-shadow: 0 2px 6px rgba(0,0,0,0.7);"
+      class="mb-8 text-base md:text-lg text-[#fef6e7] max-w-3xl mx-auto"
+      style="text-shadow: 0 2px 6px rgba(0,0,0,0.6);"
     >
       Recursos educativos para ayudarle a entender sus derechos y encontrar apoyo confiable.
     </p>
@@ -102,9 +103,9 @@
 
 <section class="px-6 py-16 ">
   <div class="max-w-4xl mx-auto text-center">
-    <h2 class="text-2xl md:text-3xl lg:text-4xl font-bold mb-4">
+    <h1 class="text-3xl md:text-4xl font-bold mb-4">
       ¿Conoce a Alguien que Ha Sido Detenido?
-    </h2>
+    </h1>
 
     <p class="text-lg mb-6">
       Puede usar el localizador oficial de detenidos de ICE para encontrar a alguien actualmente bajo custodia.
@@ -114,18 +115,21 @@
     href="https://locator.ice.gov/odls/#/search"
     target="_blank"
     rel="noopener noreferrer"
-    class="relative inline-block overflow-hidden rounded-full border-2 bg-[#003049] px-8 py-4 font-semibold text-[#ffffff] transition-colors duration-300 group">
-    <!--filling layer animationn-->
-    <span 
-      class="absolute inset-0 -translate-x-full bg-[#669bbc] transition-transform duration-300 group-hover:translate-x-0"></span>
-      <!--button text-->
-      <span class="relative z-10 group-hover:text-white transition-colors duration-300">
+  class="relative inline-block min-w-[260px] overflow-hidden rounded-full border-2
+         bg-[#003049] px-8 py-4 text-base font-semibold text-white
+         transition group hover:-translate-y-0.5 hover:shadow-lg">
+  <span
+    class="absolute inset-0 -translate-x-full bg-[#669bbc]
+           transition-transform duration-300 group-hover:translate-x-0"
+  ></span>
+
+  <span class="relative z-10 transition-colors duration-300 group-hover:text-white">
         Localizar un Detenido
       </span>
   </a>
   
   <p class="text-sm text-[#242423]/70 mt-6">
-    Este enlace le dirige a un sitio web oficial del gobierno de EE.UU.
+    Este enlace le llevará a un sitio web oficial del gobierno de Estados Unidos.
   </p>
   </div>
 </section>
@@ -136,10 +140,10 @@
     <div class="max-w-4xl mx-auto grid gap-6 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2">
 
       <!-- Card 1 ACLU-->
-      <div class="bg-[#fdf0d5] rounded-xl shadow-lg transform hover:-translate-y-1 transition-all duration-300">
+      <div class="bg-[#fffbfa] rounded-xl shadow-lg transform hover:-translate-y-1 transition-all duration-300">
         <div class="p-4 flex items-start gap-4">
           <img src="../Assets/images/kyr/law-document-icon.png" 
-               alt="Logo ACLU" class="w-12 h-12">
+               alt="ACLU Logo" class="w-12 h-12">
           <div>
             <h3 class="font-semibold text-[#242423] text-xl">Derechos de Inmigrantes ACLU</h3>
             <p class="text-sm text-[#242423]/80 my-1">
@@ -153,10 +157,10 @@
         </div>
       </div>
       <!-- Card 2 NILC-->
-      <div class="bg-[#fdf0d5] rounded-xl shadow-lg transform hover:-translate-y-1 transition-all duration-300">
+      <div class="bg-[#fffbfa] rounded-xl shadow-lg transform hover:-translate-y-1 transition-all duration-300">
         <div class="p-4 flex items-start gap-4">
-          <img src="../Assets/images/kyr/law-icon.png"
-               alt="Logo NILC" class="w-12 h-12">
+          <img src="../assets/images/kyr/law-icon.png"
+               alt="NILC Logo" class="w-12 h-12">
           <div>
             <h3 class="font-semibold text-[#242423] text-xl">Centro Nacional de Leyes de Inmigración</h3>
             <p class="text-sm text-[#242423]/80 my-1">
@@ -170,15 +174,14 @@
         </div>
       </div>
       <!--Card 3 NIJC-->
-      <div class="bg-[#fdf0d5] rounded-xl shadow-lg transform hover:-translate-y-1 transition-all duration-300">
+      <div class="bg-[#fffbfa] rounded-xl shadow-lg transform hover:-translate-y-1 transition-all duration-300">
         <div class="p-4 flex items-start gap-4">
           <img src="../Assets/images/kyr/justice-icon.png"
-               alt="Logo NIJC" class="w-12 h-12">
+               alt="NIJC Logo" class="w-12 h-12">
           <div>
             <h3 class="font-semibold text-[#242423] text-xl">Centro Nacional de Justicia del Inmigrante</h3>
             <p class="text-sm text-[#242423]/80 my-1">
-             El Centro Nacional de Justicia del Inmigrante (NIJC) defiende los derechos de inmigrantes, refugiados y solicitantes de asilo.
-            </p>
+                El Centro Nacional de Justicia del Inmigrante (NIJC) defiende los derechos de inmigrantes, refugiados y solicitantes de asilo.            </p>
             <a href="https://immigrantjustice.org/for-immigrants/know-your-rights/ice-encounter/" class="text-[#669BBC] font-medium hover:underline text-sm" 
                target="_blank">
               Visitar NIJC →
@@ -187,14 +190,14 @@
         </div>
       </div>
       <!--Card 4 United We Dream-->
-        <div class="bg-[#fdf0d5] rounded-xl shadow-lg transform hover:-translate-y-1 transition-all duration-300">
+        <div class="bg-[#fffbfa] rounded-xl shadow-lg transform hover:-translate-y-1 transition-all duration-300">
         <div class="p-4 flex items-start gap-4">
           <img src="../Assets/images/kyr/group-icon.png"
                alt="UWD" class="w-12 h-12">
           <div>
             <h3 class="font-semibold text-[#242423] text-xl">United We Dream</h3>
             <p class="text-sm text-[#242423]/80 my-1">
-              United We Dream está comprometido a asegurar que las personas que son, han sido o serán directamente impactadas por la experiencia inmigrante estén al frente de la toma de decisiones y en toda UWD
+              United We Dream está comprometido a asegurar que las personas que son, han sido o serán directamente impactadas por la experiencia inmigrante estén al frente de la toma de decisiones y en toda UWD.
             </p>
             <a href="https://unitedwedream.org/resources/know-your-rights/?gad_source=1&gad_campaignid=12715220287&gbraid=0AAAAABjeV0P3fVUouOAMaYsT0NPt-lmyh&gclid=Cj0KCQiA1czLBhDhARIsAIEc7ugZvx8BYlOqQiKdE3UntNfmyJeIRsGB_bagD78iFDOTWSl_G6BuCskaAhRTEALw_wcB" class="text-[#669BBC] font-medium hover:underline text-sm" 
                target="_blank">
@@ -220,18 +223,17 @@
   <div class="grid grid-cols-1 md:grid-cols-2 gap-8 px-4">
 
     <!-- ENGLISH POSTER -->
-    <div class="bg-[#fdf0d5] rounded-xl shadow-lg p-6 flex flex-col items-center">
+    <div class="bg-[#fffbfa] rounded-xl shadow-lg p-6 flex flex-col items-center">
       <img
-        src="../Assets/images/kyr/KYR-POSTER-ENG.png"
+        src="../Assets/images/kyr/ENG-CC-POSTER.png"
         alt="Póster Conozca Sus Derechos - Inglés"
         class="rounded-lg mb-4 max-h-[500px] object-contain"
       />
 
       <a
-        href="../Assets/images/kyr/KYR-POSTER-ENG.png"
+        href="../Assets/images/kyr/ENG-CC-POSTER.png"
         download
-        class="relative mt-4 inline-flex items-center gap-2 overflow-hidden rounded-full border-2 bg-[#003049] px-6 py-3 font-semibold text-[#ffffff] group hover:-translate-y-0.5 hover:shadow-lg transition"
-      >
+        class="relative mt-4 inline-flex items-center gap-2 overflow-hidden rounded-full border-2 bg-[#003049] px-6 py-3 font-semibold text-[#ffffff] group hover:-translate-y-0.5 hover:shadow-lg transition">
         <!-- Fill animation -->
         <span
           class="absolute inset-0 -translate-x-full bg-[#669bbc] transition-transform duration-300 group-hover:translate-x-0"
@@ -239,21 +241,21 @@
 
         <!-- Button text -->
         <span class="relative z-10 group-hover:text-white transition-colors duration-300">
-          Download (English)
+          Descargar (Inglés)
         </span>
       </a>
     </div>
 
     <!-- SPANISH POSTER -->
-    <div class="bg-[#fdf0d5] rounded-xl shadow-lg p-6 flex flex-col items-center">
+    <div class="bg-[#fffbfa] rounded-xl shadow-lg p-6 flex flex-col items-center">
       <img
-        src="../Assets/images/kyr/KYR-POSTER-SPN.png"
-        alt="Póster Conoce Tus Derechos - Español"
+        src="../Assets/images/kyr/SPN-CC-POSTER.png"
+        alt="Conoce Tus Derechos Poster - Español"
         class="rounded-lg mb-4 max-h-[500px] object-contain"
       />
 
       <a
-        href="../Assets/images/kyr/KYR-POSTER-SPN.png"
+        href="../Assets/images/kyr/SPN-CC-POSTER.png"
         download
         class="relative mt-4 inline-flex items-center gap-2 overflow-hidden rounded-full border-2 bg-[#003049] px-6 py-3 font-semibold text-[#ffffff] group hover:-translate-y-0.5 hover:shadow-lg transition"
       >
@@ -280,15 +282,18 @@
     </p>
     <a
       href="/mapes"
-      class="relative inline-block overflow-hidden rounded-full border-2 bg-[#003049] px-6 py-3 font-semibold text-[#ffffff] group hover:-translate-y-0.5 hover:shadow-lg transition"
+    class="relative inline-block min-w-[260px] overflow-hidden rounded-full border-2
+         bg-[#003049] px-8 py-4 text-base font-semibold text-white
+         transition group hover:-translate-y-0.5 hover:shadow-lg"
     >
       <!-- Fill animation -->
       <span
-        class="absolute inset-0 -translate-x-full bg-[#669bbc] transition-transform duration-300 group-hover:translate-x-0"
+        class="absolute inset-0 -translate-x-full bg-[#669bbc]
+           transition-transform duration-300 group-hover:translate-x-0"
       ></span>
 
       <!-- Button text -->
-      <span class="relative z-10 group-hover:text-white transition-colors duration-300">
+      <span class="relative z-10 transition-colors duration-300 group-hover:text-white">
         Encontrar Ayuda Legal Cerca de Usted
       </span>
     </a>
@@ -312,6 +317,16 @@
 
   </div>
 </section>
+<button
+  id="backToTop"
+  aria-label="Volver arriba"
+  class="fixed bottom-6 right-6 z-50 hidden
+         rounded-full bg-[#003049] text-white
+         p-4 shadow-lg transition
+         hover:bg-[#669bbc] hover:-translate-y-1
+         focus:outline-none focus:ring-2 focus:ring-[#669bbc]/60">
+Volver arriba ↑
+</button>
 
     <!--FOOTER -->
   <div class='relative z-20 w-full h-full shadow-[0_-2px_4px_rgba(0,0,0,0.1)]'>
@@ -328,7 +343,7 @@
           <ol class='text-[#595959] lg:text-[1.1rem]'>
             <li><a href='/mapes' class='hover:underline hover:decoration-black'>Firmas Cerca de Usted</a></li>
             <li><a href='/newsletteres' class='hover:underline hover:decoration-black'>Artículos</a></li>
-            <li><a href='#' class='hover:underline hover:decoration-black'>Contáctenos</a></li>
+            <li><a href='mailto:civicclarity18@gmail.com?subject=Contact%20Civic%20Clarity&body=Hello%20Civic%20Clarity%20Team,%0A%0A" aria-label="Email Civic Clarity support' class='hover:underline hover:decoration-black'>Contáctenos</a></li>
           </ol>
         </div>
 
@@ -346,7 +361,7 @@
 
       <div class='w-full h-full flex flex-row justify-between p-[0.5rem] border-t-[0.1px] border-[#595959]'>
         <!-- COPYRIGHT -->
-        <p class='my-[0.2rem] font-[medium] text-[0.9rem] lg:text-[1.3rem]'>@ 2025 Claridad Cívica</p>
+        <p class='my-[0.2rem] font-[medium] text-[0.9rem] lg:text-[1.3rem]'>@ 2026 Claridad Cívica</p>
 
             <!-- SOCIAL MEDIA -->
           <ul class='flex flex-row gap-[1.2rem]'>
