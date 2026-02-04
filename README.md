@@ -1,7 +1,4 @@
 # Civic Clarity
-<p align="center">
-  <img src="public/Assets/images/nav/logo.png" alt="Civic Clarity Logo" width="180">
-</p>
 
 Civic Clarity is a community centered web application designed to support individuals—especially immigrants and mixed status families by providing access to trusted information, legal resources, and local support in the Charlotte, NC area.
 
@@ -81,6 +78,7 @@ Charlotte is stronger when all our communities thrive. We stand with you and are
 ### APIs Used
 - Google: Maps, Directions, Geocoder
 - AWS: Simple Email Service
+- Email.JS: Email Sender 
 
 ### External Trusted Links
 - ICE Detainee Locator (official U.S. government website)
@@ -137,7 +135,7 @@ Database connection managed via Node.js + Express
 
 - Set up and integrated the Google Maps and Google Places APIs for the Legal Help Locator
 
-- Developed backend logic for the Map page, including search functionality and location handling
+- Developed backend logic for the Map page, including search functionality, directions, and location handling
 
 - Implemented the Newsletter subscription API
 
@@ -187,11 +185,10 @@ DB_PASSWORD=
 DB_NAME=
 EMAIL_API_KEY=
 
-⚠️ Do not commit the .env file.
-
 4. Start the server
 node server.js
 
 5. Open in browser
 http://localhost:3000
+
 
