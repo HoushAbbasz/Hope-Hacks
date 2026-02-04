@@ -171,16 +171,16 @@ function setupSearch(geocoder) {
                        let errorMsg = 'Could not get your location. ';
                        switch(error.code) {
                            case error.PERMISSION_DENIED:
-                               errorMsg += 'Location permission was denied. Please enable location access in your browser settings or enter an address instead.';
+                               errorMsg += 'Se denegó el permiso de ubicación. Por favor, habilite el acceso a la ubicación en la configuración de su navegador.';
                                break;
                            case error.POSITION_UNAVAILABLE:
-                               errorMsg += 'Location information is unavailable. Please enter an address instead.';
+                               errorMsg += 'La información de ubicación no está disponible.';
                                break;
                            case error.TIMEOUT:
-                               errorMsg += 'Location request timed out. Please try again or enter an address instead.';
+                               errorMsg += 'La solicitud de ubicación ha caducado.';
                                break;
                            default:
-                               errorMsg += 'Please enter an address instead.';
+                               errorMsg += 'Por favor, utilice la función "Buscar el más cercano" o introduzca una dirección primero.';
                        }
                        displayError(errorMsg);
                        currentLocationBtn.textContent = '📍 Use Current Location';
@@ -193,7 +193,7 @@ function setupSearch(geocoder) {
                );
            } else {
                // if browser doesn't support geolocation, show alert
-               displayError('Su navegador no es compatible con la geolocalización. Por favor, introduzca una dirección manualmente.');
+               displayError('Su navegador no es compatible con la geolocalización. Utilice la función "Buscar el más cercano" o introduzca una dirección primero.');
            }
        });
    }
