@@ -156,7 +156,7 @@ function setupSearch(geocoder) {
                       
                        // if location is not within bounds
                        if (!isWithinBounds(userLocation)) {
-                           alert('Your location is outside the Charlotte area. Please enter a Charlotte area address.');
+                           displayError('Su ubicación se encuentra fuera del área de Charlotte. Por favor, ingrese una dirección dentro del área de Charlotte.');
                            currentLocationBtn.textContent = '📍 Use Current Location';
                            return;
                        }
@@ -182,7 +182,7 @@ function setupSearch(geocoder) {
                            default:
                                errorMsg += 'Please enter an address instead.';
                        }
-                       alert(errorMsg);
+                       displayError(errorMsg);
                        currentLocationBtn.textContent = '📍 Use Current Location';
                    },
                    {
@@ -193,7 +193,7 @@ function setupSearch(geocoder) {
                );
            } else {
                // if browser doesn't support geolocation, show alert
-               alert('Geolocation is not supported by your browser. Please enter an address instead.');
+               displayError('Su navegador no es compatible con la geolocalización. Por favor, introduzca una dirección manualmente.');
            }
        });
    }
@@ -466,7 +466,7 @@ function showRoute(origin, destination) {
            directionsRenderer.setDirections(result);
        } else {
            console.error('Directions error:', status);
-           alert('Could not calculate route: ' + status);
+           displayError('No se pudo calcular la ruta: ' + status);
        }
    });
 }
@@ -621,7 +621,7 @@ function setupDirectionsButtons() {
                        const origin = results[0].geometry.location;
                        showRoute(origin, destination);
                    } else {
-                       alert('Please enter a valid address first or use "Find Nearest" to search.');
+                       displayError('Por favor, introduzca primero una dirección válida o utilice la opción "Buscar el más cercano" para realizar la búsqueda.');
                    }
                });
            } else if (userMarker) {
@@ -640,21 +640,21 @@ function setupDirectionsButtons() {
                        },
                        (error) => {
                            console.error('Geolocation error:', error);
-                           let errorMsg = 'Could not get your location. ';
+                           let errorMsg = 'No se pudo obtener su ubicación. ';
                            switch(error.code) {
                                case error.PERMISSION_DENIED:
-                                   errorMsg += 'Location permission was denied. Please enable location access in your browser settings.';
+                                   errorMsg += 'Se denegó el permiso de ubicación. Por favor, habilite el acceso a la ubicación en la configuración de su navegador.';
                                    break;
                                case error.POSITION_UNAVAILABLE:
-                                   errorMsg += 'Location information is unavailable.';
+                                   errorMsg += 'La información de ubicación no está disponible.';
                                    break;
                                case error.TIMEOUT:
-                                   errorMsg += 'Location request timed out.';
+                                   errorMsg += 'La solicitud de ubicación ha caducado.';
                                    break;
                                default:
-                                   errorMsg += 'Please use "Find Nearest" or enter an address first.';
+                                   errorMsg += 'Por favor, utilice la función "Buscar el más cercano" o introduzca una dirección primero.';
                            }
-                           alert(errorMsg);
+                           displayError(errorMsg);
                        },
                        {
                            enableHighAccuracy: true,
@@ -663,7 +663,7 @@ function setupDirectionsButtons() {
                        }
                    );
                } else {
-                   alert('Geolocation is not supported by your browser. Please use "Find Nearest" or enter an address first.');
+                   displayError('Su navegador no es compatible con la geolocalización. Utilice la función "Buscar el más cercano" o introduzca una dirección.');
                }
            }
        });
@@ -708,18 +708,18 @@ function setupDirectionsButtons() {
                            let errorMsg = 'Could not get your location. ';
                            switch(error.code) {
                                case error.PERMISSION_DENIED:
-                                   errorMsg += 'Location permission was denied. Please enable location access in your browser settings.';
+                                   errorMsg += 'Se denegó el permiso de ubicación. Por favor, habilite el acceso a la ubicación en la configuración de su navegador.';
                                    break;
                                case error.POSITION_UNAVAILABLE:
-                                   errorMsg += 'Location information is unavailable.';
+                                   errorMsg += 'La información de ubicación no está disponible.';
                                    break;
                                case error.TIMEOUT:
-                                   errorMsg += 'Location request timed out.';
+                                   errorMsg += 'La solicitud de ubicación ha caducado.';
                                    break;
                                default:
-                                   errorMsg += 'Please use "Find Nearest" or enter an address first.';
+                                   errorMsg += 'Por favor, utilice la función "Buscar el más cercano" o introduzca una dirección primero.';
                            }
-                           alert(errorMsg);
+                           displayError(errorMsg);
                        },
                        {
                            enableHighAccuracy: true,
@@ -728,7 +728,7 @@ function setupDirectionsButtons() {
                        }
                    );
                } else {
-                   alert('Geolocation is not supported by your browser. Please use "Find Nearest" or enter an address first.');
+                   displayError('Su navegador no es compatible con la geolocalización. Utilice la función "Buscar el más cercano" o introduzca una dirección primero.');
                }
            }
        });
