@@ -70,17 +70,16 @@
     serving the Charlotte area.
   </p>
 
-  <p class="text-sm text-[#242423]/60">
+  <p class="text-sm text-[#242423] font-bold mt-6">
     This tool provides general information and does not constitute legal advice.
   </p>
 </section>
 
 <!-- search container -->
 <section class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 pt-4 sm:pt-6">
-  <p class="text-sm uppercase tracking-wide text-[#242423]/60 mb-2">
-    Step 1: Enter a location
+  <p class="text-sm uppercase tracking-wide text-[#242423] mb-2 text-center">
+  Step 1: Enter a location
   </p>
-
   <div class="bg-[#fffbfa] border border-black/10 rounded-2xl shadow-sm p-4 sm:p-6">
     <h2 class="text-base sm:text-lg font-bold mb-4">Search for nearby resources</h2>
 
@@ -146,20 +145,14 @@
 <main class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
   <div class="grid gap-6 lg:grid-cols-12 lg:items-start">
 
-    <p class="text-sm uppercase tracking-wide text-[#242423]/60 mb-2 lg:col-span-4 lg:text-center">
-  Step 2: Review Results:
-</p>
-
-<p class="hidden lg:block text-sm uppercase tracking-wide text-[#242423]/60 mb-2 lg:col-span-8 lg:text-center">
-  Step 3: Review Map/Route:
-</p>
-
-
-
-    <!-- Results container-->
+    <!-- Results column -->
     <aside class="lg:col-span-4">
-      <div class="bg-[#fffbfa] border border-black/10 rounded-2xl shadow-sm overflow-hidden lg:h-[650px] flex flex-col">
+      <!-- Step 2 label -->
+      <p class="text-sm uppercase tracking-wide text-[#242423] text-center mb-2 mt-2">
+        Step 2: Review Results:
+      </p>
 
+      <div class="bg-[#fffbfa] border border-black/10 rounded-2xl shadow-sm overflow-hidden lg:h-[650px] flex flex-col">
         <div class="px-5 py-4 border-b border-black/10 flex items-center justify-between">
           <h3 class="font-bold">Results</h3>
           <span class="text-xs text-[#242423]/60">Charlotte, NC</span>
@@ -173,23 +166,22 @@
       </div>
     </aside>
 
-    <!-- Map container -->
-  <section class="lg:col-span-8">
-  <p class="block lg:hidden text-sm uppercase tracking-wide text-[#242423]/60 mb-3">
-  Step 3: Review Map/Route:
-  </p>
+    <!-- Map column -->
+    <section class="lg:col-span-8">
+      <!-- Step 3 label -->
+      <p class="text-sm uppercase tracking-wide text-[#242423] text-center mb-2 mt-2">
+        Step 3: Review Map/Route:
+      </p>
 
-  <div class="bg-[#fffbfa] border border-black/10 rounded-2xl shadow-sm overflow-hidden">
-    <!-- map header -->
-    <div class="px-5 py-4 border-b border-black/10 flex items-center justify-between">
-      <h3 class="font-bold">Map</h3>
-      <span class="text-xs text-[#242423]/60">Interactive view</span>
-    </div>
-
-    <div id="map" class="w-full h-[360px] sm:h-[420px] lg:h-[650px]"></div>
-  </div>
-</section>
-
+      <div class="bg-[#fffbfa] border border-black/10 rounded-2xl shadow-sm overflow-hidden lg:h-[650px] flex flex-col">
+        <!-- map header -->
+        <div class="px-5 py-4 border-b border-black/10 flex items-center justify-between">
+          <h3 class="font-bold">Map</h3>
+          <span class="text-xs text-[#242423]/60">Interactive view</span>
+        </div>
+        <div id="map" class="w-full h-[360px] sm:h-[420px] lg:flex-1 lg:h-auto"></div>
+      </div>
+    </section>
 
   </div>
 </main>
