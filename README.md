@@ -75,10 +75,15 @@ Charlotte is stronger when all our communities thrive. We stand with you and are
 
 ## 🔌 APIs & External Services
 
-### APIs Used
+### 3RD Party APIs Used
 - Google: Maps, Directions, Geocoder
 - AWS: Simple Email Service
-- Email.JS: Email Sender 
+- Email.JS: Email Sender
+
+### 1ST Party APIs Used
+- POST /register
+- GET /mapAPI
+- GET /emailConfig
 
 ### External Trusted Links
 - ICE Detainee Locator (official U.S. government website)
@@ -190,5 +195,6 @@ node server.js
 
 5. Open in browser
 http://localhost:3000
+
 
 
