@@ -4,7 +4,7 @@ let emailConfig = null;
 // fetch EmailJS config from server
 async function loadEmailConfig() {
     try {
-        const response = await fetch('http://localhost:3000/emailConfig');
+        const response = await fetch(`${API_CONFIG.BACKEND_URL}/emailConfig`);
         emailConfig = await response.json();
         
         // check if EmailJS is loaded
@@ -84,7 +84,7 @@ document.addEventListener('DOMContentLoaded', async () => {
         try {
             // register user in database
             console.log('Sending to /register endpoint...');
-            const registerResponse = await fetch('http://localhost:3000/register', {
+            const registerResponse = await fetch(`${API_CONFIG.BACKEND_URL}/register`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',

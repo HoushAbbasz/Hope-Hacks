@@ -770,7 +770,7 @@ function calculateBounds(center, radiusInMiles) {
 
 // waits for DOM to load before fetching api key
 window.addEventListener('DOMContentLoaded', () => {
-   fetch('http://localhost:3000/mapAPI')
+   fetch(`${API_CONFIG.BACKEND_URL}/mapAPI`)
        .then(response => response.json())
        .then(mapAPI => {
            // append google maps script tag with api key to document body
