@@ -1,4 +1,4 @@
 // config.js
 const API_CONFIG = {
-  BACKEND_URL: 'http://hope-hacks-env.eba-h2h2y6m8.us-east-1.elasticbeanstalk.com'
+  BACKEND_URL: 'https://ytcs3zv7f2.execute-api.us-east-1.amazonaws.com'
 };
