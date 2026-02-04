@@ -2,7 +2,7 @@ require('dotenv').config();
 const cors = require('cors');
 const express = require('express');
 const path = require('path');
-const connection = require('./database');
+const pool = require('./database');
 
 
 const app = express();
@@ -24,7 +24,7 @@ app.post('/register', async (req, res) => {
   console.log('Name:', name);
 
   try {
-    const [result] = await connection.promise().query(
+    const [result] = await pool.promise().query(
       'INSERT INTO users (email, name) VALUES (?, ?)',
       [email, name || null]
     );
@@ -38,7 +38,6 @@ app.post('/register', async (req, res) => {
     console.error('Error code:', error.code);
     console.error('Full error:', error);
     
-    // check if it's a duplicate entry error
     if (error.code === 'ER_DUP_ENTRY') {
       res.status(400).json({ error: 'This email is already registered.' });
     } else {
