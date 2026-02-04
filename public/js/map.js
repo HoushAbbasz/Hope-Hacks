@@ -156,7 +156,7 @@ function setupSearch(geocoder) {
                       
                        // if location is not within bounds
                        if (!isWithinBounds(userLocation)) {
-                           alert('Your location is outside the Charlotte area. Please enter a Charlotte area address.');
+                           displayError('Your location is outside the Charlotte area. Please enter a Charlotte area address.');
                            currentLocationBtn.textContent = '📍 Use Current Location';
                            return;
                        }
@@ -182,7 +182,7 @@ function setupSearch(geocoder) {
                            default:
                                errorMsg += 'Please enter an address instead.';
                        }
-                       alert(errorMsg);
+                       displayError(errorMsg);
                        currentLocationBtn.textContent = '📍 Use Current Location';
                    },
                    {
@@ -193,7 +193,7 @@ function setupSearch(geocoder) {
                );
            } else {
                // if browser doesn't support geolocation, show alert
-               alert('Geolocation is not supported by your browser. Please enter an address instead.');
+               displayError('Geolocation is not supported by your browser. Please enter an address instead.');
            }
        });
    }
@@ -250,6 +250,7 @@ function showAllLocations() {
    fitMapToMarkers(allMarkers);
 }
 
+// Validation Message
 const mapError = document.getElementById('map-error');
 
 function displayError(message) {
@@ -465,7 +466,7 @@ function showRoute(origin, destination) {
            directionsRenderer.setDirections(result);
        } else {
            console.error('Directions error:', status);
-           alert('Could not calculate route: ' + status);
+           displayError('Could not calculate route: ' + status);
        }
    });
 }
@@ -620,7 +621,7 @@ function setupDirectionsButtons() {
                        const origin = results[0].geometry.location;
                        showRoute(origin, destination);
                    } else {
-                       alert('Please enter a valid address first or use "Find Nearest" to search.');
+                       displayError('Please enter a valid address first or use "Find Nearest" to search.');
                    }
                });
            } else if (userMarker) {
@@ -653,7 +654,7 @@ function setupDirectionsButtons() {
                                default:
                                    errorMsg += 'Please use "Find Nearest" or enter an address first.';
                            }
-                           alert(errorMsg);
+                           displayError(errorMsg);
                        },
                        {
                            enableHighAccuracy: true,
@@ -662,7 +663,7 @@ function setupDirectionsButtons() {
                        }
                    );
                } else {
-                   alert('Geolocation is not supported by your browser. Please use "Find Nearest" or enter an address first.');
+                   displayError('Geolocation is not supported by your browser. Please use "Find Nearest" or enter an address first.');
                }
            }
        });
@@ -718,7 +719,7 @@ function setupDirectionsButtons() {
                                default:
                                    errorMsg += 'Please use "Find Nearest" or enter an address first.';
                            }
-                           alert(errorMsg);
+                           displayError(errorMsg);
                        },
                        {
                            enableHighAccuracy: true,
@@ -727,7 +728,7 @@ function setupDirectionsButtons() {
                        }
                    );
                } else {
-                   alert('Geolocation is not supported by your browser. Please use "Find Nearest" or enter an address first.');
+                   displayError('Geolocation is not supported by your browser. Please use "Find Nearest" or enter an address first.');
                }
            }
        });
