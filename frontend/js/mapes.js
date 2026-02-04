@@ -251,10 +251,10 @@ function showAllLocations() {
 }
 
 // Error message display
-const mapError = document.getElementById('map-errors');
+const mapError = document.getElementById('map-error');
 
 function displayError(message) {
-    const errorEll = document.getElementById('map-errors');
+    const errorEll = document.getElementById('map-error');
     errorEll.textContent = message;
     errorEll.classList.remove('hidden');
 }
