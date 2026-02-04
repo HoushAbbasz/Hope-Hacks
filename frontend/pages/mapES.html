@@ -64,19 +64,19 @@
     Encuentre Ayuda Legal de Inmigración Cerca de Usted
   </h1>
 
-  <p class="text-lg text-[#242423]/80 max-w-3xl mx-auto mb-3">
+<p class="text-lg text-[#242423]/80 max-w-3xl mx-auto mb-3">
     Busque abogados de inmigración confiables y organizaciones legales acreditadas
     que sirven el área de Charlotte.
   </p>
 
-  <p class="text-sm text-[#242423]/60">
+<p class="text-sm text-[#242423] font-bold mt-6">
     Esta herramienta proporciona información general y no constituye asesoramiento legal.
   </p>
 </section>
 
 <!-- search container -->
 <section class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 pt-4 sm:pt-6">
-  <p class="text-sm uppercase tracking-wide text-[#242423]/60 mb-2">
+  <p class="text-sm uppercase tracking-wide text-[#242423] mb-2 text-center">
     Paso 1: Ingrese una ubicación
   </p>
 
@@ -134,7 +134,7 @@
       </div>
     </div>
     <!-- Error message-->
-    <p id="map-errors" class="hidden text-sm text-red-600 ml-2"></p>
+    <p id="map-error" class="hidden text-sm text-red-600 ml-2"></p>
     <p class="text-xs text-[#242423]/60 mt-4">
       Buscador de recursos educativos. Los resultados pueden variar y no constituyen asesoramiento legal.
     </p>
@@ -145,50 +145,44 @@
 <main class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
   <div class="grid gap-6 lg:grid-cols-12 lg:items-start">
 
-    <p class="text-sm uppercase tracking-wide text-[#242423]/60 mb-2 lg:col-span-4 lg:text-center">
+    <!-- Results column -->
+    <aside class="lg:col-span-4">
+      <!-- Step 2 label -->
+      <p class="text-sm uppercase tracking-wide text-[#242423] text-center mb-2 mt-2">
   Paso 2: Revisar Resultados:
 </p>
 
-<p class="hidden lg:block text-sm uppercase tracking-wide text-[#242423]/60 mb-2 lg:col-span-8 lg:text-center">
-  Paso 3: Revisar Mapa/Ruta:
-</p>
-
-
-
-    <!-- Results container-->
-    <aside class="lg:col-span-4">
-      <div class="bg-[#fffbfa] border border-black/10 rounded-2xl shadow-sm overflow-hidden lg:h-[650px] flex flex-col">
-
+<div class="bg-[#fffbfa] border border-black/10 rounded-2xl shadow-sm overflow-hidden lg:h-[650px] flex flex-col">
         <div class="px-5 py-4 border-b border-black/10 flex items-center justify-between">
-          <h3 class="font-bold">Resultados</h3>
+          <h3 class="font-bold">Resultado</h3>
           <span class="text-xs text-[#242423]/60">Charlotte, NC</span>
         </div>
 
         <div id="cardsContainer" class="p-4 flex-1 overflow-y-auto">
           <p class="text-sm text-[#242423]/70 text-center py-10">
-            Ingrese una dirección o haga clic en<span class="font-semibold">"Ver Todo"</span> para ver recursos cercanos.
+            Ingrese una dirección o haga clic <span class="font-semibold">“View All”</span> to see nearby resources.
           </p>
         </div>
       </div>
     </aside>
 
-    <!-- Map container -->
-  <section class="lg:col-span-8">
-  <p class="block lg:hidden text-sm uppercase tracking-wide text-[#242423]/60 mb-3">
-  Paso 3: Revisar Mapa/Ruta:
-  </p>
+    <!-- Map column -->
+    <section class="lg:col-span-8">
+      <!-- Step 3 label -->
+      <p class="text-sm uppercase tracking-wide text-[#242423] text-center mb-2 mt-2">
+        Paso 3: Revisar el mapa/la ruta:
+      </p>
 
-  <div class="bg-[#fffbfa] border border-black/10 rounded-2xl shadow-sm overflow-hidden">
-    <!-- map header -->
-    <div class="px-5 py-4 border-b border-black/10 flex items-center justify-between">
-      <h3 class="font-bold">Mapa</h3>
-      <span class="text-xs text-[#242423]/60">Vista interactiva</span>
-    </div>
-
-    <div id="map" class="w-full h-[360px] sm:h-[420px] lg:h-[650px]"></div>
-  </div>
-</section>
-
+      <div class="bg-[#fffbfa] border border-black/10 rounded-2xl shadow-sm overflow-hidden lg:h-[650px] flex flex-col">
+        <!-- map header -->
+        <div class="px-5 py-4 border-b border-black/10 flex items-center justify-between">
+          <h3 class="font-bold">Mapa</h3>
+          <span class="text-xs text-[#242423]/60">Vista interactiva
+</span>
+        </div>
+        <div id="map" class="w-full h-[360px] sm:h-[420px] lg:flex-1 lg:h-auto"></div>
+      </div>
+    </section>
 
   </div>
 </main>
