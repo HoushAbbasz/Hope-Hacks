@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', ()=> {
   backToTopBtn.innerHTML = '↑';
   
   // add classes for styling
-  backToTopBtn.className = 'fixed bottom-[2rem] right-[2rem] w-[3rem] h-[3rem] bg-[#669BBC] text-white rounded-full shadow-lg hover:bg-[#242423] transition-all duration-300 opacity-0 pointer-events-none z-50 flex items-center justify-center text-[1.5rem] font-bold';
+  backToTopBtn.className = 'fixed bottom-[1.5rem] right-[2rem] w-[3rem] h-[3rem] bg-[#669BBC] text-white rounded-full shadow-lg hover:bg-[#242423] transition-all duration-300 opacity-0 pointer-events-none z-50 flex items-center justify-center text-[1.5rem] font-bold';
   
   // append to body
   document.body.appendChild(backToTopBtn);
